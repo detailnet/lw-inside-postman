@@ -24,13 +24,13 @@ Choose the one that best fits the testing situation you need:
 > To do so enter an url instead of a file in the file selection window (e.g.: https://raw.githubusercontent.com/detailnet/lw-inside-postman/master/environments/development.json).
 
 ###Setup global variables
-We use global variables to store data that is your own and must not be shared with others.
+We use global variables to store data that is your own, and must not be shared with others.
 
-Currently whe support following global variables:
+Currently we support following global variables:
  - `credential_application_id`: API application ID _(used for production environments)_
  - `credential_application_key`: API application Key _(used for production environments)_
 
-To set up global variables:
+Set up global variables:
  - Go to the environments manager window
   - Move the mouse pointer over the eye dropdown menu (top bar)
   - Click on "Manage environments"
