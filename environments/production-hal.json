@@ -3,10 +3,10 @@
 	"name": "lw-inside production [hal]",
 	"values": [
 		{
-			"key": "url_basel",
-			"value": "http://lw-inside.detailnet.ch",
+			"key": "url_base",
+			"value": "https://lw-inside.detailnet.ch",
 			"type": "text",
-			"name": "url_basel",
+			"name": "url_base",
 			"enabled": true
 		},
 		{
@@ -14,6 +14,20 @@
 			"value": "application/hal+json",
 			"type": "text",
 			"name": "header_accept",
+			"enabled": true
+		},
+		{
+			"key": "header_application_id",
+			"value": "{{credential_application_id}}",
+			"type": "text",
+			"name": "header_application_id",
+			"enabled": true
+		},
+		{
+			"key": "header_application_key",
+			"value": "{{credential_application_key}}",
+			"type": "text",
+			"name": "header_application_key",
 			"enabled": true
 		}
 	],
