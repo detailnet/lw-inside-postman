@@ -1,0 +1,23 @@
+{
+	"id": "a6a8d067-e41b-9eef-e373-59231d9dbffc",
+	"name": "lw-inside development [hal]",
+	"values": [
+		{
+			"key": "url_base",
+			"value": "http://lw-inside.public.web01.detailnet.me",
+			"type": "text",
+			"name": "url_base",
+			"enabled": true
+		},
+		{
+			"key": "header_accept",
+			"value": "application/hal+json",
+			"type": "text",
+			"name": "header_accept",
+			"enabled": true
+		}
+	],
+	"timestamp": 1432886642220,
+	"synced": false,
+	"syncedFilename": ""
+}

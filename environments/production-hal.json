@@ -1,0 +1,23 @@
+{
+	"id": "7f8692bf-6b27-dd21-27a8-3706537d1cd9",
+	"name": "lw-inside production [hal]",
+	"values": [
+		{
+			"key": "url_basel",
+			"value": "http://lw-inside.detailnet.ch",
+			"type": "text",
+			"name": "url_basel",
+			"enabled": true
+		},
+		{
+			"key": "header_accept",
+			"value": "application/hal+json",
+			"type": "text",
+			"name": "header_accept",
+			"enabled": true
+		}
+	],
+	"timestamp": 1432886661002,
+	"synced": false,
+	"syncedFilename": ""
+}

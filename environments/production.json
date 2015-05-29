@@ -1,0 +1,23 @@
+{
+	"id": "d4846cea-0303-3b41-3cc2-37a931557fd6",
+	"name": "lw-inside production",
+	"values": [
+		{
+			"key": "url_basel",
+			"value": "http://lw-inside.detailnet.ch",
+			"type": "text",
+			"name": "url_basel",
+			"enabled": true
+		},
+		{
+			"key": "header_accept",
+			"value": "application/json",
+			"type": "text",
+			"name": "header_accept",
+			"enabled": true
+		}
+	],
+	"timestamp": 1432886672203,
+	"synced": false,
+	"syncedFilename": ""
+}
