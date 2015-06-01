@@ -13,10 +13,10 @@ Following guide applies for:
  - Import collection 
    - Select "Collections" tab (left menu), click on "Import into Postman" icon.
    - Choose tab "Download from link"
-   - Enter collection link ([choose from section above](#Collection-data))
+   - Enter collection link ([choose from section above](#collection-data))
    - Click on "Import" button (once only).
- - [Setup/Import environments](#Import-environments)
- - [Setup global variables](#Setup-global-variables) _(For the moment needed only for production environments)_
+ - [Setup/Import environments](#import-environments)
+ - [Setup global variables](#setup-global-variables) _(For the moment needed only for production environments)_
  - Choose an environment
  - Run requests 
 
