@@ -13,13 +13,15 @@
 			"write": true,
 			"order": [
 				"c32c1d4d-dac8-b9ff-e1c2-4087e21e6ea4",
-				"a28edcdf-0e8a-3810-7ae0-1bac0db6afd1",
 				"0338e4b9-de60-0c2c-8016-10cd6953f849",
 				"fabc31a9-d199-f367-f9eb-e7f08de1bc7d",
 				"7dfc1287-02ab-ec93-d9e5-7f7ba4ccbaba",
 				"ef2248e5-3230-c4ae-2492-d8d846dfa97a",
 				"233c9b2b-782b-8f2a-211b-c2fdffd14772",
 				"0af36a91-7351-d01f-070b-41fc4438b237",
+				"a28edcdf-0e8a-3810-7ae0-1bac0db6afd1",
+				"23b4c226-da26-55bd-c13a-fa826504c4a3",
+				"bf3b670f-970e-d85e-d5f2-558284b86e96",
 				"b066e0db-b0a1-290a-8ee4-c942adab98d8",
 				"c2578fb0-1317-a56a-14cc-e52af9c42943",
 				"5ea64a3d-ae40-73ec-8758-57b40c94f7b9",
@@ -31,10 +33,11 @@
 				"943d750f-8f3a-8720-f727-01ee2c435752"
 			],
 			"collection_name": "lw-inside",
-			"collection_owner": "44016",
+			"collection_owner": "46703",
 			"collection_id": "40381fb5-2f71-5147-638f-f7cee9e7ef6e",
 			"collection": "40381fb5-2f71-5147-638f-f7cee9e7ef6e",
-			"owner": "44016"
+			"owner": "46703",
+			"collectionId": "40381fb5-2f71-5147-638f-f7cee9e7ef6e"
 		},
 		{
 			"id": "50a4bbc5-a2d5-692e-f290-b6cf69ade8a1",
@@ -46,10 +49,32 @@
 				"249af2fb-13eb-13d3-3c25-fb5aad37bcc8"
 			],
 			"collection_name": "lw-inside",
-			"collection_owner": "44016",
+			"collection_owner": "46703",
 			"collection_id": "40381fb5-2f71-5147-638f-f7cee9e7ef6e",
 			"collection": "40381fb5-2f71-5147-638f-f7cee9e7ef6e",
-			"owner": "44016",
+			"owner": "46703",
+			"collectionId": "40381fb5-2f71-5147-638f-f7cee9e7ef6e"
+		},
+		{
+			"id": "60850ca0-474e-fafd-1a53-46b773e01db4",
+			"name": "ProductText",
+			"description": "",
+			"write": true,
+			"order": [
+				"9265cb6f-ebf8-6c87-cced-f9b1e86e37f5",
+				"b644f93a-2510-9171-6ec0-3e83ccc2188e",
+				"72ea9285-72c3-ca19-cc50-e1f967338815",
+				"0c493e9c-9269-b057-b7a9-512114b57a18",
+				"52e14891-eb1b-7b90-b88e-430289a2820b",
+				"18e83f62-0ef6-c324-b595-f9b5fbba4a9e",
+				"f1472ef9-875f-31be-78e2-cacbc67b22a4",
+				"7e9d8a1a-9601-e06c-1fac-e1a6620a1a60"
+			],
+			"collection_name": "lw-inside",
+			"collection_owner": "46703",
+			"collection_id": "40381fb5-2f71-5147-638f-f7cee9e7ef6e",
+			"collection": "40381fb5-2f71-5147-638f-f7cee9e7ef6e",
+			"owner": "46703",
 			"collectionId": "40381fb5-2f71-5147-638f-f7cee9e7ef6e"
 		},
 		{
@@ -73,38 +98,16 @@
 				"f6f554e0-fc31-da67-47a3-96205575df93"
 			],
 			"collection_name": "lw-inside",
-			"collection_owner": "44016",
+			"collection_owner": "46703",
 			"collection_id": "40381fb5-2f71-5147-638f-f7cee9e7ef6e",
 			"collection": "40381fb5-2f71-5147-638f-f7cee9e7ef6e",
-			"owner": "44016",
-			"collectionId": "40381fb5-2f71-5147-638f-f7cee9e7ef6e"
-		},
-		{
-			"id": "60850ca0-474e-fafd-1a53-46b773e01db4",
-			"name": "ProductText",
-			"description": "",
-			"write": true,
-			"order": [
-				"9265cb6f-ebf8-6c87-cced-f9b1e86e37f5",
-				"b644f93a-2510-9171-6ec0-3e83ccc2188e",
-				"72ea9285-72c3-ca19-cc50-e1f967338815",
-				"0c493e9c-9269-b057-b7a9-512114b57a18",
-				"52e14891-eb1b-7b90-b88e-430289a2820b",
-				"18e83f62-0ef6-c324-b595-f9b5fbba4a9e",
-				"f1472ef9-875f-31be-78e2-cacbc67b22a4",
-				"7e9d8a1a-9601-e06c-1fac-e1a6620a1a60"
-			],
-			"collection_name": "lw-inside",
-			"collection_owner": "44016",
-			"collection_id": "40381fb5-2f71-5147-638f-f7cee9e7ef6e",
-			"collection": "40381fb5-2f71-5147-638f-f7cee9e7ef6e",
-			"owner": "44016",
+			"owner": "46703",
 			"collectionId": "40381fb5-2f71-5147-638f-f7cee9e7ef6e"
 		}
 	],
 	"timestamp": 1422608780331,
 	"synced": false,
-	"owner": "44016",
+	"owner": "46703",
 	"sharedWithTeam": false,
 	"subscribed": false,
 	"remoteLink": null,
@@ -123,7 +126,7 @@
 			"dataMode": "raw",
 			"timestamp": 0,
 			"version": 2,
-			"owner": "44016",
+			"owner": "46703",
 			"preRequestScript": "",
 			"tests": "",
 			"synced": false,
@@ -143,7 +146,7 @@
 			"dataMode": "raw",
 			"timestamp": 0,
 			"version": 2,
-			"owner": "44016",
+			"owner": "46703",
 			"preRequestScript": "",
 			"tests": "",
 			"synced": false,
@@ -172,7 +175,7 @@
 			"synced": false,
 			"folder": "60850ca0-474e-fafd-1a53-46b773e01db4",
 			"rawModeData": "{\r\n  \"locales\": [\r\n    {\r\n      \"id\": \"de\",\r\n      \"text\": \"Text in DE\"\r\n    },\r\n    {\r\n      \"id\": \"de_CH\",\r\n      \"text\": \"\"\r\n    }\r\n  ]\r\n}",
-			"owner": "44016"
+			"owner": "46703"
 		},
 		{
 			"id": "18e83f62-0ef6-c324-b595-f9b5fbba4a9e",
@@ -196,7 +199,7 @@
 			"collectionOwner": 0,
 			"synced": false,
 			"folder": "60850ca0-474e-fafd-1a53-46b773e01db4",
-			"owner": "44016"
+			"owner": "46703"
 		},
 		{
 			"id": "233c9b2b-782b-8f2a-211b-c2fdffd14772",
@@ -220,9 +223,32 @@
 			"collectionOwner": 0,
 			"synced": false,
 			"rawModeData": "{\n    \"type\":\"f26bc1d9-2ce8-42c3-8460-99841c00e77c\",\n    \"product_groups\":[\"ab908fed-6b07-4ef7-b7ba-2a33d6589350\",\"20a1b89e-38f4-42f2-aa2a-943b34ec39e2\"],\n    \"products\":[\"abc1c09b-b89e-4bf0-9924-03712ef262f5\",\"4a190a42-6a88-4d4a-a7cb-01ec2ddfb13f\"],\n    \"languages\":[\"en_CH\",\"sv_FI\"],\n    \"reference\":\"new reference\",\n    \"description\":\"New description\\nSecond line\",\n    \"tags\":[\"187650d3-b9e1-42a0-b81d-1721414dc2c5\"]\n}",
-			"owner": "44016",
+			"owner": "46703",
 			"write": true,
 			"folder": "112b40a5-e99f-ee1a-ab71-d20f8b9cded2"
+		},
+		{
+			"id": "23b4c226-da26-55bd-c13a-fa826504c4a3",
+			"headers": "Accept: {{header_accept}}\nApp-ID: {{header_application_id}}\nApp-Key: {{header_application_key}}\nContent-Type: application/json\n",
+			"url": "http://lw-inside.public.web01.detailnet.me/api/assets/44444444-aaaa-4444-aaaa-444444444444/file-replacements/44444444-aaaa-4444-aaaa-444444444444",
+			"pathVariables": {},
+			"preRequestScript": "",
+			"method": "PATCH",
+			"collectionId": "40381fb5-2f71-5147-638f-f7cee9e7ef6e",
+			"data": [],
+			"dataMode": "raw",
+			"name": "/api/assets/{asset_id}/file-replacements/{file_replacement_id}",
+			"description": "Edit a file replacement",
+			"descriptionFormat": "html",
+			"time": 1433244273216,
+			"version": 2,
+			"responses": [],
+			"tests": "",
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"folder": "112b40a5-e99f-ee1a-ab71-d20f8b9cded2",
+			"synced": false,
+			"rawModeData": "{\n  \"status\":\"submitted\"\n}"
 		},
 		{
 			"collectionId": "40381fb5-2f71-5147-638f-f7cee9e7ef6e",
@@ -236,7 +262,7 @@
 			"dataMode": "raw",
 			"timestamp": 0,
 			"version": 2,
-			"owner": "44016",
+			"owner": "46703",
 			"preRequestScript": "",
 			"tests": "",
 			"synced": false,
@@ -263,7 +289,7 @@
 			"collectionId": "40381fb5-2f71-5147-638f-f7cee9e7ef6e",
 			"synced": false,
 			"rawModeData": "{\n  \"name\":\"XXXX Product updated\",\n  \"fragrance\": 1,\n  \"content\": 400,\n  \"unit\":\"mg\",\n  \"ingredients\": [\n      {\n          \"id\": 1,\n          \"content\": 0.05,\n          \"unit\" : \"%\"\n      },\n      {\n          \"id\": 6,\n          \"content\": 0.001,\n          \"unit\" : \"%\"\n      }\n  ]\n}",
-			"owner": "44016",
+			"owner": "46703",
 			"folder": "18402b80-b7ac-ffdf-1e59-a6a33463c262"
 		},
 		{
@@ -285,7 +311,7 @@
 			"collectionId": "40381fb5-2f71-5147-638f-f7cee9e7ef6e",
 			"responses": [],
 			"synced": false,
-			"owner": "44016",
+			"owner": "46703",
 			"write": true,
 			"folder": "18402b80-b7ac-ffdf-1e59-a6a33463c262"
 		},
@@ -309,7 +335,7 @@
 			"responses": [],
 			"synced": false,
 			"rawModeData": "",
-			"owner": "44016",
+			"owner": "46703",
 			"folder": "112b40a5-e99f-ee1a-ab71-d20f8b9cded2"
 		},
 		{
@@ -334,7 +360,7 @@
 			"folder": "112b40a5-e99f-ee1a-ab71-d20f8b9cded2",
 			"synced": false,
 			"rawModeData": "",
-			"owner": "44016"
+			"owner": "46703"
 		},
 		{
 			"id": "518156c8-105c-4768-2330-5245415420ba",
@@ -355,7 +381,7 @@
 			"collectionId": "40381fb5-2f71-5147-638f-f7cee9e7ef6e",
 			"synced": false,
 			"rawModeData": "",
-			"owner": "44016",
+			"owner": "46703",
 			"write": true,
 			"folder": "18402b80-b7ac-ffdf-1e59-a6a33463c262"
 		},
@@ -377,7 +403,7 @@
 			"description": "",
 			"collectionId": "40381fb5-2f71-5147-638f-f7cee9e7ef6e",
 			"synced": false,
-			"owner": "44016",
+			"owner": "46703",
 			"write": true,
 			"folder": "18402b80-b7ac-ffdf-1e59-a6a33463c262"
 		},
@@ -404,7 +430,7 @@
 			"synced": false,
 			"folder": "60850ca0-474e-fafd-1a53-46b773e01db4",
 			"rawModeData": "{\r\n  \"product\": \"c9925402-cff8-49c7-9b4e-b6a991b36a67\",\r\n  \"block\": \"bd69d5c2-3d32-4ada-97ed-a6cc8902fe60\",\r\n  \"locales\": [\r\n    {\r\n      \"id\": \"de\",\r\n      \"text\": \"Text in DE\"\r\n    },\r\n    {\r\n      \"id\": \"de_CH\",\r\n      \"text\": \"\"\r\n    }\r\n  ]\r\n}",
-			"owner": "44016"
+			"owner": "46703"
 		},
 		{
 			"collectionId": "40381fb5-2f71-5147-638f-f7cee9e7ef6e",
@@ -419,7 +445,7 @@
 			"timestamp": 0,
 			"version": 2,
 			"time": 1426614639033,
-			"owner": "44016",
+			"owner": "46703",
 			"preRequestScript": "",
 			"tests": "",
 			"synced": false,
@@ -448,7 +474,7 @@
 			"helperAttributes": {},
 			"collectionOwner": 0,
 			"synced": false,
-			"owner": "44016",
+			"owner": "46703",
 			"write": true,
 			"folder": "112b40a5-e99f-ee1a-ab71-d20f8b9cded2"
 		},
@@ -471,7 +497,7 @@
 			"collectionId": "40381fb5-2f71-5147-638f-f7cee9e7ef6e",
 			"responses": [],
 			"synced": false,
-			"owner": "44016",
+			"owner": "46703",
 			"folder": "18402b80-b7ac-ffdf-1e59-a6a33463c262"
 		},
 		{
@@ -486,7 +512,7 @@
 			"dataMode": "raw",
 			"timestamp": 0,
 			"version": 2,
-			"owner": "44016",
+			"owner": "46703",
 			"preRequestScript": "",
 			"tests": "",
 			"synced": false,
@@ -514,7 +540,7 @@
 			"responses": [],
 			"synced": false,
 			"rawModeData": "{\n    \"name\":\"New collection name\",\n    \"assets\":[25, \"44444444-aaaa-4444-aaaa-444444444444\"]\n}",
-			"owner": "44016",
+			"owner": "46703",
 			"folder": "112b40a5-e99f-ee1a-ab71-d20f8b9cded2"
 		},
 		{
@@ -538,7 +564,7 @@
 			"synced": false,
 			"folder": "60850ca0-474e-fafd-1a53-46b773e01db4",
 			"rawModeData": "{\r\n  \"block\": \"bd69d5c2-3d32-4ada-97ed-a6cc8902fe60\",\r\n  \"locales\": [\r\n    {\r\n      \"id\": \"de\",\r\n      \"text\": \"Text in DE\"\r\n    },\r\n    {\r\n      \"id\": \"de_CH\",\r\n      \"text\": \"\"\r\n    }\r\n  ]\r\n}",
-			"owner": "44016"
+			"owner": "46703"
 		},
 		{
 			"id": "7dfc1287-02ab-ec93-d9e5-7f7ba4ccbaba",
@@ -557,7 +583,9 @@
 			"name": "/api/assets/{asset_id}",
 			"description": "List single asset",
 			"collectionId": "40381fb5-2f71-5147-638f-f7cee9e7ef6e",
-			"synced": false
+			"synced": false,
+			"owner": "46703",
+			"folder": "112b40a5-e99f-ee1a-ab71-d20f8b9cded2"
 		},
 		{
 			"id": "7e9d8a1a-9601-e06c-1fac-e1a6620a1a60",
@@ -582,7 +610,7 @@
 			"synced": false,
 			"write": true,
 			"folder": "60850ca0-474e-fafd-1a53-46b773e01db4",
-			"owner": "44016"
+			"owner": "46703"
 		},
 		{
 			"id": "819ef3c0-6028-843f-2786-c3f682938313",
@@ -602,7 +630,7 @@
 			"description": "",
 			"collectionId": "40381fb5-2f71-5147-638f-f7cee9e7ef6e",
 			"synced": false,
-			"owner": "44016",
+			"owner": "46703",
 			"write": true,
 			"folder": "18402b80-b7ac-ffdf-1e59-a6a33463c262"
 		},
@@ -624,7 +652,7 @@
 			"description": "",
 			"collectionId": "40381fb5-2f71-5147-638f-f7cee9e7ef6e",
 			"synced": false,
-			"owner": "44016",
+			"owner": "46703",
 			"write": true,
 			"folder": "18402b80-b7ac-ffdf-1e59-a6a33463c262"
 		},
@@ -653,7 +681,7 @@
 			"folder": "60850ca0-474e-fafd-1a53-46b773e01db4",
 			"isFromCollection": true,
 			"collectionRequestId": "9265cb6f-ebf8-6c87-cced-f9b1e86e37f5",
-			"owner": "44016"
+			"owner": "46703"
 		},
 		{
 			"id": "943d750f-8f3a-8720-f727-01ee2c435752",
@@ -675,7 +703,7 @@
 			"responses": [],
 			"synced": false,
 			"rawModeData": "",
-			"owner": "44016",
+			"owner": "46703",
 			"folder": "112b40a5-e99f-ee1a-ab71-d20f8b9cded2"
 		},
 		{
@@ -698,32 +726,29 @@
 			"responses": [],
 			"synced": false,
 			"rawModeData": "{\n  \"id\": \"44444444-aaaa-4444-aaaa-444444444444\",\n  \"name\":\"New collection\",\n  \"assets\":[10,13,15,16]\n}",
-			"owner": "44016",
+			"owner": "46703",
 			"folder": "112b40a5-e99f-ee1a-ab71-d20f8b9cded2"
 		},
 		{
 			"id": "a28edcdf-0e8a-3810-7ae0-1bac0db6afd1",
 			"headers": "Accept: {{header_accept}}\nApp-ID: {{header_application_id}}\nApp-Key: {{header_application_key}}\nContent-Type: application/json\n",
 			"url": "http://lw-inside.public.web01.detailnet.me/api/assets/44444444-aaaa-4444-aaaa-444444444444/file-replacements",
-			"pathVariables": {},
 			"preRequestScript": "",
+			"pathVariables": {},
 			"method": "POST",
-			"collectionId": "40381fb5-2f71-5147-638f-f7cee9e7ef6e",
 			"data": [],
 			"dataMode": "raw",
-			"name": "/api/assets/{asset_id}/file-replacements",
-			"description": "Request information for replacing an asset",
-			"descriptionFormat": "html",
-			"time": 1433144927728,
 			"version": 2,
-			"responses": [],
 			"tests": "",
 			"currentHelper": "normal",
 			"helperAttributes": {},
-			"folder": "112b40a5-e99f-ee1a-ab71-d20f8b9cded2",
+			"time": 1433244293136,
+			"name": "/api/assets/{asset_id}/file-replacements",
+			"description": "Request information for replacing the file of an asset",
+			"collectionId": "40381fb5-2f71-5147-638f-f7cee9e7ef6e",
+			"responses": [],
 			"synced": false,
-			"rawModeData": "{\n  \"mime_type\":\"image/jpeg\"\n}",
-			"owner": "44016"
+			"rawModeData": "{\n  \"id\":\"44444444-aaaa-4444-aaaa-444444444444\",\n  \"mime_type\":\"image/jpeg\"\n}"
 		},
 		{
 			"collectionId": "40381fb5-2f71-5147-638f-f7cee9e7ef6e",
@@ -737,7 +762,7 @@
 			"dataMode": "raw",
 			"timestamp": 0,
 			"version": 2,
-			"owner": "44016",
+			"owner": "46703",
 			"preRequestScript": "",
 			"tests": "",
 			"synced": false,
@@ -764,7 +789,7 @@
 			"collectionId": "40381fb5-2f71-5147-638f-f7cee9e7ef6e",
 			"responses": [],
 			"synced": false,
-			"owner": "44016",
+			"owner": "46703",
 			"folder": "112b40a5-e99f-ee1a-ab71-d20f8b9cded2"
 		},
 		{
@@ -785,7 +810,7 @@
 			"description": "",
 			"collectionId": "40381fb5-2f71-5147-638f-f7cee9e7ef6e",
 			"synced": false,
-			"owner": "44016",
+			"owner": "46703",
 			"write": true,
 			"folder": "18402b80-b7ac-ffdf-1e59-a6a33463c262"
 		},
@@ -801,7 +826,7 @@
 			"dataMode": "raw",
 			"timestamp": 0,
 			"version": 2,
-			"owner": "44016",
+			"owner": "46703",
 			"preRequestScript": "",
 			"tests": "",
 			"synced": false,
@@ -830,7 +855,30 @@
 			"synced": false,
 			"folder": "60850ca0-474e-fafd-1a53-46b773e01db4",
 			"rawModeData": "{\r\n  \"block\": \"bd69d5c2-3d32-4ada-97ed-a6cc8902fe60\",\r\n  \"locales\": [\r\n    {\r\n      \"id\": \"de\",\r\n      \"text\": \"Text in DE\"\r\n    },\r\n    {\r\n      \"id\": \"de_CH\",\r\n      \"text\": \"\"\r\n    }\r\n  ]\r\n}",
-			"owner": "44016"
+			"owner": "46703"
+		},
+		{
+			"id": "bf3b670f-970e-d85e-d5f2-558284b86e96",
+			"headers": "Accept: {{header_accept}}\nApp-ID: {{header_application_id}}\nApp-Key: {{header_application_key}}\n",
+			"url": "http://lw-inside.public.web01.detailnet.me/api/assets/44444444-aaaa-4444-aaaa-444444444444/file-replacements/44444444-aaaa-4444-aaaa-444444444444",
+			"pathVariables": {},
+			"preRequestScript": "",
+			"method": "DELETE",
+			"collectionId": "40381fb5-2f71-5147-638f-f7cee9e7ef6e",
+			"data": [],
+			"dataMode": "raw",
+			"name": "/api/assets/{asset_id}/file-replacements/{file_replacement_id}",
+			"description": "Delete a file replacement",
+			"descriptionFormat": "html",
+			"time": 1433244255743,
+			"version": 2,
+			"responses": [],
+			"tests": "",
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"folder": "112b40a5-e99f-ee1a-ab71-d20f8b9cded2",
+			"synced": false,
+			"rawModeData": ""
 		},
 		{
 			"collectionId": "40381fb5-2f71-5147-638f-f7cee9e7ef6e",
@@ -844,7 +892,7 @@
 			"dataMode": "raw",
 			"timestamp": 0,
 			"version": 2,
-			"owner": "44016",
+			"owner": "46703",
 			"preRequestScript": "",
 			"tests": "",
 			"synced": false,
@@ -864,7 +912,7 @@
 			"dataMode": "raw",
 			"timestamp": 0,
 			"version": 2,
-			"owner": "44016",
+			"owner": "46703",
 			"preRequestScript": "",
 			"tests": "",
 			"synced": false,
@@ -884,7 +932,7 @@
 			"dataMode": "raw",
 			"timestamp": 0,
 			"version": 2,
-			"owner": "44016",
+			"owner": "46703",
 			"preRequestScript": "",
 			"tests": "",
 			"synced": false,
@@ -911,7 +959,7 @@
 			"collectionId": "40381fb5-2f71-5147-638f-f7cee9e7ef6e",
 			"synced": false,
 			"rawModeData": "{\n  \"tags\":[],\n  \"languages\":[],\n  \"product_groups\":[],\n  \"products\":[],\n  \"type\":15,\n  \"reference\":\"New reference id\",\n  \"description\":\"Patched Decriptrion.\"\n}",
-			"owner": "44016",
+			"owner": "46703",
 			"write": true,
 			"folder": "112b40a5-e99f-ee1a-ab71-d20f8b9cded2"
 		},
@@ -938,7 +986,7 @@
 			"synced": false,
 			"folder": "60850ca0-474e-fafd-1a53-46b773e01db4",
 			"rawModeData": "{\r\n  \"locales\": [\r\n    {\r\n      \"id\": \"de\",\r\n      \"text\": \"New text in DE\"\r\n    },\r\n    {\r\n      \"id\": \"fr_CH\",\r\n      \"text\": \"Text in fr_CH\"\r\n    }\r\n  ]\r\n}",
-			"owner": "44016"
+			"owner": "46703"
 		},
 		{
 			"id": "f6f554e0-fc31-da67-47a3-96205575df93",
@@ -958,7 +1006,7 @@
 			"description": "",
 			"collectionId": "40381fb5-2f71-5147-638f-f7cee9e7ef6e",
 			"synced": false,
-			"owner": "44016",
+			"owner": "46703",
 			"write": true,
 			"folder": "18402b80-b7ac-ffdf-1e59-a6a33463c262"
 		},
@@ -981,7 +1029,7 @@
 			"collectionId": "40381fb5-2f71-5147-638f-f7cee9e7ef6e",
 			"synced": false,
 			"rawModeData": "{\n  \"id\":\"44444444-aaaa-4444-aaaa-444444444444\",\n  \"name\":\"XXXX Product XXXX sdf sf sf ds fsdf sd fsdf s f4\",\n  \"content\": 400,\n  \"unit\":\"mg\",\n  \"groups\":[1],\n  \"skin_types\": [2],\n  \"aging_type\": 2,\n  \"fragrance\": null,\n  \"ingredients\": [\n      {\n          \"id\": 2,\n          \"content\": 0.5,\n          \"unit\" : \"%\"\n      }\n  ]\n}",
-			"owner": "44016",
+			"owner": "46703",
 			"folder": "18402b80-b7ac-ffdf-1e59-a6a33463c262"
 		},
 		{
@@ -1001,7 +1049,7 @@
 			"synced": false,
 			"write": true,
 			"folder": "112b40a5-e99f-ee1a-ab71-d20f8b9cded2",
-			"owner": "44016"
+			"owner": "46703"
 		},
 		{
 			"collectionId": "40381fb5-2f71-5147-638f-f7cee9e7ef6e",
@@ -1015,7 +1063,7 @@
 			"dataMode": "raw",
 			"timestamp": 0,
 			"version": 2,
-			"owner": "44016",
+			"owner": "46703",
 			"preRequestScript": "",
 			"tests": "",
 			"synced": false,
