@@ -9,11 +9,11 @@ Following guide applies for:
 
 ### Initial setup
  
-- Remove collection if already present _(see note above)_
+- Remove collection if already present _(see note below)_
 - Import collection 
   - Select "Collections" tab (left menu), click on "Import into Postman" icon.
   - Choose tab "Download from link"
-  - Enter collection link ([choose from section above](#collection-data))
+  - Enter collection link ([choose from section below](#collection-data))
   - Click on "Import" button (once only).
 - [Setup/Import environments](#import-environments)
 - [Setup global variables](#setup-global-variables) _(For the moment needed only for production environments)_
