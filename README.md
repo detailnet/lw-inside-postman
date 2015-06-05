@@ -9,7 +9,7 @@ Following guide applies for:
 
 ### Initial setup
  
-- Remove collection if already present _(see note below)_
+- Remove collection if already present _([see note below](#initial-setup-note))_
 - Import collection 
   - Select "Collections" tab (left menu), click on "Import into Postman" icon.
   - Choose tab "Download from link"
@@ -20,7 +20,7 @@ Following guide applies for:
 - Choose an environment
 - Run requests 
 
-> Important: If you already have the collection into your Postman application, you should first remove it before import.
+> <a name="initial-setup-note"></a>Important: If you already have the collection into your Postman application, you should first remove it before import.
 > If not, the latest collection (copy) you import will change all collection reference UUID's, making the future commit/merge unreadable.
 
 #### Collection data
