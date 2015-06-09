@@ -67,4 +67,7 @@ Set up global variables:
 - Move your mouse pointer over the collection name (left menu), click on "Share collection" icon.
 - Click on "Download" button.
 - Overwrite your local repository `{projects_dir}/lw-inside-postman/collections/default.json` file.
-- Review changes with your preferred editor and commit them trough Git.
+- Review changes with your preferred editor
+  - Replace tabs with 4 whitespaces
+  - Reset owner ro original
+  - Commit only modified/added routes trough Git.
