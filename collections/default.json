@@ -20,6 +20,7 @@
                 "233c9b2b-782b-8f2a-211b-c2fdffd14772",
                 "0af36a91-7351-d01f-070b-41fc4438b237",
                 "a28edcdf-0e8a-3810-7ae0-1bac0db6afd1",
+                "2e8e0c29-7c6d-482e-b9ff-b96dae013d71",
                 "23b4c226-da26-55bd-c13a-fa826504c4a3",
                 "bf3b670f-970e-d85e-d5f2-558284b86e96",
                 "b066e0db-b0a1-290a-8ee4-c942adab98d8",
@@ -290,7 +291,29 @@
             "description": "Search assets (create a new asset search)",
             "collectionId": "40381fb5-2f71-5147-638f-f7cee9e7ef6e",
             "synced": false,
-            "rawModeData": "{  \r\n  \"page\": 1,\r\n  \"page_size\": 5,\r\n  \"filter\": [  \r\n    {  \r\n      \"property\": \"products\",\r\n      \"operator\": \"in\",\r\n      \"value\": [  \r\n        \"3\"\r\n      ],\r\n      \"type\": \"array\"\r\n    }\r\n  ],\r\n  \"sort\": [  \r\n    {  \r\n      \"property\": \"created_on\",\r\n      \"direction\": \"asc\"\r\n    }\r\n  ]\r\n}\r\n"
+            "rawModeData": "{  \r\n  \"page\": 1,\r\n  \"page_size\": 5,\r\n  \"filter\": [  \r\n    {  \r\n      \"property\": \"products\",\r\n      \"operator\": \"in\",\r\n      \"value\": [  \r\n        \"3\"\r\n      ],\r\n      \"type\": \"array\"\r\n    }\r\n  ],\r\n  \"sort\": [  \r\n    {  \r\n      \"property\": \"created_on\",\r\n      \"direction\": \"asc\"\r\n    }\r\n  ]\r\n}\r\n",
+            "owner": "37929",
+            "folder": "112b40a5-e99f-ee1a-ab71-d20f8b9cded2"
+        },
+        {
+            "id": "2e8e0c29-7c6d-482e-b9ff-b96dae013d71",
+            "headers": "Accept: {{header_accept}}\nApp-ID: {{header_application_id}}\nApp-Key: {{header_application_key}}\n",
+            "url": "http://lw-inside.public.web01.detailnet.me/api/assets/44444444-aaaa-4444-aaaa-444444444444/file-replacements?page_size=3&page=1&sort=[{\"property\":\"created_on\",\"direction\":\"desc\"}]",
+            "preRequestScript": "",
+            "pathVariables": {},
+            "method": "GET",
+            "data": [],
+            "dataMode": "params",
+            "version": 2,
+            "tests": "",
+            "currentHelper": "normal",
+            "helperAttributes": {},
+            "time": 1433854726172,
+            "name": "/api/assets/{asset_id}/file-replacements",
+            "description": "Get history of file replacements of an asset",
+            "collectionId": "40381fb5-2f71-5147-638f-f7cee9e7ef6e",
+            "responses": [],
+            "synced": false
         },
         {
             "id": "2e9d11cd-c0e9-9f03-5a5c-2747635e7132",
