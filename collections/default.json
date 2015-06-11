@@ -58,28 +58,6 @@
             "collectionId": "40381fb5-2f71-5147-638f-f7cee9e7ef6e"
         },
         {
-            "id": "60850ca0-474e-fafd-1a53-46b773e01db4",
-            "name": "ProductText",
-            "description": "",
-            "write": true,
-            "order": [
-                "9265cb6f-ebf8-6c87-cced-f9b1e86e37f5",
-                "b644f93a-2510-9171-6ec0-3e83ccc2188e",
-                "72ea9285-72c3-ca19-cc50-e1f967338815",
-                "0c493e9c-9269-b057-b7a9-512114b57a18",
-                "52e14891-eb1b-7b90-b88e-430289a2820b",
-                "18e83f62-0ef6-c324-b595-f9b5fbba4a9e",
-                "f1472ef9-875f-31be-78e2-cacbc67b22a4",
-                "7e9d8a1a-9601-e06c-1fac-e1a6620a1a60"
-            ],
-            "collection_name": "lw-inside",
-            "collection_owner": "37929",
-            "collection_id": "40381fb5-2f71-5147-638f-f7cee9e7ef6e",
-            "collection": "40381fb5-2f71-5147-638f-f7cee9e7ef6e",
-            "owner": "37929",
-            "collectionId": "40381fb5-2f71-5147-638f-f7cee9e7ef6e"
-        },
-        {
             "id": "18402b80-b7ac-ffdf-1e59-a6a33463c262",
             "name": "Product",
             "description": "",
@@ -98,6 +76,28 @@
                 "5aac3b6a-9c7e-c27c-a455-1007fa38d878",
                 "359d3955-ef46-03d9-3f12-06cb7e94dd76",
                 "f6f554e0-fc31-da67-47a3-96205575df93"
+            ],
+            "collection_name": "lw-inside",
+            "collection_owner": "37929",
+            "collection_id": "40381fb5-2f71-5147-638f-f7cee9e7ef6e",
+            "collection": "40381fb5-2f71-5147-638f-f7cee9e7ef6e",
+            "owner": "37929",
+            "collectionId": "40381fb5-2f71-5147-638f-f7cee9e7ef6e"
+        },
+        {
+            "id": "60850ca0-474e-fafd-1a53-46b773e01db4",
+            "name": "ProductText",
+            "description": "",
+            "write": true,
+            "order": [
+                "9265cb6f-ebf8-6c87-cced-f9b1e86e37f5",
+                "b644f93a-2510-9171-6ec0-3e83ccc2188e",
+                "72ea9285-72c3-ca19-cc50-e1f967338815",
+                "0c493e9c-9269-b057-b7a9-512114b57a18",
+                "52e14891-eb1b-7b90-b88e-430289a2820b",
+                "18e83f62-0ef6-c324-b595-f9b5fbba4a9e",
+                "f1472ef9-875f-31be-78e2-cacbc67b22a4",
+                "7e9d8a1a-9601-e06c-1fac-e1a6620a1a60"
             ],
             "collection_name": "lw-inside",
             "collection_owner": "37929",
@@ -232,7 +232,7 @@
         {
             "id": "23b4c226-da26-55bd-c13a-fa826504c4a3",
             "headers": "Accept: {{header_accept}}\nApp-ID: {{header_application_id}}\nApp-Key: {{header_application_key}}\nContent-Type: application/json\n",
-            "url": "http://lw-inside.public.web01.detailnet.me/api/assets/44444444-aaaa-4444-aaaa-444444444444/file-replacements/44444444-aaaa-4444-aaaa-444444444444",
+            "url": "{{url_base}}/api/assets/44444444-aaaa-4444-aaaa-444444444444/file-replacements/44444444-aaaa-4444-aaaa-444444444444",
             "pathVariables": {},
             "preRequestScript": "",
             "method": "PATCH",
@@ -269,7 +269,7 @@
             "preRequestScript": "",
             "tests": "",
             "synced": false,
-            "rawModeData": "{\n    \"source_url\": \"http://img01.detailnet.ch/previews/louiswidmer2/500/1082.jpg\",\n    \"source_meta\": {\n        \"width\": 284,\n        \"height\": 500\n    },\n    \"action_count\": 1,\n    \"actions\": [\n        {\n            \"name\": \"thumbnail\",\n            \"params\": {\n                \"size\": \"500x500>\"\n            },\n            \"save\": {\n                \"identifier\": \"500\",\n                \"params\": {\n                    \"bucket\": \"ivan-wolf\",\n                    \"key\": \"assets/4bc644f4-b473-4634-8ba7-8e6995fc9284/TU TKL 08_DL-500.jpg\"\n                },\n                \"type\": \"s3\"\n            }\n        }\n    ],\n    \"notification_count\": 1,\n    \"notifications\": [\n        {\n            \"params\": {\n                \"url\": \"http://lw-inside.public.ivan-wolf.ngrok.com/dws-fileconversion/receive-completed-job\"\n            },\n            \"type\": \"webhook\",\n            \"id\": \"54e762de9450ec66518b4569\",\n            \"calls\": [\n                {\n                    \"sent_on\": \"2015-02-20T17:38:02+0100\",\n                    \"success\": true\n                }\n            ]\n        }\n    ],\n    \"status\": \"complete\",\n    \"result_count\": 1,\n    \"results\": [\n        {\n            \"identifier\": \"500\",\n            \"url\": \"http://ivan-wolf.s3.amazonaws.com/assets/4bc644f4-b473-4634-8ba7-8e6995fc9284/TU TKL 08_DL-500.jpg\",\n            \"id\": \"54e762e29450ec5f518b456e\",\n            \"meta\": {\n                \"width\": 284,\n                \"height\": 500\n            }\n        }\n    ],\n    \"submitted_on\": \"2015-02-20T17:37:50+0100\",\n    \"processing_started_on\": \"2015-02-20T17:37:52+0100\",\n    \"processing_completed_on\": \"2015-02-20T17:37:54+0100\",\n    \"completed_on\": \"2015-02-20T17:38:02+0100\",\n    \"id\": \"54e762de9450ec66518b4568\"\n}",
+            "rawModeData": "{\n    \"source_url\": \"http://img01.detailnet.ch/previews/louiswidmer2/500/1082.jpg\",\n    \"source_meta\": {\n        \"width\": 284,\n        \"height\": 500\n    },\n    \"action_count\": 1,\n    \"actions\": [\n        {\n            \"name\": \"thumbnail\",\n            \"params\": {\n                \"size\": \"500x500>\"\n            },\n            \"save\": {\n                \"identifier\": \"500\",\n                \"params\": {\n                    \"bucket\": \"ivan-wolf\",\n                    \"key\": \"assets/4bc644f4-b473-4634-8ba7-8e6995fc9284/TU TKL 08_DL-500.jpg\"\n                },\n                \"type\": \"s3\"\n            }\n        }\n    ],\n    \"notification_count\": 1,\n    \"notifications\": [\n        {\n            \"params\": {\n                \"url\": \"{{url_base}}/dws-fileconversion/receive-completed-job\"\n            },\n            \"type\": \"webhook\",\n            \"id\": \"54e762de9450ec66518b4569\",\n            \"calls\": [\n                {\n                    \"sent_on\": \"2015-02-20T17:38:02+0100\",\n                    \"success\": true\n                }\n            ]\n        }\n    ],\n    \"status\": \"complete\",\n    \"result_count\": 1,\n    \"results\": [\n        {\n            \"identifier\": \"500\",\n            \"url\": \"http://ivan-wolf.s3.amazonaws.com/assets/4bc644f4-b473-4634-8ba7-8e6995fc9284/TU TKL 08_DL-500.jpg\",\n            \"id\": \"54e762e29450ec5f518b456e\",\n            \"meta\": {\n                \"width\": 284,\n                \"height\": 500\n            }\n        }\n    ],\n    \"submitted_on\": \"2015-02-20T17:37:50+0100\",\n    \"processing_started_on\": \"2015-02-20T17:37:52+0100\",\n    \"processing_completed_on\": \"2015-02-20T17:37:54+0100\",\n    \"completed_on\": \"2015-02-20T17:38:02+0100\",\n    \"id\": \"54e762de9450ec66518b4568\"\n}",
             "write": true,
             "folder": "50a4bbc5-a2d5-692e-f290-b6cf69ade8a1"
         },
@@ -298,7 +298,7 @@
         {
             "id": "2e8e0c29-7c6d-482e-b9ff-b96dae013d71",
             "headers": "Accept: {{header_accept}}\nApp-ID: {{header_application_id}}\nApp-Key: {{header_application_key}}\n",
-            "url": "http://lw-inside.public.web01.detailnet.me/api/assets/44444444-aaaa-4444-aaaa-444444444444/file-replacements?page_size=3&page=1&sort=[{\"property\":\"created_on\",\"direction\":\"desc\"}]",
+            "url": "{{url_base}}/api/assets/44444444-aaaa-4444-aaaa-444444444444/file-replacements?page_size=3&page=1&sort=[{\"property\":\"created_on\",\"direction\":\"desc\"}]",
             "preRequestScript": "",
             "pathVariables": {},
             "method": "GET",
@@ -313,7 +313,9 @@
             "description": "Get history of file replacements of an asset",
             "collectionId": "40381fb5-2f71-5147-638f-f7cee9e7ef6e",
             "responses": [],
-            "synced": false
+            "synced": false,
+            "owner": "37929",
+            "folder": "112b40a5-e99f-ee1a-ab71-d20f8b9cded2"
         },
         {
             "id": "2e9d11cd-c0e9-9f03-5a5c-2747635e7132",
@@ -561,7 +563,7 @@
             "preRequestScript": "",
             "tests": "",
             "synced": false,
-            "rawModeData": "{\n    \"source_url\": \"http://img01.detailnet.ch/previews/louiswidmer2/500/1082.jpg\",\n    \"source_meta\": {\n        \"width\": 284,\n        \"height\": 500\n    },\n    \"action_count\": 1,\n    \"actions\": [\n        {\n            \"name\": \"thumbnail\",\n            \"params\": {\n                \"size\": \"500x500>\"\n            },\n            \"save\": {\n                \"identifier\": \"500\",\n                \"params\": {\n                    \"bucket\": \"ivan-wolf\",\n                    \"key\": \"assets/4bc644f4-b473-4634-8ba7-8e6995fc9284/TU TKL 08_DL-500.jpg\"\n                },\n                \"type\": \"s3\"\n            }\n        }\n    ],\n    \"notification_count\": 1,\n    \"notifications\": [\n        {\n            \"params\": {\n                \"url\": \"http://lw-inside.public.ivan-wolf.ngrok.com/dws-fileconversion/receive-completed-job\"\n            },\n            \"type\": \"webhook\",\n            \"id\": \"54e762de9450ec66518b4569\",\n            \"calls\": [\n                {\n                    \"sent_on\": \"2015-02-20T17:38:02+0100\",\n                    \"success\": true\n                }\n            ]\n        }\n    ],\n    \"status\": \"complete\",\n    \"result_count\": 1,\n    \"results\": [\n        {\n            \"identifier\": \"500\",\n            \"url\": \"http://ivan-wolf.s3.amazonaws.com/assets/4bc644f4-b473-4634-8ba7-8e6995fc9284/TU TKL 08_DL-500.jpg\",\n            \"id\": \"54e762e29450ec5f518b456e\",\n            \"meta\": {\n                \"width\": 284,\n                \"height\": 500\n            }\n        }\n    ],\n    \"submitted_on\": \"2015-02-20T17:37:50+0100\",\n    \"processing_started_on\": \"2015-02-20T17:37:52+0100\",\n    \"processing_completed_on\": \"2015-02-20T17:37:54+0100\",\n    \"completed_on\": \"2015-02-20T17:38:02+0100\",\n    \"id\": \"54e762de9450ec66518b4568\"\n}",
+            "rawModeData": "{\n    \"source_url\": \"http://img01.detailnet.ch/previews/louiswidmer2/500/1082.jpg\",\n    \"source_meta\": {\n        \"width\": 284,\n        \"height\": 500\n    },\n    \"action_count\": 1,\n    \"actions\": [\n        {\n            \"name\": \"thumbnail\",\n            \"params\": {\n                \"size\": \"500x500>\"\n            },\n            \"save\": {\n                \"identifier\": \"500\",\n                \"params\": {\n                    \"bucket\": \"ivan-wolf\",\n                    \"key\": \"assets/4bc644f4-b473-4634-8ba7-8e6995fc9284/TU TKL 08_DL-500.jpg\"\n                },\n                \"type\": \"s3\"\n            }\n        }\n    ],\n    \"notification_count\": 1,\n    \"notifications\": [\n        {\n            \"params\": {\n                \"url\": \"{{url_base}}/dws-fileconversion/receive-completed-job\"\n            },\n            \"type\": \"webhook\",\n            \"id\": \"54e762de9450ec66518b4569\",\n            \"calls\": [\n                {\n                    \"sent_on\": \"2015-02-20T17:38:02+0100\",\n                    \"success\": true\n                }\n            ]\n        }\n    ],\n    \"status\": \"complete\",\n    \"result_count\": 1,\n    \"results\": [\n        {\n            \"identifier\": \"500\",\n            \"url\": \"http://ivan-wolf.s3.amazonaws.com/assets/4bc644f4-b473-4634-8ba7-8e6995fc9284/TU TKL 08_DL-500.jpg\",\n            \"id\": \"54e762e29450ec5f518b456e\",\n            \"meta\": {\n                \"width\": 284,\n                \"height\": 500\n            }\n        }\n    ],\n    \"submitted_on\": \"2015-02-20T17:37:50+0100\",\n    \"processing_started_on\": \"2015-02-20T17:37:52+0100\",\n    \"processing_completed_on\": \"2015-02-20T17:37:54+0100\",\n    \"completed_on\": \"2015-02-20T17:38:02+0100\",\n    \"id\": \"54e762de9450ec66518b4568\"\n}",
             "write": true,
             "folder": "50a4bbc5-a2d5-692e-f290-b6cf69ade8a1"
         },
@@ -777,7 +779,7 @@
         {
             "id": "a28edcdf-0e8a-3810-7ae0-1bac0db6afd1",
             "headers": "Accept: {{header_accept}}\nApp-ID: {{header_application_id}}\nApp-Key: {{header_application_key}}\nContent-Type: application/json\n",
-            "url": "http://lw-inside.public.web01.detailnet.me/api/assets/44444444-aaaa-4444-aaaa-444444444444/file-replacements",
+            "url": "{{url_base}}/api/assets/44444444-aaaa-4444-aaaa-444444444444/file-replacements",
             "preRequestScript": "",
             "pathVariables": {},
             "method": "POST",
@@ -787,15 +789,13 @@
             "tests": "",
             "currentHelper": "normal",
             "helperAttributes": {},
-            "time": 1433244293136,
+            "time": 1434039945199,
             "name": "/api/assets/{asset_id}/file-replacements",
             "description": "Request information for replacing the file of an asset",
             "collectionId": "40381fb5-2f71-5147-638f-f7cee9e7ef6e",
             "responses": [],
             "synced": false,
-            "rawModeData": "{\n  \"id\":\"44444444-aaaa-4444-aaaa-444444444444\",\n  \"mime_type\":\"image/jpeg\"\n}",
-            "owner": "37929",
-            "folder": "112b40a5-e99f-ee1a-ab71-d20f8b9cded2"
+            "rawModeData": "{\n  \"id\":\"44444444-aaaa-4444-aaaa-444444444444\",\n  \"name\": \"newname.abc\",\n  \"mime_type\":\"image/jpeg\",\n  \"size\" : 1234\n}"
         },
         {
             "collectionId": "40381fb5-2f71-5147-638f-f7cee9e7ef6e",
@@ -813,7 +813,7 @@
             "preRequestScript": "",
             "tests": "",
             "synced": false,
-            "rawModeData": "{\n    \"source_url\": \"http://img01.detailnet.ch/previews/louiswidmer2/500/1082.jpg\",\n    \"source_meta\": {\n        \"width\": 284,\n        \"height\": 500\n    },\n    \"action_count\": 1,\n    \"actions\": [\n        {\n            \"name\": \"thumbnail\",\n            \"params\": {\n                \"size\": \"500x500>\"\n            },\n            \"save\": {\n                \"identifier\": \"500\",\n                \"params\": {\n                    \"bucket\": \"ivan-wolf\",\n                    \"key\": \"assets/4bc644f4-b473-4634-8ba7-8e6995fc9284/TU TKL 08_DL-500.jpg\"\n                },\n                \"type\": \"s3\"\n            }\n        }\n    ],\n    \"notification_count\": 1,\n    \"notifications\": [\n        {\n            \"params\": {\n                \"url\": \"http://lw-inside.public.ivan-wolf.ngrok.com/dws-fileconversion/receive-completed-job\"\n            },\n            \"type\": \"webhook\",\n            \"id\": \"54e762de9450ec66518b4569\",\n            \"calls\": [\n                {\n                    \"sent_on\": \"2015-02-20T17:38:02+0100\",\n                    \"success\": true\n                }\n            ]\n        }\n    ],\n    \"status\": \"complete\",\n    \"result_count\": 1,\n    \"results\": [\n        {\n            \"identifier\": \"500\",\n            \"url\": \"http://ivan-wolf.s3.amazonaws.com/assets/4bc644f4-b473-4634-8ba7-8e6995fc9284/TU TKL 08_DL-500.jpg\",\n            \"id\": \"54e762e29450ec5f518b456e\",\n            \"meta\": {\n                \"width\": 284,\n                \"height\": 500\n            }\n        }\n    ],\n    \"submitted_on\": \"2015-02-20T17:37:50+0100\",\n    \"processing_started_on\": \"2015-02-20T17:37:52+0100\",\n    \"processing_completed_on\": \"2015-02-20T17:37:54+0100\",\n    \"completed_on\": \"2015-02-20T17:38:02+0100\",\n    \"id\": \"54e762de9450ec66518b4568\"\n}",
+            "rawModeData": "{\n    \"source_url\": \"http://img01.detailnet.ch/previews/louiswidmer2/500/1082.jpg\",\n    \"source_meta\": {\n        \"width\": 284,\n        \"height\": 500\n    },\n    \"action_count\": 1,\n    \"actions\": [\n        {\n            \"name\": \"thumbnail\",\n            \"params\": {\n                \"size\": \"500x500>\"\n            },\n            \"save\": {\n                \"identifier\": \"500\",\n                \"params\": {\n                    \"bucket\": \"ivan-wolf\",\n                    \"key\": \"assets/4bc644f4-b473-4634-8ba7-8e6995fc9284/TU TKL 08_DL-500.jpg\"\n                },\n                \"type\": \"s3\"\n            }\n        }\n    ],\n    \"notification_count\": 1,\n    \"notifications\": [\n        {\n            \"params\": {\n                \"url\": \"{{url_base}}/dws-fileconversion/receive-completed-job\"\n            },\n            \"type\": \"webhook\",\n            \"id\": \"54e762de9450ec66518b4569\",\n            \"calls\": [\n                {\n                    \"sent_on\": \"2015-02-20T17:38:02+0100\",\n                    \"success\": true\n                }\n            ]\n        }\n    ],\n    \"status\": \"complete\",\n    \"result_count\": 1,\n    \"results\": [\n        {\n            \"identifier\": \"500\",\n            \"url\": \"http://ivan-wolf.s3.amazonaws.com/assets/4bc644f4-b473-4634-8ba7-8e6995fc9284/TU TKL 08_DL-500.jpg\",\n            \"id\": \"54e762e29450ec5f518b456e\",\n            \"meta\": {\n                \"width\": 284,\n                \"height\": 500\n            }\n        }\n    ],\n    \"submitted_on\": \"2015-02-20T17:37:50+0100\",\n    \"processing_started_on\": \"2015-02-20T17:37:52+0100\",\n    \"processing_completed_on\": \"2015-02-20T17:37:54+0100\",\n    \"completed_on\": \"2015-02-20T17:38:02+0100\",\n    \"id\": \"54e762de9450ec66518b4568\"\n}",
             "write": true,
             "folder": "18402b80-b7ac-ffdf-1e59-a6a33463c262"
         },
@@ -877,7 +877,7 @@
             "preRequestScript": "",
             "tests": "",
             "synced": false,
-            "rawModeData": "{\n    \"source_url\": \"http://img01.detailnet.ch/previews/louiswidmer2/500/1082.jpg\",\n    \"source_meta\": {\n        \"width\": 284,\n        \"height\": 500\n    },\n    \"action_count\": 1,\n    \"actions\": [\n        {\n            \"name\": \"thumbnail\",\n            \"params\": {\n                \"size\": \"500x500>\"\n            },\n            \"save\": {\n                \"identifier\": \"500\",\n                \"params\": {\n                    \"bucket\": \"ivan-wolf\",\n                    \"key\": \"assets/4bc644f4-b473-4634-8ba7-8e6995fc9284/TU TKL 08_DL-500.jpg\"\n                },\n                \"type\": \"s3\"\n            }\n        }\n    ],\n    \"notification_count\": 1,\n    \"notifications\": [\n        {\n            \"params\": {\n                \"url\": \"http://lw-inside.public.ivan-wolf.ngrok.com/dws-fileconversion/receive-completed-job\"\n            },\n            \"type\": \"webhook\",\n            \"id\": \"54e762de9450ec66518b4569\",\n            \"calls\": [\n                {\n                    \"sent_on\": \"2015-02-20T17:38:02+0100\",\n                    \"success\": true\n                }\n            ]\n        }\n    ],\n    \"status\": \"complete\",\n    \"result_count\": 1,\n    \"results\": [\n        {\n            \"identifier\": \"500\",\n            \"url\": \"http://ivan-wolf.s3.amazonaws.com/assets/4bc644f4-b473-4634-8ba7-8e6995fc9284/TU TKL 08_DL-500.jpg\",\n            \"id\": \"54e762e29450ec5f518b456e\",\n            \"meta\": {\n                \"width\": 284,\n                \"height\": 500\n            }\n        }\n    ],\n    \"submitted_on\": \"2015-02-20T17:37:50+0100\",\n    \"processing_started_on\": \"2015-02-20T17:37:52+0100\",\n    \"processing_completed_on\": \"2015-02-20T17:37:54+0100\",\n    \"completed_on\": \"2015-02-20T17:38:02+0100\",\n    \"id\": \"54e762de9450ec66518b4568\"\n}",
+            "rawModeData": "{\n    \"source_url\": \"http://img01.detailnet.ch/previews/louiswidmer2/500/1082.jpg\",\n    \"source_meta\": {\n        \"width\": 284,\n        \"height\": 500\n    },\n    \"action_count\": 1,\n    \"actions\": [\n        {\n            \"name\": \"thumbnail\",\n            \"params\": {\n                \"size\": \"500x500>\"\n            },\n            \"save\": {\n                \"identifier\": \"500\",\n                \"params\": {\n                    \"bucket\": \"ivan-wolf\",\n                    \"key\": \"assets/4bc644f4-b473-4634-8ba7-8e6995fc9284/TU TKL 08_DL-500.jpg\"\n                },\n                \"type\": \"s3\"\n            }\n        }\n    ],\n    \"notification_count\": 1,\n    \"notifications\": [\n        {\n            \"params\": {\n                \"url\": \"{{url_base}}/dws-fileconversion/receive-completed-job\"\n            },\n            \"type\": \"webhook\",\n            \"id\": \"54e762de9450ec66518b4569\",\n            \"calls\": [\n                {\n                    \"sent_on\": \"2015-02-20T17:38:02+0100\",\n                    \"success\": true\n                }\n            ]\n        }\n    ],\n    \"status\": \"complete\",\n    \"result_count\": 1,\n    \"results\": [\n        {\n            \"identifier\": \"500\",\n            \"url\": \"http://ivan-wolf.s3.amazonaws.com/assets/4bc644f4-b473-4634-8ba7-8e6995fc9284/TU TKL 08_DL-500.jpg\",\n            \"id\": \"54e762e29450ec5f518b456e\",\n            \"meta\": {\n                \"width\": 284,\n                \"height\": 500\n            }\n        }\n    ],\n    \"submitted_on\": \"2015-02-20T17:37:50+0100\",\n    \"processing_started_on\": \"2015-02-20T17:37:52+0100\",\n    \"processing_completed_on\": \"2015-02-20T17:37:54+0100\",\n    \"completed_on\": \"2015-02-20T17:38:02+0100\",\n    \"id\": \"54e762de9450ec66518b4568\"\n}",
             "write": true,
             "folder": "112b40a5-e99f-ee1a-ab71-d20f8b9cded2"
         },
@@ -907,7 +907,7 @@
         {
             "id": "bf3b670f-970e-d85e-d5f2-558284b86e96",
             "headers": "Accept: {{header_accept}}\nApp-ID: {{header_application_id}}\nApp-Key: {{header_application_key}}\n",
-            "url": "http://lw-inside.public.web01.detailnet.me/api/assets/44444444-aaaa-4444-aaaa-444444444444/file-replacements/44444444-aaaa-4444-aaaa-444444444444",
+            "url": "{{url_base}}/api/assets/44444444-aaaa-4444-aaaa-444444444444/file-replacements/44444444-aaaa-4444-aaaa-444444444444",
             "pathVariables": {},
             "preRequestScript": "",
             "method": "DELETE",
@@ -944,7 +944,7 @@
             "preRequestScript": "",
             "tests": "",
             "synced": false,
-            "rawModeData": "{\n    \"source_url\": \"http://img01.detailnet.ch/previews/louiswidmer2/500/1082.jpg\",\n    \"source_meta\": {\n        \"width\": 284,\n        \"height\": 500\n    },\n    \"action_count\": 1,\n    \"actions\": [\n        {\n            \"name\": \"thumbnail\",\n            \"params\": {\n                \"size\": \"500x500>\"\n            },\n            \"save\": {\n                \"identifier\": \"500\",\n                \"params\": {\n                    \"bucket\": \"ivan-wolf\",\n                    \"key\": \"assets/4bc644f4-b473-4634-8ba7-8e6995fc9284/TU TKL 08_DL-500.jpg\"\n                },\n                \"type\": \"s3\"\n            }\n        }\n    ],\n    \"notification_count\": 1,\n    \"notifications\": [\n        {\n            \"params\": {\n                \"url\": \"http://lw-inside.public.ivan-wolf.ngrok.com/dws-fileconversion/receive-completed-job\"\n            },\n            \"type\": \"webhook\",\n            \"id\": \"54e762de9450ec66518b4569\",\n            \"calls\": [\n                {\n                    \"sent_on\": \"2015-02-20T17:38:02+0100\",\n                    \"success\": true\n                }\n            ]\n        }\n    ],\n    \"status\": \"complete\",\n    \"result_count\": 1,\n    \"results\": [\n        {\n            \"identifier\": \"500\",\n            \"url\": \"http://ivan-wolf.s3.amazonaws.com/assets/4bc644f4-b473-4634-8ba7-8e6995fc9284/TU TKL 08_DL-500.jpg\",\n            \"id\": \"54e762e29450ec5f518b456e\",\n            \"meta\": {\n                \"width\": 284,\n                \"height\": 500\n            }\n        }\n    ],\n    \"submitted_on\": \"2015-02-20T17:37:50+0100\",\n    \"processing_started_on\": \"2015-02-20T17:37:52+0100\",\n    \"processing_completed_on\": \"2015-02-20T17:37:54+0100\",\n    \"completed_on\": \"2015-02-20T17:38:02+0100\",\n    \"id\": \"54e762de9450ec66518b4568\"\n}",
+            "rawModeData": "{\n    \"source_url\": \"http://img01.detailnet.ch/previews/louiswidmer2/500/1082.jpg\",\n    \"source_meta\": {\n        \"width\": 284,\n        \"height\": 500\n    },\n    \"action_count\": 1,\n    \"actions\": [\n        {\n            \"name\": \"thumbnail\",\n            \"params\": {\n                \"size\": \"500x500>\"\n            },\n            \"save\": {\n                \"identifier\": \"500\",\n                \"params\": {\n                    \"bucket\": \"ivan-wolf\",\n                    \"key\": \"assets/4bc644f4-b473-4634-8ba7-8e6995fc9284/TU TKL 08_DL-500.jpg\"\n                },\n                \"type\": \"s3\"\n            }\n        }\n    ],\n    \"notification_count\": 1,\n    \"notifications\": [\n        {\n            \"params\": {\n                \"url\": \"{{url_base}}/dws-fileconversion/receive-completed-job\"\n            },\n            \"type\": \"webhook\",\n            \"id\": \"54e762de9450ec66518b4569\",\n            \"calls\": [\n                {\n                    \"sent_on\": \"2015-02-20T17:38:02+0100\",\n                    \"success\": true\n                }\n            ]\n        }\n    ],\n    \"status\": \"complete\",\n    \"result_count\": 1,\n    \"results\": [\n        {\n            \"identifier\": \"500\",\n            \"url\": \"http://ivan-wolf.s3.amazonaws.com/assets/4bc644f4-b473-4634-8ba7-8e6995fc9284/TU TKL 08_DL-500.jpg\",\n            \"id\": \"54e762e29450ec5f518b456e\",\n            \"meta\": {\n                \"width\": 284,\n                \"height\": 500\n            }\n        }\n    ],\n    \"submitted_on\": \"2015-02-20T17:37:50+0100\",\n    \"processing_started_on\": \"2015-02-20T17:37:52+0100\",\n    \"processing_completed_on\": \"2015-02-20T17:37:54+0100\",\n    \"completed_on\": \"2015-02-20T17:38:02+0100\",\n    \"id\": \"54e762de9450ec66518b4568\"\n}",
             "write": true,
             "folder": "112b40a5-e99f-ee1a-ab71-d20f8b9cded2"
         },
@@ -1100,22 +1100,24 @@
             "owner": "37929"
         },
         {
-            "collectionId": "40381fb5-2f71-5147-638f-f7cee9e7ef6e",
             "id": "fde5bf66-67ad-0efe-01aa-372cbd5ddb23",
-            "name": "/dws-fileconversion/receive-completed-job",
-            "description": "DWS-FileConversion notification",
-            "url": "http://lw-inside.public.ivan-wolf.ngrok.com/dws-fileconversion/receive-completed-job",
+            "headers": "Accept: {{header_accept}}\nApp-ID: {{credential_application_id}}\nApp-Key: {{credential_application_key}}\nContent-Type: application/json\n",
+            "url": "{{url_base}}/dws-fileconversion/receive-completed-job",
+            "preRequestScript": "",
+            "pathVariables": {},
             "method": "POST",
-            "headers": "Content-Type: application/json\n",
             "data": [],
             "dataMode": "raw",
-            "timestamp": 0,
             "version": 2,
-            "owner": "37929",
-            "preRequestScript": "",
             "tests": "",
+            "currentHelper": "normal",
+            "helperAttributes": {},
+            "time": 1434040114745,
+            "name": "/dws-fileconversion/receive-completed-job",
+            "description": "DWS-FileConversion notification",
+            "collectionId": "40381fb5-2f71-5147-638f-f7cee9e7ef6e",
             "synced": false,
-            "rawModeData": "{\n    \"source_url\": \"http://img01.detailnet.ch/previews/louiswidmer2/500/1082.jpg\",\n    \"source_meta\": {\n        \"width\": 284,\n        \"height\": 500\n    },\n    \"action_count\": 1,\n    \"actions\": [\n        {\n            \"name\": \"thumbnail\",\n            \"params\": {\n                \"size\": \"500x500>\"\n            },\n            \"save\": {\n                \"identifier\": \"500\",\n                \"params\": {\n                    \"bucket\": \"ivan-wolf\",\n                    \"key\": \"assets/4bc644f4-b473-4634-8ba7-8e6995fc9284/TU TKL 08_DL-500.jpg\"\n                },\n                \"type\": \"s3\"\n            }\n        }\n    ],\n    \"notification_count\": 1,\n    \"notifications\": [\n        {\n            \"params\": {\n                \"url\": \"http://lw-inside.public.ivan-wolf.ngrok.com/dws-fileconversion/receive-completed-job\"\n            },\n            \"type\": \"webhook\",\n            \"id\": \"54e762de9450ec66518b4569\",\n            \"calls\": [\n                {\n                    \"sent_on\": \"2015-02-20T17:38:02+0100\",\n                    \"success\": true\n                }\n            ]\n        }\n    ],\n    \"status\": \"complete\",\n    \"result_count\": 1,\n    \"results\": [\n        {\n            \"identifier\": \"500\",\n            \"url\": \"http://ivan-wolf.s3.amazonaws.com/assets/4bc644f4-b473-4634-8ba7-8e6995fc9284/TU TKL 08_DL-500.jpg\",\n            \"id\": \"54e762e29450ec5f518b456e\",\n            \"meta\": {\n                \"width\": 284,\n                \"height\": 500\n            }\n        }\n    ],\n    \"submitted_on\": \"2015-02-20T17:37:50+0100\",\n    \"processing_started_on\": \"2015-02-20T17:37:52+0100\",\n    \"processing_completed_on\": \"2015-02-20T17:37:54+0100\",\n    \"completed_on\": \"2015-02-20T17:38:02+0100\",\n    \"id\": \"54e762de9450ec66518b4568\"\n}"
+            "rawModeData": "{\n    \"source_url\": \"http://img01.detailnet.ch/previews/louiswidmer2/500/1082.jpg\",\n    \"source_meta\": {\n        \"width\": 284,\n        \"height\": 500\n    },\n    \"action_count\": 1,\n    \"actions\": [\n        {\n            \"name\": \"thumbnail\",\n            \"params\": {\n                \"size\": \"500x500>\"\n            },\n            \"save\": {\n                \"identifier\": \"500\",\n                \"params\": {\n                    \"bucket\": \"ivan-wolf\",\n                    \"key\": \"assets/4bc644f4-b473-4634-8ba7-8e6995fc9284/TU TKL 08_DL-500.jpg\"\n                },\n                \"type\": \"s3\"\n            }\n        }\n    ],\n    \"notification_count\": 1,\n    \"notifications\": [\n        {\n            \"params\": {\n                \"url\": \"{{url_base}}/dws-fileconversion/receive-completed-job\"\n            },\n            \"type\": \"webhook\",\n            \"id\": \"54e762de9450ec66518b4569\",\n            \"calls\": [\n                {\n                    \"sent_on\": \"2015-02-20T17:38:02+0100\",\n                    \"success\": true\n                }\n            ]\n        }\n    ],\n    \"status\": \"complete\",\n    \"result_count\": 1,\n    \"results\": [\n        {\n            \"identifier\": \"500\",\n            \"url\": \"http://ivan-wolf.s3.amazonaws.com/assets/4bc644f4-b473-4634-8ba7-8e6995fc9284/TU TKL 08_DL-500.jpg\",\n            \"id\": \"54e762e29450ec5f518b456e\",\n            \"meta\": {\n                \"width\": 284,\n                \"height\": 500\n            }\n        }\n    ],\n    \"submitted_on\": \"2015-02-20T17:37:50+0100\",\n    \"processing_started_on\": \"2015-02-20T17:37:52+0100\",\n    \"processing_completed_on\": \"2015-02-20T17:37:54+0100\",\n    \"completed_on\": \"2015-02-20T17:38:02+0100\",\n    \"id\": \"54e762de9450ec66518b4568\"\n}"
         }
     ]
 }
