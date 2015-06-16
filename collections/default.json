@@ -58,6 +58,27 @@
             "collectionId": "40381fb5-2f71-5147-638f-f7cee9e7ef6e"
         },
         {
+            "id": "60850ca0-474e-fafd-1a53-46b773e01db4",
+            "name": "ProductText",
+            "description": "",
+            "write": true,
+            "order": [
+                "b644f93a-2510-9171-6ec0-3e83ccc2188e",
+                "9265cb6f-ebf8-6c87-cced-f9b1e86e37f5",
+                "0c493e9c-9269-b057-b7a9-512114b57a18",
+                "52e14891-eb1b-7b90-b88e-430289a2820b",
+                "18e83f62-0ef6-c324-b595-f9b5fbba4a9e",
+                "f1472ef9-875f-31be-78e2-cacbc67b22a4",
+                "7e9d8a1a-9601-e06c-1fac-e1a6620a1a60"
+            ],
+            "collection_name": "lw-inside",
+            "collection_owner": "37929",
+            "collection_id": "40381fb5-2f71-5147-638f-f7cee9e7ef6e",
+            "collection": "40381fb5-2f71-5147-638f-f7cee9e7ef6e",
+            "owner": "37929",
+            "collectionId": "40381fb5-2f71-5147-638f-f7cee9e7ef6e"
+        },
+        {
             "id": "18402b80-b7ac-ffdf-1e59-a6a33463c262",
             "name": "Product",
             "description": "",
@@ -76,27 +97,6 @@
                 "5aac3b6a-9c7e-c27c-a455-1007fa38d878",
                 "359d3955-ef46-03d9-3f12-06cb7e94dd76",
                 "f6f554e0-fc31-da67-47a3-96205575df93"
-            ],
-            "collection_name": "lw-inside",
-            "collection_owner": "37929",
-            "collection_id": "40381fb5-2f71-5147-638f-f7cee9e7ef6e",
-            "collection": "40381fb5-2f71-5147-638f-f7cee9e7ef6e",
-            "owner": "37929",
-            "collectionId": "40381fb5-2f71-5147-638f-f7cee9e7ef6e"
-        },
-        {
-            "id": "60850ca0-474e-fafd-1a53-46b773e01db4",
-            "name": "ProductText",
-            "description": "",
-            "write": true,
-            "order": [
-                "b644f93a-2510-9171-6ec0-3e83ccc2188e",
-                "9265cb6f-ebf8-6c87-cced-f9b1e86e37f5",
-                "0c493e9c-9269-b057-b7a9-512114b57a18",
-                "52e14891-eb1b-7b90-b88e-430289a2820b",
-                "18e83f62-0ef6-c324-b595-f9b5fbba4a9e",
-                "f1472ef9-875f-31be-78e2-cacbc67b22a4",
-                "7e9d8a1a-9601-e06c-1fac-e1a6620a1a60"
             ],
             "collection_name": "lw-inside",
             "collection_owner": "37929",
@@ -174,7 +174,9 @@
             "collectionId": "40381fb5-2f71-5147-638f-f7cee9e7ef6e",
             "responses": [],
             "synced": false,
-            "rawModeData": "{\r\n  \"locales\": [\r\n    {\r\n      \"id\": \"de\",\r\n      \"text\": \"Text in DE\"\r\n    },\r\n    {\r\n      \"id\": \"de_CH\",\r\n      \"text\": \"\"\r\n    }\r\n  ]\r\n}"
+            "rawModeData": "{\r\n  \"locales\": [\r\n    {\r\n      \"id\": \"de\",\r\n      \"text\": \"Text in DE\"\r\n    },\r\n    {\r\n      \"id\": \"de_CH\",\r\n      \"text\": \"\"\r\n    }\r\n  ]\r\n}",
+            "owner": "37929",
+            "folder": "60850ca0-474e-fafd-1a53-46b773e01db4"
         },
         {
             "id": "18e83f62-0ef6-c324-b595-f9b5fbba4a9e",
@@ -194,7 +196,9 @@
             "description": "List a single product text",
             "collectionId": "40381fb5-2f71-5147-638f-f7cee9e7ef6e",
             "responses": [],
-            "synced": false
+            "synced": false,
+            "owner": "37929",
+            "folder": "60850ca0-474e-fafd-1a53-46b773e01db4"
         },
         {
             "id": "233c9b2b-782b-8f2a-211b-c2fdffd14772",
@@ -323,14 +327,12 @@
             "tests": "",
             "currentHelper": "normal",
             "helperAttributes": {},
-            "time": 1432655190901,
+            "time": 1434460465265,
             "name": "/api/products/{product_id}",
             "description": "",
             "collectionId": "40381fb5-2f71-5147-638f-f7cee9e7ef6e",
             "synced": false,
-            "rawModeData": "{\n  \"name\":\"XXXX Product updated\",\n  \"fragrance\": 1,\n  \"content\": 400,\n  \"unit\":\"mg\",\n  \"ingredients\": [\n      {\n          \"id\": 1,\n          \"content\": 0.05,\n          \"unit\" : \"%\"\n      },\n      {\n          \"id\": 6,\n          \"content\": 0.001,\n          \"unit\" : \"%\"\n      }\n  ]\n}",
-            "owner": "37929",
-            "folder": "18402b80-b7ac-ffdf-1e59-a6a33463c262"
+            "rawModeData": "{\n  \"name\":\"XXXX Product updated\",\n  \"fragrance\": 1,\n  \"content\": {\n      \"value\": 300,\n      \"unit\": \"mg\"\n  },\n  \"unit\":\"mg\",\n  \"ingredients\": [\n      {\n          \"id\": 1,\n          \"content\": 0.05,\n          \"unit\" : \"%\"\n      },\n      {\n          \"id\": 6,\n          \"content\": 0.001,\n          \"unit\" : \"%\"\n      }\n  ]\n}"
         },
         {
             "id": "359d3955-ef46-03d9-3f12-06cb7e94dd76",
@@ -691,7 +693,9 @@
             "description": "List a product's texts",
             "collectionId": "40381fb5-2f71-5147-638f-f7cee9e7ef6e",
             "responses": [],
-            "synced": false
+            "synced": false,
+            "owner": "37929",
+            "folder": "60850ca0-474e-fafd-1a53-46b773e01db4"
         },
         {
             "id": "943d750f-8f3a-8720-f727-01ee2c435752",
@@ -865,7 +869,9 @@
             "collectionId": "40381fb5-2f71-5147-638f-f7cee9e7ef6e",
             "responses": [],
             "synced": false,
-            "rawModeData": "{\r\n  \"id\": \"44444444-aaaa-4444-aaaa-444444444444\",\r\n  \"block\": \"bd69d5c2-3d32-4ada-97ed-a6cc8902fe60\",\r\n  \"locales\": [\r\n    {\r\n      \"id\": \"de\",\r\n      \"text\": \"Text in DE\"\r\n    },\r\n    {\r\n      \"id\": \"de_CH\",\r\n      \"text\": \"\"\r\n    }\r\n  ]\r\n}"
+            "rawModeData": "{\r\n  \"id\": \"44444444-aaaa-4444-aaaa-444444444444\",\r\n  \"block\": \"bd69d5c2-3d32-4ada-97ed-a6cc8902fe60\",\r\n  \"locales\": [\r\n    {\r\n      \"id\": \"de\",\r\n      \"text\": \"Text in DE\"\r\n    },\r\n    {\r\n      \"id\": \"de_CH\",\r\n      \"text\": \"\"\r\n    }\r\n  ]\r\n}",
+            "owner": "37929",
+            "folder": "60850ca0-474e-fafd-1a53-46b773e01db4"
         },
         {
             "id": "bf3b670f-970e-d85e-d5f2-558284b86e96",
@@ -993,7 +999,9 @@
             "collectionId": "40381fb5-2f71-5147-638f-f7cee9e7ef6e",
             "responses": [],
             "synced": false,
-            "rawModeData": "{\r\n  \"locales\": [\r\n    {\r\n      \"id\": \"de\",\r\n      \"text\": \"New text in DE\"\r\n    },\r\n    {\r\n      \"id\": \"fr_CH\",\r\n      \"text\": \"Text in fr_CH\"\r\n    }\r\n  ]\r\n}"
+            "rawModeData": "{\r\n  \"locales\": [\r\n    {\r\n      \"id\": \"de\",\r\n      \"text\": \"New text in DE\"\r\n    },\r\n    {\r\n      \"id\": \"fr_CH\",\r\n      \"text\": \"Text in fr_CH\"\r\n    }\r\n  ]\r\n}",
+            "owner": "37929",
+            "folder": "60850ca0-474e-fafd-1a53-46b773e01db4"
         },
         {
             "id": "f6f554e0-fc31-da67-47a3-96205575df93",
@@ -1035,7 +1043,9 @@
             "description": "",
             "collectionId": "40381fb5-2f71-5147-638f-f7cee9e7ef6e",
             "synced": false,
-            "rawModeData": "{\n  \"id\":\"44444444-aaaa-4444-aaaa-444444444444\",\n  \"name\":\"XXXX Product XXXX sdf sf sf ds fsdf sd fsdf s f4\",\n  \"content\": {\n      \"value\":400,\n      \"unit\":\"mg\"\n  },\n  \"groups\":[1],\n  \"skin_types\": [2],\n  \"aging_type\": 2,\n  \"fragrance\": null,\n  \"ingredients\": [\n      {\n          \"id\": 2,\n          \"content\": 0.5,\n          \"unit\" : \"%\"\n      }\n  ]\n}"
+            "rawModeData": "{\n  \"id\":\"44444444-aaaa-4444-aaaa-444444444444\",\n  \"name\":\"XXXX Product XXXX sdf sf sf ds fsdf sd fsdf s f4\",\n  \"content\": {\n      \"value\":400,\n      \"unit\":\"mg\"\n  },\n  \"groups\":[1],\n  \"skin_types\": [2],\n  \"aging_type\": 2,\n  \"fragrance\": null,\n  \"ingredients\": [\n      {\n          \"id\": 2,\n          \"content\": 0.5,\n          \"unit\" : \"%\"\n      }\n  ]\n}",
+            "owner": "37929",
+            "folder": "18402b80-b7ac-ffdf-1e59-a6a33463c262"
         },
         {
             "collectionId": "40381fb5-2f71-5147-638f-f7cee9e7ef6e",
