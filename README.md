@@ -49,8 +49,8 @@ We use global variables to store data that is your own, and must not be shared w
 
 Currently we support following global variables:
 
- - `credential_application_id`: API application ID _(used for production environments)_
- - `credential_application_key`: API application Key _(used for production environments)_
+ - `lw_inside_production_application_id`: API application ID _(used for production environments)_
+ - `lw_inside_production_application_key`: API application Key _(used for production environments)_
 
 Set up global variables:
 
