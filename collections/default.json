@@ -771,7 +771,7 @@
             "id": "a353ebaf-4c20-b697-d3d3-e8e5eaac1dfa",
             "name": "/api/product-groups",
             "description": "",
-            "url": "{{url_base}}/api/product-groups?page_size=-1",
+            "url": "{{url_base}}/api/product-groups?page_size=5&page=1&sort=[{\"property\":\"sort_index\",\"direction\":\"asc\"}]&filter=[{\"property\":\"name\",\"operator\":\"like\",\"type\":\"string\",\"value\":\"%a%\"}]",
             "method": "GET",
             "headers": "Accept: {{header_accept}}\nApp-ID: {{header_application_id}}\nApp-Key: {{header_application_key}}\n",
             "data": [],
