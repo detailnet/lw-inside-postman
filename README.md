@@ -9,18 +9,18 @@ Following guide applies for:
 
 ### Initial setup
  
-- Remove collection if already present _(see note above)_.
+- Remove collection if already present _([see note below](#initial-setup-note))_.
 - Import collection:
   - Select "Collections" tab (left menu), click on "Import into Postman" icon.
   - Choose tab "Download from link".
   - Enter collection link ([choose from section below](#collection-data)).
   - Click on "Import" button (once only).
-- [Setup/Import environments](#import-environments)
-- [Setup global variables](#setup-global-variables) _(For the moment needed only for production environments)_
+- [Setup/Import environments](#import-environments).
+- [Setup global variables](#setup-global-variables) _(For the moment needed only for production environments)_.
 - Choose an environment.
 - Run requests.
 
-> Important: If you already have the collection into your Postman application, you should first remove it before import.
+> <a name="initial-setup-note"></a>Important: If you already have the collection into your Postman application, you should first remove it before import.
 > If not, the latest collection (copy) you import will change all collection reference UUID's, making the future commit/merge unreadable.
 
 #### Collection data
@@ -49,8 +49,8 @@ We use global variables to store data that is your own, and must not be shared w
 
 Currently we support following global variables:
 
- - `credential_application_id`: API application ID _(used for production environments)_
- - `credential_application_key`: API application Key _(used for production environments)_
+ - `lw_inside_production_application_id`: API application ID _(used for production environments)_
+ - `lw_inside_production_application_key`: API application Key _(used for production environments)_
 
 Set up global variables:
 
@@ -67,4 +67,7 @@ Set up global variables:
 - Move your mouse pointer over the collection name (left menu), click on "Share collection" icon.
 - Click on "Download" button.
 - Overwrite your local repository's `{projects_dir}/lw-inside-postman/collections/default.json` file.
-- Review changes with your preferred editor and commit/push them through Git.
+- Review changes with your preferred editor:
+  - Replace tabs with 4 whitespaces.
+  - Reset owner to original.
+  - Commit only modified/added routes through Git.

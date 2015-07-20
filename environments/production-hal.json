@@ -18,14 +18,14 @@
 		},
 		{
 			"key": "header_application_id",
-			"value": "{{credential_application_id}}",
+			"value": "{{lw_inside_production_application_id}}",
 			"type": "text",
 			"name": "header_application_id",
 			"enabled": true
 		},
 		{
 			"key": "header_application_key",
-			"value": "{{credential_application_key}}",
+			"value": "{{lw_inside_production_application_key}}",
 			"type": "text",
 			"name": "header_application_key",
 			"enabled": true
