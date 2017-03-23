@@ -84,7 +84,7 @@
 				{
 					"name": "/api/assets",
 					"request": {
-						"url": "{{url_base}}/api/assets?page=1&page_size=5&filter=[{\"property\":\"products\",\"operator\":\"in\",\"value\":[\"3\"],\"type\":\"array\"}]&sort=[{\"property\":\"created_on\",\"direction\":\"asc\"}]",
+						"url": "{{url_base}}/api/assets?page=1&page_size=5&filter=[{\"property\":\"products\",\"operator\":\"in\",\"value\":[\"2b46f560-f7c4-4fa1-9ed6-a25c39d6b671\"],\"type\":\"array\"}]&sort=[{\"property\":\"created_on\",\"direction\":\"asc\"}]",
 						"method": "GET",
 						"header": [
 							{
@@ -138,7 +138,7 @@
 				{
 					"name": "/api/assets/{asset_id}",
 					"request": {
-						"url": "{{url_base}}/api/assets/44444444-aaaa-4444-aaaa-444444444444",
+						"url": "{{url_base}}/api/assets/c9925402-cff8-49c7-9b4e-b6a991b36a69",
 						"method": "PATCH",
 						"header": [
 							{
@@ -164,7 +164,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n  \"tags\":[],\n  \"languages\":[],\n  \"product_groups\":[],\n  \"products\":[],\n  \"type\":15,\n  \"reference\":\"New reference id\",\n  \"description\":\"Patched Decriptrion.\"\n}"
+							"raw": "{\n  \"tags\":[],\n  \"languages\":[\"it\"],\n  \"product_groups\":[],\n  \"products\":[],\n  \"type\":\"0d55e175-09a0-4007-8317-e5c6a1560af2\",\n  \"reference\":\"New reference id\",\n  \"description\":\"Patched Decriptrion.\",\n  \"archived\": true\n}"
 						},
 						"description": ""
 					},
