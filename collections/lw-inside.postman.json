@@ -1,46 +1,50 @@
 {
-	"variables": [],
 	"info": {
 		"name": "lw-inside",
 		"_postman_id": "1039b4e6-a34a-9790-accc-315a0036e8c8",
 		"description": "Louis Widmer Inside API",
-		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
 	},
 	"item": [
 		{
 			"name": "Asset",
-			"description": "",
 			"item": [
 				{
 					"name": "/api/assets/new",
 					"request": {
-						"url": "{{url_base}}/api/assets/new",
 						"method": "POST",
 						"header": [
 							{
 								"key": "Accept",
-								"value": "{{header_accept}}",
-								"description": ""
+								"value": "{{header_accept}}"
 							},
 							{
 								"key": "App-ID",
-								"value": "{{header_application_id}}",
-								"description": ""
+								"value": "{{header_application_id}}"
 							},
 							{
 								"key": "App-Key",
-								"value": "{{header_application_key}}",
-								"description": ""
+								"value": "{{header_application_key}}"
 							},
 							{
 								"key": "Content-Type",
-								"value": "application/json",
-								"description": ""
+								"value": "application/json"
 							}
 						],
 						"body": {
 							"mode": "raw",
 							"raw": "{\n  \"name\":\"test.jpg\",\n  \"mime_type\":\"image/jpeg\"\n}"
+						},
+						"url": {
+							"raw": "{{url_base}}/api/assets/new",
+							"host": [
+								"{{url_base}}"
+							],
+							"path": [
+								"api",
+								"assets",
+								"new"
+							]
 						},
 						"description": "Request information for a new asset"
 					},
@@ -49,33 +53,38 @@
 				{
 					"name": "/api/assets",
 					"request": {
-						"url": "{{url_base}}/api/assets",
 						"method": "POST",
 						"header": [
 							{
 								"key": "Accept",
-								"value": "{{header_accept}}",
-								"description": ""
+								"value": "{{header_accept}}"
 							},
 							{
 								"key": "App-ID",
-								"value": "{{header_application_id}}",
-								"description": ""
+								"value": "{{header_application_id}}"
 							},
 							{
 								"key": "App-Key",
-								"value": "{{header_application_key}}",
-								"description": ""
+								"value": "{{header_application_key}}"
 							},
 							{
 								"key": "Content-Type",
-								"value": "application/json",
-								"description": ""
+								"value": "application/json"
 							}
 						],
 						"body": {
 							"mode": "raw",
 							"raw": "{\n  \"id\":\"19cecacb-0b24-43c3-8df3-4086fb60f49c\",\n  \"name\":\"test.jpg\",\n  \"url\":\"https://ivan-wolf.s3-eu-west-1.amazonaws.com/a04aeb8d-21c6-4134-987e-48c1f361c045/test.jpg\",\n  \"size\":1234,\n  \"mime_type\":\"image/jpeg\",\n  \"type\":\"2acb20c6-9571-4444-88dd-c36b487e06d9\",\n  \"languages\":[\"de_CH\",\"fr_BE\"],\n  \"products\":[\"c9925402-cff8-49c7-9b4e-b6a991b36a67\",\"7fe5aea1-e603-49b4-867d-102237381987\"],\n  \"product_groups\":[\"d88c1a9c-c541-4ad4-a053-9959f0c8ca90\", \"291e7a7e-8d99-4c66-900d-6a1463a7cfc8\"],\n  \"tags\":[\"187650d3-b9e1-42a0-b81d-1721414dc2c5\",\"0c2122cf-b818-4923-a211-1178c8fd973a\"],\n  \"roles\":[\"2acb20c6-9571-4444-88dd-c36b487e06d3\", \"2acb20c6-9571-4444-88dd-c36b487e06d9\"],\n  \"created_by\":\"8e29fbbd-de31-4eaa-942a-34a70f851182\",\n  \"reference\":\"Test reference id\",\n  \"description\":\"Decriptrion on\\nlines.\"\n}"
+						},
+						"url": {
+							"raw": "{{url_base}}/api/assets",
+							"host": [
+								"{{url_base}}"
+							],
+							"path": [
+								"api",
+								"assets"
+							]
 						},
 						"description": "Create a new asset"
 					},
@@ -84,26 +93,53 @@
 				{
 					"name": "/api/assets",
 					"request": {
-						"url": "{{url_base}}/api/assets?page=1&page_size=5&filter=[{\"property\":\"products\",\"operator\":\"in\",\"value\":[\"2b46f560-f7c4-4fa1-9ed6-a25c39d6b671\"],\"type\":\"array\"}]&sort=[{\"property\":\"created_on\",\"direction\":\"asc\"}]",
 						"method": "GET",
 						"header": [
 							{
 								"key": "Accept",
-								"value": "{{header_accept}}",
-								"description": ""
+								"value": "{{header_accept}}"
 							},
 							{
 								"key": "App-ID",
-								"value": "{{header_application_id}}",
-								"description": ""
+								"value": "{{header_application_id}}"
 							},
 							{
 								"key": "App-Key",
-								"value": "{{header_application_key}}",
-								"description": ""
+								"value": "{{header_application_key}}"
 							}
 						],
-						"body": {},
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{url_base}}/api/assets?page=1&page_size=5&filter=[{\"property\":\"products\",\"operator\":\"in\",\"value\":[\"2b46f560-f7c4-4fa1-9ed6-a25c39d6b671\"],\"type\":\"array\"}]&sort=[{\"property\":\"created_on\",\"direction\":\"asc\"}]",
+							"host": [
+								"{{url_base}}"
+							],
+							"path": [
+								"api",
+								"assets"
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "1"
+								},
+								{
+									"key": "page_size",
+									"value": "5"
+								},
+								{
+									"key": "filter",
+									"value": "[{\"property\":\"products\",\"operator\":\"in\",\"value\":[\"2b46f560-f7c4-4fa1-9ed6-a25c39d6b671\"],\"type\":\"array\"}]"
+								},
+								{
+									"key": "sort",
+									"value": "[{\"property\":\"created_on\",\"direction\":\"asc\"}]"
+								}
+							]
+						},
 						"description": "List assets"
 					},
 					"response": []
@@ -111,26 +147,36 @@
 				{
 					"name": "/api/assets/{asset_id}",
 					"request": {
-						"url": "{{url_base}}/api/assets/44444444-aaaa-4444-aaaa-444444444444",
 						"method": "GET",
 						"header": [
 							{
 								"key": "Accept",
-								"value": "{{header_accept}}",
-								"description": ""
+								"value": "{{header_accept}}"
 							},
 							{
 								"key": "App-ID",
-								"value": "{{header_application_id}}",
-								"description": ""
+								"value": "{{header_application_id}}"
 							},
 							{
 								"key": "App-Key",
-								"value": "{{header_application_key}}",
-								"description": ""
+								"value": "{{header_application_key}}"
 							}
 						],
-						"body": {},
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{url_base}}/api/assets/44444444-aaaa-4444-aaaa-444444444444",
+							"host": [
+								"{{url_base}}"
+							],
+							"path": [
+								"api",
+								"assets",
+								"44444444-aaaa-4444-aaaa-444444444444"
+							]
+						},
 						"description": "List single asset"
 					},
 					"response": []
@@ -138,98 +184,115 @@
 				{
 					"name": "/api/assets/{asset_id}",
 					"request": {
-						"url": "{{url_base}}/api/assets/c9925402-cff8-49c7-9b4e-b6a991b36a69",
 						"method": "PATCH",
 						"header": [
 							{
 								"key": "Accept",
-								"value": "{{header_accept}}",
-								"description": ""
+								"value": "{{header_accept}}"
 							},
 							{
 								"key": "App-ID",
-								"value": "{{header_application_id}}",
-								"description": ""
+								"value": "{{header_application_id}}"
 							},
 							{
 								"key": "App-Key",
-								"value": "{{header_application_key}}",
-								"description": ""
+								"value": "{{header_application_key}}"
 							},
 							{
 								"key": "Content-Type",
-								"value": "application/json",
-								"description": ""
+								"value": "application/json"
 							}
 						],
 						"body": {
 							"mode": "raw",
 							"raw": "{\n  \"tags\":[],\n  \"languages\":[\"it\"],\n  \"product_groups\":[],\n  \"products\":[],\n  \"type\":\"0d55e175-09a0-4007-8317-e5c6a1560af2\",\n  \"reference\":\"New reference id\",\n  \"description\":\"Patched Decriptrion.\",\n  \"archived\": true\n}"
 						},
-						"description": ""
+						"url": {
+							"raw": "{{url_base}}/api/assets/c9925402-cff8-49c7-9b4e-b6a991b36a69",
+							"host": [
+								"{{url_base}}"
+							],
+							"path": [
+								"api",
+								"assets",
+								"c9925402-cff8-49c7-9b4e-b6a991b36a69"
+							]
+						}
 					},
 					"response": []
 				},
 				{
 					"name": "/api/assets/{asset_ids}",
 					"request": {
-						"url": "{{url_base}}/api/assets/44444444-aaaa-4444-aaaa-444444444444,a0d6b94e-4d0f-4a68-aa95-b1641aedaee6",
 						"method": "PATCH",
 						"header": [
 							{
 								"key": "Accept",
-								"value": "{{header_accept}}",
-								"description": ""
+								"value": "{{header_accept}}"
 							},
 							{
 								"key": "App-ID",
-								"value": "{{header_application_id}}",
-								"description": ""
+								"value": "{{header_application_id}}"
 							},
 							{
 								"key": "App-Key",
-								"value": "{{header_application_key}}",
-								"description": ""
+								"value": "{{header_application_key}}"
 							},
 							{
 								"key": "Content-Type",
-								"value": "application/json",
-								"description": ""
+								"value": "application/json"
 							}
 						],
 						"body": {
 							"mode": "raw",
 							"raw": "{\n    \"type\":\"f26bc1d9-2ce8-42c3-8460-99841c00e77c\",\n    \"product_groups\":[\"ab908fed-6b07-4ef7-b7ba-2a33d6589350\",\"20a1b89e-38f4-42f2-aa2a-943b34ec39e2\"],\n    \"products\":[\"abc1c09b-b89e-4bf0-9924-03712ef262f5\",\"4a190a42-6a88-4d4a-a7cb-01ec2ddfb13f\"],\n    \"languages\":[\"en_CH\",\"sv_FI\"],\n    \"reference\":\"new reference\",\n    \"description\":\"New description\\nSecond line\",\n    \"tags\":[\"187650d3-b9e1-42a0-b81d-1721414dc2c5\"]\n}"
 						},
-						"description": ""
+						"url": {
+							"raw": "{{url_base}}/api/assets/44444444-aaaa-4444-aaaa-444444444444,a0d6b94e-4d0f-4a68-aa95-b1641aedaee6",
+							"host": [
+								"{{url_base}}"
+							],
+							"path": [
+								"api",
+								"assets",
+								"44444444-aaaa-4444-aaaa-444444444444,a0d6b94e-4d0f-4a68-aa95-b1641aedaee6"
+							]
+						}
 					},
 					"response": []
 				},
 				{
 					"name": "/api/assets/{asset_id}",
 					"request": {
-						"url": "{{url_base}}/api/assets/44444444-aaaa-4444-aaaa-444444444444",
 						"method": "DELETE",
 						"header": [
 							{
 								"key": "Accept",
-								"value": "{{header_accept}}",
-								"description": ""
+								"value": "{{header_accept}}"
 							},
 							{
 								"key": "App-ID",
-								"value": "{{header_application_id}}",
-								"description": ""
+								"value": "{{header_application_id}}"
 							},
 							{
 								"key": "App-Key",
-								"value": "{{header_application_key}}",
-								"description": ""
+								"value": "{{header_application_key}}"
 							}
 						],
 						"body": {
 							"mode": "raw",
 							"raw": ""
+						},
+						"url": {
+							"raw": "{{url_base}}/api/assets/44444444-aaaa-4444-aaaa-444444444444",
+							"host": [
+								"{{url_base}}"
+							],
+							"path": [
+								"api",
+								"assets",
+								"44444444-aaaa-4444-aaaa-444444444444"
+							]
 						},
 						"description": "Delete a single asset"
 					},
@@ -238,33 +301,40 @@
 				{
 					"name": "/api/assets/{asset_id}/file-replacements",
 					"request": {
-						"url": "{{url_base}}/api/assets/44444444-aaaa-4444-aaaa-444444444444/file-replacements",
 						"method": "POST",
 						"header": [
 							{
 								"key": "Accept",
-								"value": "{{header_accept}}",
-								"description": ""
+								"value": "{{header_accept}}"
 							},
 							{
 								"key": "App-ID",
-								"value": "{{header_application_id}}",
-								"description": ""
+								"value": "{{header_application_id}}"
 							},
 							{
 								"key": "App-Key",
-								"value": "{{header_application_key}}",
-								"description": ""
+								"value": "{{header_application_key}}"
 							},
 							{
 								"key": "Content-Type",
-								"value": "application/json",
-								"description": ""
+								"value": "application/json"
 							}
 						],
 						"body": {
 							"mode": "raw",
 							"raw": "{\n  \"id\":\"44444444-aaaa-4444-aaaa-444444444444\",\n  \"name\": \"newname.abc\",\n  \"mime_type\":\"image/jpeg\",\n  \"size\" : 1234\n}"
+						},
+						"url": {
+							"raw": "{{url_base}}/api/assets/44444444-aaaa-4444-aaaa-444444444444/file-replacements",
+							"host": [
+								"{{url_base}}"
+							],
+							"path": [
+								"api",
+								"assets",
+								"44444444-aaaa-4444-aaaa-444444444444",
+								"file-replacements"
+							]
 						},
 						"description": "Request information for replacing the file of an asset"
 					},
@@ -273,26 +343,51 @@
 				{
 					"name": "/api/assets/{asset_id}/file-replacements",
 					"request": {
-						"url": "{{url_base}}/api/assets/44444444-aaaa-4444-aaaa-444444444444/file-replacements?page_size=3&page=1&sort=[{\"property\":\"created_on\",\"direction\":\"desc\"}]",
 						"method": "GET",
 						"header": [
 							{
 								"key": "Accept",
-								"value": "{{header_accept}}",
-								"description": ""
+								"value": "{{header_accept}}"
 							},
 							{
 								"key": "App-ID",
-								"value": "{{header_application_id}}",
-								"description": ""
+								"value": "{{header_application_id}}"
 							},
 							{
 								"key": "App-Key",
-								"value": "{{header_application_key}}",
-								"description": ""
+								"value": "{{header_application_key}}"
 							}
 						],
-						"body": {},
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{url_base}}/api/assets/44444444-aaaa-4444-aaaa-444444444444/file-replacements?page_size=3&page=1&sort=[{\"property\":\"created_on\",\"direction\":\"desc\"}]",
+							"host": [
+								"{{url_base}}"
+							],
+							"path": [
+								"api",
+								"assets",
+								"44444444-aaaa-4444-aaaa-444444444444",
+								"file-replacements"
+							],
+							"query": [
+								{
+									"key": "page_size",
+									"value": "3"
+								},
+								{
+									"key": "page",
+									"value": "1"
+								},
+								{
+									"key": "sort",
+									"value": "[{\"property\":\"created_on\",\"direction\":\"desc\"}]"
+								}
+							]
+						},
 						"description": "Get history of file replacements of an asset"
 					},
 					"response": []
@@ -300,33 +395,41 @@
 				{
 					"name": "/api/assets/{asset_id}/file-replacements/{file_replacement_id}",
 					"request": {
-						"url": "{{url_base}}/api/assets/44444444-aaaa-4444-aaaa-444444444444/file-replacements/44444444-aaaa-4444-aaaa-444444444444",
 						"method": "PATCH",
 						"header": [
 							{
 								"key": "Accept",
-								"value": "{{header_accept}}",
-								"description": ""
+								"value": "{{header_accept}}"
 							},
 							{
 								"key": "App-ID",
-								"value": "{{header_application_id}}",
-								"description": ""
+								"value": "{{header_application_id}}"
 							},
 							{
 								"key": "App-Key",
-								"value": "{{header_application_key}}",
-								"description": ""
+								"value": "{{header_application_key}}"
 							},
 							{
 								"key": "Content-Type",
-								"value": "application/json",
-								"description": ""
+								"value": "application/json"
 							}
 						],
 						"body": {
 							"mode": "raw",
 							"raw": "{\n  \"status\":\"submitted\"\n}"
+						},
+						"url": {
+							"raw": "{{url_base}}/api/assets/44444444-aaaa-4444-aaaa-444444444444/file-replacements/44444444-aaaa-4444-aaaa-444444444444",
+							"host": [
+								"{{url_base}}"
+							],
+							"path": [
+								"api",
+								"assets",
+								"44444444-aaaa-4444-aaaa-444444444444",
+								"file-replacements",
+								"44444444-aaaa-4444-aaaa-444444444444"
+							]
 						},
 						"description": "Edit a file replacement"
 					},
@@ -335,28 +438,37 @@
 				{
 					"name": "/api/assets/{asset_id}/file-replacements/{file_replacement_id}",
 					"request": {
-						"url": "{{url_base}}/api/assets/44444444-aaaa-4444-aaaa-444444444444/file-replacements/44444444-aaaa-4444-aaaa-444444444444",
 						"method": "DELETE",
 						"header": [
 							{
 								"key": "Accept",
-								"value": "{{header_accept}}",
-								"description": ""
+								"value": "{{header_accept}}"
 							},
 							{
 								"key": "App-ID",
-								"value": "{{header_application_id}}",
-								"description": ""
+								"value": "{{header_application_id}}"
 							},
 							{
 								"key": "App-Key",
-								"value": "{{header_application_key}}",
-								"description": ""
+								"value": "{{header_application_key}}"
 							}
 						],
 						"body": {
 							"mode": "raw",
 							"raw": ""
+						},
+						"url": {
+							"raw": "{{url_base}}/api/assets/44444444-aaaa-4444-aaaa-444444444444/file-replacements/44444444-aaaa-4444-aaaa-444444444444",
+							"host": [
+								"{{url_base}}"
+							],
+							"path": [
+								"api",
+								"assets",
+								"44444444-aaaa-4444-aaaa-444444444444",
+								"file-replacements",
+								"44444444-aaaa-4444-aaaa-444444444444"
+							]
 						},
 						"description": "Delete a file replacement"
 					},
@@ -365,86 +477,131 @@
 				{
 					"name": "/api/asset-tags",
 					"request": {
-						"url": "{{url_base}}/api/asset-tags?page_size=-1",
 						"method": "GET",
 						"header": [
 							{
 								"key": "Accept",
-								"value": "{{header_accept}}",
-								"description": ""
+								"value": "{{header_accept}}"
 							},
 							{
 								"key": "App-ID",
-								"value": "{{header_application_id}}",
-								"description": ""
+								"value": "{{header_application_id}}"
 							},
 							{
 								"key": "App-Key",
-								"value": "{{header_application_key}}",
-								"description": ""
+								"value": "{{header_application_key}}"
 							}
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"source_url\": \"http://img01.detailnet.ch/previews/louiswidmer2/500/1082.jpg\",\n    \"source_meta\": {\n        \"width\": 284,\n        \"height\": 500\n    },\n    \"action_count\": 1,\n    \"actions\": [\n        {\n            \"name\": \"thumbnail\",\n            \"params\": {\n                \"size\": \"500x500>\"\n            },\n            \"save\": {\n                \"identifier\": \"500\",\n                \"params\": {\n                    \"bucket\": \"ivan-wolf\",\n                    \"key\": \"assets/4bc644f4-b473-4634-8ba7-8e6995fc9284/TU TKL 08_DL-500.jpg\"\n                },\n                \"type\": \"s3\"\n            }\n        }\n    ],\n    \"notification_count\": 1,\n    \"notifications\": [\n        {\n            \"params\": {\n                \"url\": \"{{url_base}}/dws-fileconversion/receive-completed-job\"\n            },\n            \"type\": \"webhook\",\n            \"id\": \"54e762de9450ec66518b4569\",\n            \"calls\": [\n                {\n                    \"sent_on\": \"2015-02-20T17:38:02+0100\",\n                    \"success\": true\n                }\n            ]\n        }\n    ],\n    \"status\": \"complete\",\n    \"result_count\": 1,\n    \"results\": [\n        {\n            \"identifier\": \"500\",\n            \"url\": \"http://ivan-wolf.s3.amazonaws.com/assets/4bc644f4-b473-4634-8ba7-8e6995fc9284/TU TKL 08_DL-500.jpg\",\n            \"id\": \"54e762e29450ec5f518b456e\",\n            \"meta\": {\n                \"width\": 284,\n                \"height\": 500\n            }\n        }\n    ],\n    \"submitted_on\": \"2015-02-20T17:37:50+0100\",\n    \"processing_started_on\": \"2015-02-20T17:37:52+0100\",\n    \"processing_completed_on\": \"2015-02-20T17:37:54+0100\",\n    \"completed_on\": \"2015-02-20T17:38:02+0100\",\n    \"id\": \"54e762de9450ec66518b4568\"\n}"
+							"raw": ""
 						},
-						"description": ""
+						"url": {
+							"raw": "{{url_base}}/api/asset-tags?page_size=-1",
+							"host": [
+								"{{url_base}}"
+							],
+							"path": [
+								"api",
+								"asset-tags"
+							],
+							"query": [
+								{
+									"key": "page_size",
+									"value": "-1"
+								}
+							]
+						}
 					},
 					"response": []
 				},
 				{
 					"name": "/api/asset-types",
 					"request": {
-						"url": "{{url_base}}/api/asset-types?page_size=-1",
 						"method": "GET",
 						"header": [
 							{
 								"key": "Accept",
-								"value": "{{header_accept}}",
-								"description": ""
+								"value": "{{header_accept}}"
 							},
 							{
 								"key": "App-ID",
-								"value": "{{header_application_id}}",
-								"description": ""
+								"value": "{{header_application_id}}"
 							},
 							{
 								"key": "App-Key",
-								"value": "{{header_application_key}}",
-								"description": ""
+								"value": "{{header_application_key}}"
 							}
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"source_url\": \"http://img01.detailnet.ch/previews/louiswidmer2/500/1082.jpg\",\n    \"source_meta\": {\n        \"width\": 284,\n        \"height\": 500\n    },\n    \"action_count\": 1,\n    \"actions\": [\n        {\n            \"name\": \"thumbnail\",\n            \"params\": {\n                \"size\": \"500x500>\"\n            },\n            \"save\": {\n                \"identifier\": \"500\",\n                \"params\": {\n                    \"bucket\": \"ivan-wolf\",\n                    \"key\": \"assets/4bc644f4-b473-4634-8ba7-8e6995fc9284/TU TKL 08_DL-500.jpg\"\n                },\n                \"type\": \"s3\"\n            }\n        }\n    ],\n    \"notification_count\": 1,\n    \"notifications\": [\n        {\n            \"params\": {\n                \"url\": \"{{url_base}}/dws-fileconversion/receive-completed-job\"\n            },\n            \"type\": \"webhook\",\n            \"id\": \"54e762de9450ec66518b4569\",\n            \"calls\": [\n                {\n                    \"sent_on\": \"2015-02-20T17:38:02+0100\",\n                    \"success\": true\n                }\n            ]\n        }\n    ],\n    \"status\": \"complete\",\n    \"result_count\": 1,\n    \"results\": [\n        {\n            \"identifier\": \"500\",\n            \"url\": \"http://ivan-wolf.s3.amazonaws.com/assets/4bc644f4-b473-4634-8ba7-8e6995fc9284/TU TKL 08_DL-500.jpg\",\n            \"id\": \"54e762e29450ec5f518b456e\",\n            \"meta\": {\n                \"width\": 284,\n                \"height\": 500\n            }\n        }\n    ],\n    \"submitted_on\": \"2015-02-20T17:37:50+0100\",\n    \"processing_started_on\": \"2015-02-20T17:37:52+0100\",\n    \"processing_completed_on\": \"2015-02-20T17:37:54+0100\",\n    \"completed_on\": \"2015-02-20T17:38:02+0100\",\n    \"id\": \"54e762de9450ec66518b4568\"\n}"
+							"raw": ""
 						},
-						"description": ""
+						"url": {
+							"raw": "{{url_base}}/api/asset-types?page_size=-1",
+							"host": [
+								"{{url_base}}"
+							],
+							"path": [
+								"api",
+								"asset-types"
+							],
+							"query": [
+								{
+									"key": "page_size",
+									"value": "-1"
+								}
+							]
+						}
 					},
 					"response": []
 				},
 				{
 					"name": "/api/asset-collections",
 					"request": {
-						"url": "{{url_base}}/api/asset-collections?page=1&page_size=5&sort=[{\"property\":\"created_on\",\"direction\":\"asc\"}]",
 						"method": "GET",
 						"header": [
 							{
 								"key": "Accept",
-								"value": "{{header_accept}}",
-								"description": ""
+								"value": "{{header_accept}}"
 							},
 							{
 								"key": "App-ID",
-								"value": "{{header_application_id}}",
-								"description": ""
+								"value": "{{header_application_id}}"
 							},
 							{
 								"key": "App-Key",
-								"value": "{{header_application_key}}",
-								"description": ""
+								"value": "{{header_application_key}}"
 							}
 						],
-						"body": {},
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{url_base}}/api/asset-collections?page=1&page_size=5&sort=[{\"property\":\"created_on\",\"direction\":\"asc\"}]",
+							"host": [
+								"{{url_base}}"
+							],
+							"path": [
+								"api",
+								"asset-collections"
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "1"
+								},
+								{
+									"key": "page_size",
+									"value": "5"
+								},
+								{
+									"key": "sort",
+									"value": "[{\"property\":\"created_on\",\"direction\":\"asc\"}]"
+								}
+							]
+						},
 						"description": "List asset collections"
 					},
 					"response": []
@@ -452,33 +609,38 @@
 				{
 					"name": "/api/asset-collections",
 					"request": {
-						"url": "{{url_base}}/api/asset-collections",
 						"method": "POST",
 						"header": [
 							{
 								"key": "Accept",
-								"value": "{{header_accept}}",
-								"description": ""
+								"value": "{{header_accept}}"
 							},
 							{
 								"key": "App-ID",
-								"value": "{{header_application_id}}",
-								"description": ""
+								"value": "{{header_application_id}}"
 							},
 							{
 								"key": "App-Key",
-								"value": "{{header_application_key}}",
-								"description": ""
+								"value": "{{header_application_key}}"
 							},
 							{
 								"key": "Content-Type",
-								"value": "application/json",
-								"description": ""
+								"value": "application/json"
 							}
 						],
 						"body": {
 							"mode": "raw",
 							"raw": "{\n  \"id\": \"44444444-aaaa-4444-aaaa-444444444444\",\n  \"name\":\"New collection\",\n  \"assets\":[10,13,15,16]\n}"
+						},
+						"url": {
+							"raw": "{{url_base}}/api/asset-collections",
+							"host": [
+								"{{url_base}}"
+							],
+							"path": [
+								"api",
+								"asset-collections"
+							]
 						},
 						"description": "Create a new asset collection"
 					},
@@ -487,26 +649,36 @@
 				{
 					"name": "/api/asset-collections/{asset_collection_id}",
 					"request": {
-						"url": "{{url_base}}/api/asset-collections/44444444-aaaa-4444-aaaa-444444444444",
 						"method": "GET",
 						"header": [
 							{
 								"key": "Accept",
-								"value": "{{header_accept}}",
-								"description": ""
+								"value": "{{header_accept}}"
 							},
 							{
 								"key": "App-ID",
-								"value": "{{header_application_id}}",
-								"description": ""
+								"value": "{{header_application_id}}"
 							},
 							{
 								"key": "App-Key",
-								"value": "{{header_application_key}}",
-								"description": ""
+								"value": "{{header_application_key}}"
 							}
 						],
-						"body": {},
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{url_base}}/api/asset-collections/44444444-aaaa-4444-aaaa-444444444444",
+							"host": [
+								"{{url_base}}"
+							],
+							"path": [
+								"api",
+								"asset-collections",
+								"44444444-aaaa-4444-aaaa-444444444444"
+							]
+						},
 						"description": "List single asset collection"
 					},
 					"response": []
@@ -514,33 +686,39 @@
 				{
 					"name": "api/asset-collections/{asset_collection_id}",
 					"request": {
-						"url": "{{url_base}}/api/asset-collections/44444444-aaaa-4444-aaaa-444444444444",
 						"method": "PATCH",
 						"header": [
 							{
 								"key": "Accept",
-								"value": "{{header_accept}}",
-								"description": ""
+								"value": "{{header_accept}}"
 							},
 							{
 								"key": "App-ID",
-								"value": "{{header_application_id}}",
-								"description": ""
+								"value": "{{header_application_id}}"
 							},
 							{
 								"key": "App-Key",
-								"value": "{{header_application_key}}",
-								"description": ""
+								"value": "{{header_application_key}}"
 							},
 							{
 								"key": "Content-Type",
-								"value": "application/json",
-								"description": ""
+								"value": "application/json"
 							}
 						],
 						"body": {
 							"mode": "raw",
 							"raw": "{\n    \"name\":\"New collection name\",\n    \"assets\":[25, \"44444444-aaaa-4444-aaaa-444444444444\"]\n}"
+						},
+						"url": {
+							"raw": "{{url_base}}/api/asset-collections/44444444-aaaa-4444-aaaa-444444444444",
+							"host": [
+								"{{url_base}}"
+							],
+							"path": [
+								"api",
+								"asset-collections",
+								"44444444-aaaa-4444-aaaa-444444444444"
+							]
 						},
 						"description": "Edit an asset collection"
 					},
@@ -549,28 +727,35 @@
 				{
 					"name": "/api/asset-collections/{asset_collection_id}",
 					"request": {
-						"url": "{{url_base}}/api/asset-collections/44444444-aaaa-4444-aaaa-444444444444",
 						"method": "DELETE",
 						"header": [
 							{
 								"key": "Accept",
-								"value": "{{header_accept}}",
-								"description": ""
+								"value": "{{header_accept}}"
 							},
 							{
 								"key": "App-ID",
-								"value": "{{header_application_id}}",
-								"description": ""
+								"value": "{{header_application_id}}"
 							},
 							{
 								"key": "App-Key",
-								"value": "{{header_application_key}}",
-								"description": ""
+								"value": "{{header_application_key}}"
 							}
 						],
 						"body": {
 							"mode": "raw",
 							"raw": ""
+						},
+						"url": {
+							"raw": "{{url_base}}/api/asset-collections/44444444-aaaa-4444-aaaa-444444444444",
+							"host": [
+								"{{url_base}}"
+							],
+							"path": [
+								"api",
+								"asset-collections",
+								"44444444-aaaa-4444-aaaa-444444444444"
+							]
 						},
 						"description": "Delete a single asset collection"
 					},
@@ -579,33 +764,41 @@
 				{
 					"name": "/api/asset-collections/{asset_collection_id}/assets/{asset_id}",
 					"request": {
-						"url": "{{url_base}}/api/asset-collections/44444444-aaaa-4444-aaaa-444444444444/assets/44444444-aaaa-4444-aaaa-444444444444",
 						"method": "PUT",
 						"header": [
 							{
 								"key": "Accept",
-								"value": "{{header_accept}}",
-								"description": ""
+								"value": "{{header_accept}}"
 							},
 							{
 								"key": "App-ID",
-								"value": "{{header_application_id}}",
-								"description": ""
+								"value": "{{header_application_id}}"
 							},
 							{
 								"key": "App-Key",
-								"value": "{{header_application_key}}",
-								"description": ""
+								"value": "{{header_application_key}}"
 							},
 							{
 								"key": "Content-Type",
-								"value": "application/json",
-								"description": ""
+								"value": "application/json"
 							}
 						],
 						"body": {
 							"mode": "raw",
 							"raw": ""
+						},
+						"url": {
+							"raw": "{{url_base}}/api/asset-collections/44444444-aaaa-4444-aaaa-444444444444/assets/44444444-aaaa-4444-aaaa-444444444444",
+							"host": [
+								"{{url_base}}"
+							],
+							"path": [
+								"api",
+								"asset-collections",
+								"44444444-aaaa-4444-aaaa-444444444444",
+								"assets",
+								"44444444-aaaa-4444-aaaa-444444444444"
+							]
 						},
 						"description": "Add asset to collection"
 					},
@@ -614,28 +807,37 @@
 				{
 					"name": "/api/asset-collections/{asset_collection_id}/assets/{asset_id}",
 					"request": {
-						"url": "{{url_base}}/api/asset-collections/44444444-aaaa-4444-aaaa-444444444444/assets/44444444-aaaa-4444-aaaa-444444444444",
 						"method": "DELETE",
 						"header": [
 							{
 								"key": "Accept",
-								"value": "{{header_accept}}",
-								"description": ""
+								"value": "{{header_accept}}"
 							},
 							{
 								"key": "App-ID",
-								"value": "{{header_application_id}}",
-								"description": ""
+								"value": "{{header_application_id}}"
 							},
 							{
 								"key": "App-Key",
-								"value": "{{header_application_key}}",
-								"description": ""
+								"value": "{{header_application_key}}"
 							}
 						],
 						"body": {
 							"mode": "raw",
 							"raw": ""
+						},
+						"url": {
+							"raw": "{{url_base}}/api/asset-collections/44444444-aaaa-4444-aaaa-444444444444/assets/44444444-aaaa-4444-aaaa-444444444444",
+							"host": [
+								"{{url_base}}"
+							],
+							"path": [
+								"api",
+								"asset-collections",
+								"44444444-aaaa-4444-aaaa-444444444444",
+								"assets",
+								"44444444-aaaa-4444-aaaa-444444444444"
+							]
 						},
 						"description": "Delete a single asset from an asset collection"
 					},
@@ -644,33 +846,38 @@
 				{
 					"name": "/api/asset-searches",
 					"request": {
-						"url": "{{url_base}}/api/asset-searches",
 						"method": "POST",
 						"header": [
 							{
 								"key": "Accept",
-								"value": "{{header_accept}}",
-								"description": ""
+								"value": "{{header_accept}}"
 							},
 							{
 								"key": "App-ID",
-								"value": "{{header_application_id}}",
-								"description": ""
+								"value": "{{header_application_id}}"
 							},
 							{
 								"key": "App-Key",
-								"value": "{{header_application_key}}",
-								"description": ""
+								"value": "{{header_application_key}}"
 							},
 							{
 								"key": "Content-Type",
-								"value": "application/json",
-								"description": ""
+								"value": "application/json"
 							}
 						],
 						"body": {
 							"mode": "raw",
 							"raw": "{  \r\n  \"page\": 1,\r\n  \"page_size\": 5,\r\n  \"filter\": [  \r\n    {  \r\n      \"property\": \"products\",\r\n      \"operator\": \"in\",\r\n      \"value\": [  \r\n        \"3\"\r\n      ],\r\n      \"type\": \"array\"\r\n    }\r\n  ],\r\n  \"sort\": [  \r\n    {  \r\n      \"property\": \"created_on\",\r\n      \"direction\": \"asc\"\r\n    }\r\n  ]\r\n}\r\n"
+						},
+						"url": {
+							"raw": "{{url_base}}/api/asset-searches",
+							"host": [
+								"{{url_base}}"
+							],
+							"path": [
+								"api",
+								"asset-searches"
+							]
 						},
 						"description": "Search assets (create a new asset search)"
 					},
@@ -679,26 +886,35 @@
 				{
 					"name": "/api/purposes",
 					"request": {
-						"url": "{{url_base}}/api/purposes",
 						"method": "GET",
 						"header": [
 							{
 								"key": "Accept",
-								"value": "{{header_accept}}",
-								"description": ""
+								"value": "{{header_accept}}"
 							},
 							{
 								"key": "App-ID",
-								"value": "{{header_application_id}}",
-								"description": ""
+								"value": "{{header_application_id}}"
 							},
 							{
 								"key": "App-Key",
-								"value": "{{header_application_key}}",
-								"description": ""
+								"value": "{{header_application_key}}"
 							}
 						],
-						"body": {},
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{url_base}}/api/purposes",
+							"host": [
+								"{{url_base}}"
+							],
+							"path": [
+								"api",
+								"purposes"
+							]
+						},
 						"description": "List purposes"
 					},
 					"response": []
@@ -706,33 +922,38 @@
 				{
 					"name": "/dws-fileconversion/receive-completed-job",
 					"request": {
-						"url": "{{url_base}}/dws-fileconversion/receive-completed-job",
 						"method": "POST",
 						"header": [
 							{
 								"key": "Accept",
-								"value": "{{header_accept}}",
-								"description": ""
+								"value": "{{header_accept}}"
 							},
 							{
 								"key": "App-ID",
-								"value": "{{credential_application_id}}",
-								"description": ""
+								"value": "{{credential_application_id}}"
 							},
 							{
 								"key": "App-Key",
-								"value": "{{credential_application_key}}",
-								"description": ""
+								"value": "{{credential_application_key}}"
 							},
 							{
 								"key": "Content-Type",
-								"value": "application/json",
-								"description": ""
+								"value": "application/json"
 							}
 						],
 						"body": {
 							"mode": "raw",
 							"raw": "{\n    \"source_url\": \"http://img01.detailnet.ch/previews/louiswidmer2/500/1082.jpg\",\n    \"source_meta\": {\n        \"width\": 284,\n        \"height\": 500\n    },\n    \"action_count\": 1,\n    \"actions\": [\n        {\n            \"name\": \"thumbnail\",\n            \"params\": {\n                \"size\": \"500x500>\"\n            },\n            \"save\": {\n                \"identifier\": \"500\",\n                \"params\": {\n                    \"bucket\": \"ivan-wolf\",\n                    \"key\": \"assets/4bc644f4-b473-4634-8ba7-8e6995fc9284/TU TKL 08_DL-500.jpg\"\n                },\n                \"type\": \"s3\"\n            }\n        }\n    ],\n    \"notification_count\": 1,\n    \"notifications\": [\n        {\n            \"params\": {\n                \"url\": \"{{url_base}}/dws-fileconversion/receive-completed-job\"\n            },\n            \"type\": \"webhook\",\n            \"id\": \"54e762de9450ec66518b4569\",\n            \"calls\": [\n                {\n                    \"sent_on\": \"2015-02-20T17:38:02+0100\",\n                    \"success\": true\n                }\n            ]\n        }\n    ],\n    \"status\": \"complete\",\n    \"result_count\": 1,\n    \"results\": [\n        {\n            \"identifier\": \"500\",\n            \"url\": \"http://ivan-wolf.s3.amazonaws.com/assets/4bc644f4-b473-4634-8ba7-8e6995fc9284/TU TKL 08_DL-500.jpg\",\n            \"id\": \"54e762e29450ec5f518b456e\",\n            \"meta\": {\n                \"width\": 284,\n                \"height\": 500\n            }\n        }\n    ],\n    \"submitted_on\": \"2015-02-20T17:37:50+0100\",\n    \"processing_started_on\": \"2015-02-20T17:37:52+0100\",\n    \"processing_completed_on\": \"2015-02-20T17:37:54+0100\",\n    \"completed_on\": \"2015-02-20T17:38:02+0100\",\n    \"id\": \"54e762de9450ec66518b4568\"\n}"
+						},
+						"url": {
+							"raw": "{{url_base}}/dws-fileconversion/receive-completed-job",
+							"host": [
+								"{{url_base}}"
+							],
+							"path": [
+								"dws-fileconversion",
+								"receive-completed-job"
+							]
 						},
 						"description": "DWS-FileConversion notification"
 					},
@@ -791,28 +1012,41 @@
 						}
 					],
 					"request": {
-						"url": "https://requestb.in/{your-reqwstb.in-id}?inspect",
 						"method": "GET",
 						"header": [
 							{
 								"key": "Accept",
-								"value": "{{header_accept}}",
-								"description": ""
+								"value": "{{header_accept}}"
 							},
 							{
 								"key": "App-ID",
-								"value": "{{assets_header_app_id}}",
-								"description": ""
+								"value": "{{assets_header_app_id}}"
 							},
 							{
 								"key": "App-Key",
-								"value": "{{assets_header_app_key}}",
-								"description": ""
+								"value": "{{assets_header_app_key}}"
 							}
 						],
 						"body": {
 							"mode": "raw",
 							"raw": ""
+						},
+						"url": {
+							"raw": "https://requestb.in/{your-reqwstb.in-id}?inspect",
+							"protocol": "https",
+							"host": [
+								"requestb",
+								"in"
+							],
+							"path": [
+								"{your-reqwstb.in-id}"
+							],
+							"query": [
+								{
+									"key": "inspect",
+									"value": null
+								}
+							]
 						},
 						"description": "Fetch pending renderer requests on requestbin \n(update the id in the url to your own)"
 					},
@@ -856,33 +1090,38 @@
 						}
 					],
 					"request": {
-						"url": "{{url_base}}/dws-fileconversion/receive-completed-job",
 						"method": "POST",
 						"header": [
 							{
 								"key": "Accept",
-								"value": "{{header_accept}}",
-								"description": ""
+								"value": "{{header_accept}}"
 							},
 							{
 								"key": "App-ID",
-								"value": "{{assets_header_app_id}}",
-								"description": ""
+								"value": "{{assets_header_app_id}}"
 							},
 							{
 								"key": "App-Key",
-								"value": "{{assets_header_app_key}}",
-								"description": ""
+								"value": "{{assets_header_app_key}}"
 							},
 							{
 								"key": "Content-Type",
-								"value": "application/json",
-								"description": ""
+								"value": "application/json"
 							}
 						],
 						"body": {
 							"mode": "raw",
 							"raw": "{{responseToSubmit}}"
+						},
+						"url": {
+							"raw": "{{url_base}}/dws-fileconversion/receive-completed-job",
+							"host": [
+								"{{url_base}}"
+							],
+							"path": [
+								"dws-fileconversion",
+								"receive-completed-job"
+							]
 						},
 						"description": "Send one completion notifications as fetched from requestbin, execute many times (one per image)"
 					},
@@ -892,65 +1131,119 @@
 		},
 		{
 			"name": "Core",
-			"description": "",
 			"item": [
 				{
-					"name": "/api/file-types",
+					"name": "/api/countries",
 					"request": {
-						"url": "{{url_base}}/api/file-types?page_size=-1",
 						"method": "GET",
 						"header": [
 							{
 								"key": "Accept",
-								"value": "{{header_accept}}",
-								"description": ""
+								"value": "{{header_accept}}"
 							},
 							{
 								"key": "App-ID",
-								"value": "{{header_application_id}}",
-								"description": ""
+								"value": "{{header_application_id}}"
 							},
 							{
 								"key": "App-Key",
-								"value": "{{header_application_key}}",
-								"description": ""
+								"value": "{{header_application_key}}"
 							}
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"source_url\": \"http://img01.detailnet.ch/previews/louiswidmer2/500/1082.jpg\",\n    \"source_meta\": {\n        \"width\": 284,\n        \"height\": 500\n    },\n    \"action_count\": 1,\n    \"actions\": [\n        {\n            \"name\": \"thumbnail\",\n            \"params\": {\n                \"size\": \"500x500>\"\n            },\n            \"save\": {\n                \"identifier\": \"500\",\n                \"params\": {\n                    \"bucket\": \"ivan-wolf\",\n                    \"key\": \"assets/4bc644f4-b473-4634-8ba7-8e6995fc9284/TU TKL 08_DL-500.jpg\"\n                },\n                \"type\": \"s3\"\n            }\n        }\n    ],\n    \"notification_count\": 1,\n    \"notifications\": [\n        {\n            \"params\": {\n                \"url\": \"{{url_base}}/dws-fileconversion/receive-completed-job\"\n            },\n            \"type\": \"webhook\",\n            \"id\": \"54e762de9450ec66518b4569\",\n            \"calls\": [\n                {\n                    \"sent_on\": \"2015-02-20T17:38:02+0100\",\n                    \"success\": true\n                }\n            ]\n        }\n    ],\n    \"status\": \"complete\",\n    \"result_count\": 1,\n    \"results\": [\n        {\n            \"identifier\": \"500\",\n            \"url\": \"http://ivan-wolf.s3.amazonaws.com/assets/4bc644f4-b473-4634-8ba7-8e6995fc9284/TU TKL 08_DL-500.jpg\",\n            \"id\": \"54e762e29450ec5f518b456e\",\n            \"meta\": {\n                \"width\": 284,\n                \"height\": 500\n            }\n        }\n    ],\n    \"submitted_on\": \"2015-02-20T17:37:50+0100\",\n    \"processing_started_on\": \"2015-02-20T17:37:52+0100\",\n    \"processing_completed_on\": \"2015-02-20T17:37:54+0100\",\n    \"completed_on\": \"2015-02-20T17:38:02+0100\",\n    \"id\": \"54e762de9450ec66518b4568\"\n}"
+							"raw": ""
 						},
-						"description": ""
+						"url": {
+							"raw": "{{url_base}}/api/countries",
+							"host": [
+								"{{url_base}}"
+							],
+							"path": [
+								"api",
+								"countries"
+							]
+						}
 					},
 					"response": []
 				},
 				{
 					"name": "/api/languages",
 					"request": {
-						"url": "{{url_base}}/api/languages?page_size=-1",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "{{header_accept}}"
+							},
+							{
+								"key": "App-ID",
+								"value": "{{header_application_id}}"
+							},
+							{
+								"key": "App-Key",
+								"value": "{{header_application_key}}"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{url_base}}/api/languages?page_size=-1",
+							"host": [
+								"{{url_base}}"
+							],
+							"path": [
+								"api",
+								"languages"
+							],
+							"query": [
+								{
+									"key": "page_size",
+									"value": "-1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/api/translations",
+					"request": {
 						"method": "GET",
 						"header": [
 							{
 								"key": "Accept",
 								"value": "{{header_accept}}",
-								"description": ""
+								"type": "text"
 							},
 							{
 								"key": "App-ID",
 								"value": "{{header_application_id}}",
-								"description": ""
+								"type": "text"
 							},
 							{
 								"key": "App-Key",
 								"value": "{{header_application_key}}",
-								"description": ""
+								"type": "text"
 							}
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"source_url\": \"http://img01.detailnet.ch/previews/louiswidmer2/500/1082.jpg\",\n    \"source_meta\": {\n        \"width\": 284,\n        \"height\": 500\n    },\n    \"action_count\": 1,\n    \"actions\": [\n        {\n            \"name\": \"thumbnail\",\n            \"params\": {\n                \"size\": \"500x500>\"\n            },\n            \"save\": {\n                \"identifier\": \"500\",\n                \"params\": {\n                    \"bucket\": \"ivan-wolf\",\n                    \"key\": \"assets/4bc644f4-b473-4634-8ba7-8e6995fc9284/TU TKL 08_DL-500.jpg\"\n                },\n                \"type\": \"s3\"\n            }\n        }\n    ],\n    \"notification_count\": 1,\n    \"notifications\": [\n        {\n            \"params\": {\n                \"url\": \"{{url_base}}/dws-fileconversion/receive-completed-job\"\n            },\n            \"type\": \"webhook\",\n            \"id\": \"54e762de9450ec66518b4569\",\n            \"calls\": [\n                {\n                    \"sent_on\": \"2015-02-20T17:38:02+0100\",\n                    \"success\": true\n                }\n            ]\n        }\n    ],\n    \"status\": \"complete\",\n    \"result_count\": 1,\n    \"results\": [\n        {\n            \"identifier\": \"500\",\n            \"url\": \"http://ivan-wolf.s3.amazonaws.com/assets/4bc644f4-b473-4634-8ba7-8e6995fc9284/TU TKL 08_DL-500.jpg\",\n            \"id\": \"54e762e29450ec5f518b456e\",\n            \"meta\": {\n                \"width\": 284,\n                \"height\": 500\n            }\n        }\n    ],\n    \"submitted_on\": \"2015-02-20T17:37:50+0100\",\n    \"processing_started_on\": \"2015-02-20T17:37:52+0100\",\n    \"processing_completed_on\": \"2015-02-20T17:37:54+0100\",\n    \"completed_on\": \"2015-02-20T17:38:02+0100\",\n    \"id\": \"54e762de9450ec66518b4568\"\n}"
+							"raw": ""
 						},
-						"description": ""
+						"url": {
+							"raw": "{{url_base}}/api/translations",
+							"host": [
+								"{{url_base}}"
+							],
+							"path": [
+								"api",
+								"translations"
+							]
+						},
+						"description": "Get treanslations"
 					},
 					"response": []
 				}
@@ -958,384 +1251,536 @@
 		},
 		{
 			"name": "Product",
-			"description": "",
 			"item": [
 				{
 					"name": "/api/products",
 					"request": {
-						"url": "{{url_base}}/api/products?page=1&page_size=5&filter=[{\"property\":\"name\",\"operator\":\"like\",\"value\":\"%Auge%\",\"type\":\"string\"}]&sort=[{\"property\":\"name\",\"direction\":\"asc\"}]",
 						"method": "GET",
 						"header": [
 							{
 								"key": "Accept",
-								"value": "{{header_accept}}",
-								"description": ""
+								"value": "{{header_accept}}"
 							},
 							{
 								"key": "App-ID",
-								"value": "{{header_application_id}}",
-								"description": ""
+								"value": "{{header_application_id}}"
 							},
 							{
 								"key": "App-Key",
-								"value": "{{header_application_key}}",
-								"description": ""
-							}
-						],
-						"body": {},
-						"description": ""
-					},
-					"response": []
-				},
-				{
-					"name": "/api/products",
-					"request": {
-						"url": "{{url_base}}/api/products",
-						"method": "POST",
-						"header": [
-							{
-								"key": "Accept",
-								"value": "{{header_accept}}",
-								"description": ""
-							},
-							{
-								"key": "App-ID",
-								"value": "{{header_application_id}}",
-								"description": ""
-							},
-							{
-								"key": "App-Key",
-								"value": "{{header_application_key}}",
-								"description": ""
-							},
-							{
-								"key": "Content-Type",
-								"value": "application/json",
-								"description": ""
-							}
-						],
-						"body": {
-							"mode": "raw",
-							"raw": "{\n  \"id\":\"44444444-aaaa-4444-aaaa-444444444444\",\n  \"name\":\"XXXX Product XXXX sdf sf sf ds fsdf sd fsdf s f4\",\n  \"content\": {\n      \"value\":400,\n      \"unit\":\"mg\"\n  },\n  \"groups\":[1],\n  \"skin_types\": [2],\n  \"aging_type\": 2,\n  \"fragrance\": null,\n  \"ingredients\": [\n      {\n          \"id\": 2,\n          \"content\": 0.5,\n          \"unit\" : \"%\"\n      }\n  ]\n}"
-						},
-						"description": ""
-					},
-					"response": []
-				},
-				{
-					"name": "/api/products/{product_id}",
-					"request": {
-						"url": "{{url_base}}/api/products/44444444-aaaa-4444-aaaa-444444444444",
-						"method": "GET",
-						"header": [
-							{
-								"key": "Accept",
-								"value": "{{header_accept}}",
-								"description": ""
-							},
-							{
-								"key": "App-ID",
-								"value": "{{header_application_id}}",
-								"description": ""
-							},
-							{
-								"key": "App-Key",
-								"value": "{{header_application_key}}",
-								"description": ""
-							}
-						],
-						"body": {
-							"mode": "raw",
-							"raw": "{\n  \"id\":\"44444444-aaaa-4444-aaaa-444444444444\",\n  \"name\":\"XXXX Product XXXX\",\n  \"active\":true,\n  \"groups\":[1,2]\n}"
-						},
-						"description": ""
-					},
-					"response": []
-				},
-				{
-					"name": "/api/products/{product_id}",
-					"request": {
-						"url": "{{url_base}}/api/products/44444444-aaaa-4444-aaaa-444444444444",
-						"method": "PATCH",
-						"header": [
-							{
-								"key": "Accept",
-								"value": "{{header_accept}}",
-								"description": ""
-							},
-							{
-								"key": "App-ID",
-								"value": "{{header_application_id}}",
-								"description": ""
-							},
-							{
-								"key": "App-Key",
-								"value": "{{header_application_key}}",
-								"description": ""
-							},
-							{
-								"key": "Content-Type",
-								"value": "application/json",
-								"description": ""
-							}
-						],
-						"body": {
-							"mode": "raw",
-							"raw": "{\n  \"name\":\"XXXX Product updated\",\n  \"fragrance\": 1,\n  \"content\": {\n      \"value\": 300,\n      \"unit\": \"mg\"\n  },\n  \"unit\":\"mg\",\n  \"ingredients\": [\n      {\n          \"id\": 1,\n          \"content\": 0.05,\n          \"unit\" : \"%\"\n      },\n      {\n          \"id\": 6,\n          \"content\": 0.001,\n          \"unit\" : \"%\"\n      }\n  ]\n}"
-						},
-						"description": ""
-					},
-					"response": []
-				},
-				{
-					"name": "/api/products/{product_id}",
-					"request": {
-						"url": "{{url_base}}/api/products/44444444-aaaa-4444-aaaa-444444444444",
-						"method": "DELETE",
-						"header": [
-							{
-								"key": "Accept",
-								"value": "{{header_accept}}",
-								"description": ""
-							},
-							{
-								"key": "App-ID",
-								"value": "{{header_application_id}}",
-								"description": ""
-							},
-							{
-								"key": "App-Key",
-								"value": "{{header_application_key}}",
-								"description": ""
+								"value": "{{header_application_key}}"
 							}
 						],
 						"body": {
 							"mode": "raw",
 							"raw": ""
 						},
-						"description": ""
+						"url": {
+							"raw": "{{url_base}}/api/products?page=1&page_size=5&filter=[{\"property\":\"name\",\"operator\":\"like\",\"value\":\"%Auge%\",\"type\":\"string\"}]&sort=[{\"property\":\"name\",\"direction\":\"asc\"}]",
+							"host": [
+								"{{url_base}}"
+							],
+							"path": [
+								"api",
+								"products"
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "1"
+								},
+								{
+									"key": "page_size",
+									"value": "5"
+								},
+								{
+									"key": "filter",
+									"value": "[{\"property\":\"name\",\"operator\":\"like\",\"value\":\"%Auge%\",\"type\":\"string\"}]"
+								},
+								{
+									"key": "sort",
+									"value": "[{\"property\":\"name\",\"direction\":\"asc\"}]"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/api/products",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "{{header_accept}}"
+							},
+							{
+								"key": "App-ID",
+								"value": "{{header_application_id}}"
+							},
+							{
+								"key": "App-Key",
+								"value": "{{header_application_key}}"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"id\": \"44444444-aaaa-4444-aaaa-444444444444\",\n\t\"name\": \"TEST Product\",\n\t\"titles\": [\n  \t\t{\"locale\": \"de\", \"value\": \"TEST Product title DE\"},\n  \t\t{\"locale\": \"en\", \"value\": \"TEST Product title EN\"},\n  \t\t{\"locale\": \"fr\", \"value\": \"TEST Product title FR\"},\n  \t\t{\"locale\": \"it\", \"value\": \"TEST Product title IT\"}\n\t],\n\t\"content\": {\n\t\t\"value\":400,\n\t\t\"unit\":\"ml\"\n\t},\n\t\"skin_types\": [\n\t\t\"fc097053-992c-4876-ad9e-ab262b4e5daa\",\n\t\t\"e1dc345d-b9d9-4fb7-b4d9-d0fe41525215\",\n\t\t\"90a0a054-31f9-42ab-9e68-396ae3966295\"\n\t],\n\t\"aging_type\": \"ebfd5ead-09c5-4451-b7f2-e693390edcb6\",\n\t\"groups\": [\n\t\t\"d88c1a9c-c541-4ad4-a053-9959f0c8ca90\"\n\t],\n\t\"ingredients\": [\n\t\t{\"id\": \"39b3a187-7ed4-4902-8b9f-5f11b2e0ca7a\", \"unit\":null, \"content\":null, \"sort_index\": 1},\n\t\t{\"id\": \"96575d66-1f34-40b4-aa10-d5768aeca06a\", \"unit\":\"mg\", \"content\":\"5\",  \"sort_index\": 2},\n\t\t{\"id\": \"5acec4d6-8a14-4298-a948-8451ab17b9f1\", \"unit\":null, \"content\":null, \"sort_index\": 3}\n\t],\n\t\"flavors\": [\n\t\t{\n\t\t\t\"fragrance\": \"6b2b5516-106f-445a-9e44-d57556a8ab86\",\n\t\t\t\"substances\": [\n\t\t\t\t{\"id\": \"52f0b4ec-e459-4cca-84d2-3ae48c4afb4f\", \"sort_index\": 1},\n\t\t\t\t{\"id\": \"10cd49f9-4c9a-4182-9fba-87575ce706fd\", \"sort_index\": 2}\n\t\t\t],\n\t\t\t\"code\": \"aaaaaaaaaaaaaaa\",\n\t\t\t\"barcode\": \"5701234567899\",\n\t\t\t\"substance_addition\":\"1324564\"\n\t\t},\n\t\t{\n\t\t\t\"fragrance\": \"9942eb9f-1738-47c2-a598-706ad6724eff\",\n\t\t\t\"code\": \"\",\n\t\t\t\"substance_addition\": \"\",\n\t\t\t\"substances\": [\n\t\t\t\t{\"id\": \"ae50eb96-d57f-46bd-bd40-360f69dd4217\", \"sort_index\": 1},\n\t\t\t\t{\"id\": \"13efcb52-0127-4b62-a88e-e60dbdc1037a\", \"sort_index\": 2},\n\t\t\t\t{\"id\": \"b603975e-ed81-43f2-86ac-e282ac5db7cf\", \"sort_index\": 3},\n\t\t\t\t{\"id\": \"f7d24a9a-4d09-4f8e-b5fa-f6514c0d7f8f\", \"sort_index\": 4}\n\t\t\t],\n\t\t\t\"barcode\":null\n\t\t}\n\t],\n\t\"lifetime_after_opening\": 2,\n\t\"lifetime_after_production\": 5\n}"
+						},
+						"url": {
+							"raw": "{{url_base}}/api/products",
+							"host": [
+								"{{url_base}}"
+							],
+							"path": [
+								"api",
+								"products"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/api/products/{product_id}",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "{{header_accept}}"
+							},
+							{
+								"key": "App-ID",
+								"value": "{{header_application_id}}"
+							},
+							{
+								"key": "App-Key",
+								"value": "{{header_application_key}}"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{url_base}}/api/products/44444444-aaaa-4444-aaaa-444444444444",
+							"host": [
+								"{{url_base}}"
+							],
+							"path": [
+								"api",
+								"products",
+								"44444444-aaaa-4444-aaaa-444444444444"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/api/products/{product_id}",
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "{{header_accept}}"
+							},
+							{
+								"key": "App-ID",
+								"value": "{{header_application_id}}"
+							},
+							{
+								"key": "App-Key",
+								"value": "{{header_application_key}}"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"name\": \"TEST Product\",\n\t\"titles\": [\n  \t\t{\"locale\": \"de\", \"value\": \"TEST Product title DE\"},\n  \t\t{\"locale\": \"en\", \"value\": \"TEST Product title EN\"},\n  \t\t{\"locale\": \"fr\", \"value\": \"TEST Product title FR\"},\n  \t\t{\"locale\": \"it\", \"value\": \"TEST Product title IT\"}\n\t],\n\t\"content\": {\n\t\t\"value\":400,\n\t\t\"unit\":\"ml\"\n\t},\n\t\"skin_types\": [\n\t\t\"fc097053-992c-4876-ad9e-ab262b4e5daa\",\n\t\t\"e1dc345d-b9d9-4fb7-b4d9-d0fe41525215\",\n\t\t\"90a0a054-31f9-42ab-9e68-396ae3966295\"\n\t],\n\t\"groups\": [\n\t\t\"d88c1a9c-c541-4ad4-a053-9959f0c8ca90\"\n\t],\n\t\"ingredients\": [\n\t\t{\n\t\t\t\"id\": \"c4f13dd8-5417-4a28-88c3-240e094f4e3c\",\n\t\t\t\"content\": 0.5,\n\t\t\t\"unit\" : \"%\"\n\t\t}\n\t],\n\t\"flavors\":[\n\t\t{\n\t\t\t\"fragrance\": \"6b2b5516-106f-445a-9e44-d57556a8ab86\",\n\t\t\t\"substances\": [\n\t\t\t],\n\t\t\t\"code\": \"\",\n\t\t\t\"barcode\": null,\n\t\t\t\"substance_addition\": \"\"\n\t\t}\n\t]\n}"
+						},
+						"url": {
+							"raw": "{{url_base}}/api/products/c9925402-cff8-49c7-9b4e-b6a991b36a67",
+							"host": [
+								"{{url_base}}"
+							],
+							"path": [
+								"api",
+								"products",
+								"c9925402-cff8-49c7-9b4e-b6a991b36a67"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/api/products/{product_id}",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "{{header_accept}}"
+							},
+							{
+								"key": "App-ID",
+								"value": "{{header_application_id}}"
+							},
+							{
+								"key": "App-Key",
+								"value": "{{header_application_key}}"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{url_base}}/api/products/44444444-aaaa-4444-aaaa-444444444444",
+							"host": [
+								"{{url_base}}"
+							],
+							"path": [
+								"api",
+								"products",
+								"44444444-aaaa-4444-aaaa-444444444444"
+							]
+						}
 					},
 					"response": []
 				},
 				{
 					"name": "/api/product-units",
 					"request": {
-						"url": "{{url_base}}/api/product-units",
 						"method": "GET",
 						"header": [
 							{
 								"key": "Accept",
-								"value": "{{header_accept}}",
-								"description": ""
+								"value": "{{header_accept}}"
 							},
 							{
 								"key": "App-ID",
-								"value": "{{header_application_id}}",
-								"description": ""
+								"value": "{{header_application_id}}"
 							},
 							{
 								"key": "App-Key",
-								"value": "{{header_application_key}}",
-								"description": ""
+								"value": "{{header_application_key}}"
 							}
 						],
-						"body": {},
-						"description": ""
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{url_base}}/api/product-units",
+							"host": [
+								"{{url_base}}"
+							],
+							"path": [
+								"api",
+								"product-units"
+							]
+						}
 					},
 					"response": []
 				},
 				{
 					"name": "/api/product-groups",
 					"request": {
-						"url": "{{url_base}}/api/product-groups?page_size=5&page=1&sort=[{\"property\":\"sort_index\",\"direction\":\"asc\"}]&filter=[{\"property\":\"name\",\"operator\":\"like\",\"type\":\"string\",\"value\":\"%a%\"}]",
 						"method": "GET",
 						"header": [
 							{
 								"key": "Accept",
-								"value": "{{header_accept}}",
-								"description": ""
+								"value": "{{header_accept}}"
 							},
 							{
 								"key": "App-ID",
-								"value": "{{header_application_id}}",
-								"description": ""
+								"value": "{{header_application_id}}"
 							},
 							{
 								"key": "App-Key",
-								"value": "{{header_application_key}}",
-								"description": ""
+								"value": "{{header_application_key}}"
 							}
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"source_url\": \"http://img01.detailnet.ch/previews/louiswidmer2/500/1082.jpg\",\n    \"source_meta\": {\n        \"width\": 284,\n        \"height\": 500\n    },\n    \"action_count\": 1,\n    \"actions\": [\n        {\n            \"name\": \"thumbnail\",\n            \"params\": {\n                \"size\": \"500x500>\"\n            },\n            \"save\": {\n                \"identifier\": \"500\",\n                \"params\": {\n                    \"bucket\": \"ivan-wolf\",\n                    \"key\": \"assets/4bc644f4-b473-4634-8ba7-8e6995fc9284/TU TKL 08_DL-500.jpg\"\n                },\n                \"type\": \"s3\"\n            }\n        }\n    ],\n    \"notification_count\": 1,\n    \"notifications\": [\n        {\n            \"params\": {\n                \"url\": \"{{url_base}}/dws-fileconversion/receive-completed-job\"\n            },\n            \"type\": \"webhook\",\n            \"id\": \"54e762de9450ec66518b4569\",\n            \"calls\": [\n                {\n                    \"sent_on\": \"2015-02-20T17:38:02+0100\",\n                    \"success\": true\n                }\n            ]\n        }\n    ],\n    \"status\": \"complete\",\n    \"result_count\": 1,\n    \"results\": [\n        {\n            \"identifier\": \"500\",\n            \"url\": \"http://ivan-wolf.s3.amazonaws.com/assets/4bc644f4-b473-4634-8ba7-8e6995fc9284/TU TKL 08_DL-500.jpg\",\n            \"id\": \"54e762e29450ec5f518b456e\",\n            \"meta\": {\n                \"width\": 284,\n                \"height\": 500\n            }\n        }\n    ],\n    \"submitted_on\": \"2015-02-20T17:37:50+0100\",\n    \"processing_started_on\": \"2015-02-20T17:37:52+0100\",\n    \"processing_completed_on\": \"2015-02-20T17:37:54+0100\",\n    \"completed_on\": \"2015-02-20T17:38:02+0100\",\n    \"id\": \"54e762de9450ec66518b4568\"\n}"
+							"raw": ""
 						},
-						"description": ""
+						"url": {
+							"raw": "{{url_base}}/api/product-groups?page_size=5&page=1&sort=[{\"property\":\"sort_index\",\"direction\":\"asc\"}]&filter=[{\"property\":\"name\",\"operator\":\"like\",\"type\":\"string\",\"value\":\"%a%\"}]",
+							"host": [
+								"{{url_base}}"
+							],
+							"path": [
+								"api",
+								"product-groups"
+							],
+							"query": [
+								{
+									"key": "page_size",
+									"value": "5"
+								},
+								{
+									"key": "page",
+									"value": "1"
+								},
+								{
+									"key": "sort",
+									"value": "[{\"property\":\"sort_index\",\"direction\":\"asc\"}]"
+								},
+								{
+									"key": "filter",
+									"value": "[{\"property\":\"name\",\"operator\":\"like\",\"type\":\"string\",\"value\":\"%a%\"}]"
+								}
+							]
+						}
 					},
 					"response": []
 				},
 				{
 					"name": "/api/skin-types",
 					"request": {
-						"url": "{{url_base}}/api/skin-types?page_size=-1",
 						"method": "GET",
 						"header": [
 							{
 								"key": "Accept",
-								"value": "{{header_accept}}",
-								"description": ""
+								"value": "{{header_accept}}"
 							},
 							{
 								"key": "App-ID",
-								"value": "{{header_application_id}}",
-								"description": ""
+								"value": "{{header_application_id}}"
 							},
 							{
 								"key": "App-Key",
-								"value": "{{header_application_key}}",
-								"description": ""
+								"value": "{{header_application_key}}"
 							}
 						],
-						"body": {},
-						"description": ""
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{url_base}}/api/skin-types?page_size=-1",
+							"host": [
+								"{{url_base}}"
+							],
+							"path": [
+								"api",
+								"skin-types"
+							],
+							"query": [
+								{
+									"key": "page_size",
+									"value": "-1"
+								}
+							]
+						}
 					},
 					"response": []
 				},
 				{
 					"name": "/api/fragrances",
 					"request": {
-						"url": "{{url_base}}/api/fragrances?page_size=-1",
 						"method": "GET",
 						"header": [
 							{
 								"key": "Accept",
-								"value": "{{header_accept}}",
-								"description": ""
+								"value": "{{header_accept}}"
 							},
 							{
 								"key": "App-ID",
-								"value": "{{header_application_id}}",
-								"description": ""
+								"value": "{{header_application_id}}"
 							},
 							{
 								"key": "App-Key",
-								"value": "{{header_application_key}}",
-								"description": ""
+								"value": "{{header_application_key}}"
 							}
 						],
-						"body": {},
-						"description": ""
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{url_base}}/api/fragrances?page_size=-1",
+							"host": [
+								"{{url_base}}"
+							],
+							"path": [
+								"api",
+								"fragrances"
+							],
+							"query": [
+								{
+									"key": "page_size",
+									"value": "-1"
+								}
+							]
+						}
 					},
 					"response": []
 				},
 				{
 					"name": "/api/aging-types",
 					"request": {
-						"url": "{{url_base}}/api/aging-types?page_size=-1",
 						"method": "GET",
 						"header": [
 							{
 								"key": "Accept",
-								"value": "{{header_accept}}",
-								"description": ""
+								"value": "{{header_accept}}"
 							},
 							{
 								"key": "App-ID",
-								"value": "{{header_application_id}}",
-								"description": ""
+								"value": "{{header_application_id}}"
 							},
 							{
 								"key": "App-Key",
-								"value": "{{header_application_key}}",
-								"description": ""
+								"value": "{{header_application_key}}"
 							}
 						],
-						"body": {},
-						"description": ""
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{url_base}}/api/aging-types?page_size=-1",
+							"host": [
+								"{{url_base}}"
+							],
+							"path": [
+								"api",
+								"aging-types"
+							],
+							"query": [
+								{
+									"key": "page_size",
+									"value": "-1"
+								}
+							]
+						}
 					},
 					"response": []
 				},
 				{
 					"name": "/api/ingredients",
 					"request": {
-						"url": "{{url_base}}/api/ingredients?page_size=-1",
 						"method": "GET",
 						"header": [
 							{
 								"key": "Accept",
-								"value": "{{header_accept}}",
-								"description": ""
+								"value": "{{header_accept}}"
 							},
 							{
 								"key": "App-ID",
-								"value": "{{header_application_id}}",
-								"description": ""
+								"value": "{{header_application_id}}"
 							},
 							{
 								"key": "App-Key",
-								"value": "{{header_application_key}}",
-								"description": ""
+								"value": "{{header_application_key}}"
 							}
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n  \"id\":\"44444444-aaaa-4444-aaaa-444444444444\",\n  \"name\":\"XXXX Product XXXX sdf sf sf ds fsdf sd fsdf s f4\",\n  \"active\":true,\n  \"groups\":[1,2]\n}"
+							"raw": ""
 						},
-						"description": ""
+						"url": {
+							"raw": "{{url_base}}/api/ingredients?page_size=-1",
+							"host": [
+								"{{url_base}}"
+							],
+							"path": [
+								"api",
+								"ingredients"
+							],
+							"query": [
+								{
+									"key": "page_size",
+									"value": "-1"
+								}
+							]
+						}
 					},
 					"response": []
 				},
 				{
 					"name": "/api/ingredient-units",
 					"request": {
-						"url": "{{url_base}}/api/ingredient-units?page_size=-1",
 						"method": "GET",
 						"header": [
 							{
 								"key": "Accept",
-								"value": "{{header_accept}}",
-								"description": ""
+								"value": "{{header_accept}}"
 							},
 							{
 								"key": "App-ID",
-								"value": "{{header_application_id}}",
-								"description": ""
+								"value": "{{header_application_id}}"
 							},
 							{
 								"key": "App-Key",
-								"value": "{{header_application_key}}",
-								"description": ""
+								"value": "{{header_application_key}}"
 							}
 						],
-						"body": {},
-						"description": ""
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{url_base}}/api/ingredient-units?page_size=-1",
+							"host": [
+								"{{url_base}}"
+							],
+							"path": [
+								"api",
+								"ingredient-units"
+							],
+							"query": [
+								{
+									"key": "page_size",
+									"value": "-1"
+								}
+							]
+						}
 					},
 					"response": []
 				},
 				{
 					"name": "/api/substances",
 					"request": {
-						"url": "{{url_base}}/api/substances?page_size=-1",
 						"method": "GET",
 						"header": [
 							{
 								"key": "Accept",
-								"value": "{{header_accept}}",
-								"description": ""
+								"value": "{{header_accept}}"
 							},
 							{
 								"key": "App-ID",
-								"value": "{{header_application_id}}",
-								"description": ""
+								"value": "{{header_application_id}}"
 							},
 							{
 								"key": "App-Key",
-								"value": "{{header_application_key}}",
-								"description": ""
+								"value": "{{header_application_key}}"
 							}
 						],
-						"body": {},
-						"description": ""
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{url_base}}/api/substances",
+							"host": [
+								"{{url_base}}"
+							],
+							"path": [
+								"api",
+								"substances"
+							]
+						}
 					},
 					"response": []
 				}
@@ -1343,38 +1788,44 @@
 		},
 		{
 			"name": "ProductText",
-			"description": "",
 			"item": [
 				{
 					"name": "/api/products/{product_id}/texts",
 					"request": {
-						"url": "{{url_base}}/api/products/44444444-aaaa-4444-aaaa-444444444444/texts",
 						"method": "POST",
 						"header": [
 							{
 								"key": "Accept",
-								"value": "{{header_accept}}",
-								"description": ""
+								"value": "{{header_accept}}"
 							},
 							{
 								"key": "App-ID",
-								"value": "{{header_application_id}}",
-								"description": ""
+								"value": "{{header_application_id}}"
 							},
 							{
 								"key": "App-Key",
-								"value": "{{header_application_key}}",
-								"description": ""
+								"value": "{{header_application_key}}"
 							},
 							{
 								"key": "Content-Type",
-								"value": "application/json",
-								"description": ""
+								"value": "application/json"
 							}
 						],
 						"body": {
 							"mode": "raw",
 							"raw": "{\r\n  \"id\": \"44444444-aaaa-4444-aaaa-444444444444\",\r\n  \"block\": \"bd69d5c2-3d32-4ada-97ed-a6cc8902fe60\",\r\n  \"locales\": [\r\n    {\r\n      \"id\": \"de\",\r\n      \"text\": \"Text in DE\"\r\n    },\r\n    {\r\n      \"id\": \"de_CH\",\r\n      \"text\": \"\"\r\n    }\r\n  ]\r\n}"
+						},
+						"url": {
+							"raw": "{{url_base}}/api/products/44444444-aaaa-4444-aaaa-444444444444/texts",
+							"host": [
+								"{{url_base}}"
+							],
+							"path": [
+								"api",
+								"products",
+								"44444444-aaaa-4444-aaaa-444444444444",
+								"texts"
+							]
 						},
 						"description": "Create a new product text"
 					},
@@ -1383,26 +1834,37 @@
 				{
 					"name": "/api/products/{product_id}/texts",
 					"request": {
-						"url": "{{url_base}}/api/products/44444444-aaaa-4444-aaaa-444444444444/texts",
 						"method": "GET",
 						"header": [
 							{
 								"key": "Accept",
-								"value": "{{header_accept}}",
-								"description": ""
+								"value": "{{header_accept}}"
 							},
 							{
 								"key": "App-ID",
-								"value": "{{header_application_id}}",
-								"description": ""
+								"value": "{{header_application_id}}"
 							},
 							{
 								"key": "App-Key",
-								"value": "{{header_application_key}}",
-								"description": ""
+								"value": "{{header_application_key}}"
 							}
 						],
-						"body": {},
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{url_base}}/api/products/44444444-aaaa-4444-aaaa-444444444444/texts",
+							"host": [
+								"{{url_base}}"
+							],
+							"path": [
+								"api",
+								"products",
+								"44444444-aaaa-4444-aaaa-444444444444",
+								"texts"
+							]
+						},
 						"description": "List a product's texts"
 					},
 					"response": []
@@ -1410,33 +1872,41 @@
 				{
 					"name": "/api/products/{product_id}/texts/{text_id}",
 					"request": {
-						"url": "{{url_base}}/api/products/44444444-aaaa-4444-aaaa-444444444444/texts/44444444-aaaa-4444-aaaa-444444444444",
 						"method": "PATCH",
 						"header": [
 							{
 								"key": "Accept",
-								"value": "{{header_accept}}",
-								"description": ""
+								"value": "{{header_accept}}"
 							},
 							{
 								"key": "App-ID",
-								"value": "{{header_application_id}}",
-								"description": ""
+								"value": "{{header_application_id}}"
 							},
 							{
 								"key": "App-Key",
-								"value": "{{header_application_key}}",
-								"description": ""
+								"value": "{{header_application_key}}"
 							},
 							{
 								"key": "Content-Type",
-								"value": "application/json",
-								"description": ""
+								"value": "application/json"
 							}
 						],
 						"body": {
 							"mode": "raw",
 							"raw": "{\r\n  \"locales\": [\r\n    {\r\n      \"id\": \"de\",\r\n      \"text\": \"Text in DE\"\r\n    },\r\n    {\r\n      \"id\": \"de_CH\",\r\n      \"text\": \"\"\r\n    }\r\n  ]\r\n}"
+						},
+						"url": {
+							"raw": "{{url_base}}/api/products/44444444-aaaa-4444-aaaa-444444444444/texts/44444444-aaaa-4444-aaaa-444444444444",
+							"host": [
+								"{{url_base}}"
+							],
+							"path": [
+								"api",
+								"products",
+								"44444444-aaaa-4444-aaaa-444444444444",
+								"texts",
+								"44444444-aaaa-4444-aaaa-444444444444"
+							]
 						},
 						"description": "Update a product text"
 					},
@@ -1445,33 +1915,40 @@
 				{
 					"name": "/api/products/{product_id}/translation-jobs",
 					"request": {
-						"url": "{{url_base}}/api/products/44444444-aaaa-4444-aaaa-444444444444/translation-jobs",
 						"method": "POST",
 						"header": [
 							{
 								"key": "Accept",
-								"value": "{{header_accept}}",
-								"description": ""
+								"value": "{{header_accept}}"
 							},
 							{
 								"key": "App-ID",
-								"value": "{{header_application_id}}",
-								"description": ""
+								"value": "{{header_application_id}}"
 							},
 							{
 								"key": "App-Key",
-								"value": "{{header_application_key}}",
-								"description": ""
+								"value": "{{header_application_key}}"
 							},
 							{
 								"key": "Content-Type",
-								"value": "application/json",
-								"description": ""
+								"value": "application/json"
 							}
 						],
 						"body": {
 							"mode": "raw",
 							"raw": "{\r\n  \"id\": \"44444444-aaaa-4444-aaaa-444444444444\",\r\n  \"locale\": \"fr_BE\",\r\n  \"due_date\": \"2015-08-09T14:18:53+0100\",\r\n  \"texts\": [\r\n    {\r\n      \"text\": \"First translated text\",\r\n      \"block\": \"63bbe2b1-6355-4110-8a68-e3dd8fb69978\",\r\n      \"comment\": \"Please be aware, to also convert the embedded links to the desired language.\"\r\n    },\r\n    {\r\n      \"text\": \"\",\r\n      \"block\": \"b7f84cb4-3e96-4b89-b679-317b8010de5e\",\r\n      \"comment\": \"\"\r\n    }\r\n  ],\r\n  \"translators\": [\r\n    \"8e29fbbd-de31-4eaa-942a-34a70f851182\",\r\n    \"731edab6-e27c-4cfa-8c19-c34ec73c5922\"\r\n  ]\r\n}"
+						},
+						"url": {
+							"raw": "{{url_base}}/api/products/44444444-aaaa-4444-aaaa-444444444444/translation-jobs",
+							"host": [
+								"{{url_base}}"
+							],
+							"path": [
+								"api",
+								"products",
+								"44444444-aaaa-4444-aaaa-444444444444",
+								"translation-jobs"
+							]
 						},
 						"description": "Create a translation job for a product"
 					},
@@ -1480,26 +1957,37 @@
 				{
 					"name": "/api/products/{product_id}/translation-jobs",
 					"request": {
-						"url": "{{url_base}}/api/products/44444444-aaaa-4444-aaaa-444444444444/translation-jobs",
 						"method": "GET",
 						"header": [
 							{
 								"key": "Accept",
-								"value": "{{header_accept}}",
-								"description": ""
+								"value": "{{header_accept}}"
 							},
 							{
 								"key": "App-ID",
-								"value": "{{header_application_id}}",
-								"description": ""
+								"value": "{{header_application_id}}"
 							},
 							{
 								"key": "App-Key",
-								"value": "{{header_application_key}}",
-								"description": ""
+								"value": "{{header_application_key}}"
 							}
 						],
-						"body": {},
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{url_base}}/api/products/44444444-aaaa-4444-aaaa-444444444444/translation-jobs",
+							"host": [
+								"{{url_base}}"
+							],
+							"path": [
+								"api",
+								"products",
+								"44444444-aaaa-4444-aaaa-444444444444",
+								"translation-jobs"
+							]
+						},
 						"description": "List a product's translation jobs"
 					},
 					"response": []
@@ -1507,33 +1995,41 @@
 				{
 					"name": "/api/products/{product_id}/translation-jobs/{translation_job_id}",
 					"request": {
-						"url": "{{url_base}}/api/products/44444444-aaaa-4444-aaaa-444444444444/translation-jobs/44444444-aaaa-4444-aaaa-444444444444",
 						"method": "PATCH",
 						"header": [
 							{
 								"key": "Accept",
-								"value": "{{header_accept}}",
-								"description": ""
+								"value": "{{header_accept}}"
 							},
 							{
 								"key": "App-ID",
-								"value": "{{header_application_id}}",
-								"description": ""
+								"value": "{{header_application_id}}"
 							},
 							{
 								"key": "App-Key",
-								"value": "{{header_application_key}}",
-								"description": ""
+								"value": "{{header_application_key}}"
 							},
 							{
 								"key": "Content-Type",
-								"value": "application/json",
-								"description": ""
+								"value": "application/json"
 							}
 						],
 						"body": {
 							"mode": "raw",
 							"raw": "{\r\n  \"due_date\": \"2015-08-10T17:23:09+0100\",\r\n  \"status\": \"complete\",\r\n  \"texts\": [\r\n    {\r\n      \"text\": \"Second translated text\",\r\n      \"block\": \"63bbe2b1-6355-4110-8a68-e3dd8fb69978\",\r\n      \"comment\": \"I also translated the links.\"\r\n    },\r\n    {\r\n      \"text\": \"\",\r\n      \"block\": \"b7f84cb4-3e96-4b89-b679-317b8010de5e\",\r\n      \"comment\": \"I didn't change this text.\"\r\n    }\r\n  ],\r\n  \"translators\": [\r\n    \"8e29fbbd-de31-4eaa-942a-34a70f851182\",\r\n    \"731edab6-e27c-4cfa-8c19-c34ec73c5922\"\r\n  ]\r\n}"
+						},
+						"url": {
+							"raw": "{{url_base}}/api/products/44444444-aaaa-4444-aaaa-444444444444/translation-jobs/44444444-aaaa-4444-aaaa-444444444444",
+							"host": [
+								"{{url_base}}"
+							],
+							"path": [
+								"api",
+								"products",
+								"44444444-aaaa-4444-aaaa-444444444444",
+								"translation-jobs",
+								"44444444-aaaa-4444-aaaa-444444444444"
+							]
 						},
 						"description": "Update a product's translation job"
 					},
@@ -1542,33 +2038,38 @@
 				{
 					"name": "/api/texts (not working)",
 					"request": {
-						"url": "{{url_base}}/api/texts",
 						"method": "POST",
 						"header": [
 							{
 								"key": "Accept",
-								"value": "{{header_accept}}",
-								"description": ""
+								"value": "{{header_accept}}"
 							},
 							{
 								"key": "App-ID",
-								"value": "{{header_application_id}}",
-								"description": ""
+								"value": "{{header_application_id}}"
 							},
 							{
 								"key": "App-Key",
-								"value": "{{header_application_key}}",
-								"description": ""
+								"value": "{{header_application_key}}"
 							},
 							{
 								"key": "Content-Type",
-								"value": "application/json",
-								"description": ""
+								"value": "application/json"
 							}
 						],
 						"body": {
 							"mode": "raw",
 							"raw": "{\r\n  \"product\": \"c9925402-cff8-49c7-9b4e-b6a991b36a67\",\r\n  \"block\": \"bd69d5c2-3d32-4ada-97ed-a6cc8902fe60\",\r\n  \"locales\": [\r\n    {\r\n      \"id\": \"de\",\r\n      \"text\": \"Text in DE\"\r\n    },\r\n    {\r\n      \"id\": \"de_CH\",\r\n      \"text\": \"\"\r\n    }\r\n  ]\r\n}"
+						},
+						"url": {
+							"raw": "{{url_base}}/api/texts",
+							"host": [
+								"{{url_base}}"
+							],
+							"path": [
+								"api",
+								"texts"
+							]
 						},
 						"description": "Create a new product text"
 					},
@@ -1577,26 +2078,36 @@
 				{
 					"name": "/api/texts/{text_id}",
 					"request": {
-						"url": "{{url_base}}/api/translation-jobs/44444444-aaaa-4444-aaaa-444444444444",
 						"method": "GET",
 						"header": [
 							{
 								"key": "Accept",
-								"value": "{{header_accept}}",
-								"description": ""
+								"value": "{{header_accept}}"
 							},
 							{
 								"key": "App-ID",
-								"value": "{{header_application_id}}",
-								"description": ""
+								"value": "{{header_application_id}}"
 							},
 							{
 								"key": "App-Key",
-								"value": "{{header_application_key}}",
-								"description": ""
+								"value": "{{header_application_key}}"
 							}
 						],
-						"body": {},
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{url_base}}/api/translation-jobs/44444444-aaaa-4444-aaaa-444444444444",
+							"host": [
+								"{{url_base}}"
+							],
+							"path": [
+								"api",
+								"translation-jobs",
+								"44444444-aaaa-4444-aaaa-444444444444"
+							]
+						},
 						"description": "List a single product text"
 					},
 					"response": []
@@ -1604,33 +2115,39 @@
 				{
 					"name": "/api/texts/{text_id}",
 					"request": {
-						"url": "{{url_base}}/api/translation-jobs/44444444-aaaa-4444-aaaa-444444444444",
 						"method": "PATCH",
 						"header": [
 							{
 								"key": "Accept",
-								"value": "{{header_accept}}",
-								"description": ""
+								"value": "{{header_accept}}"
 							},
 							{
 								"key": "App-ID",
-								"value": "{{header_application_id}}",
-								"description": ""
+								"value": "{{header_application_id}}"
 							},
 							{
 								"key": "App-Key",
-								"value": "{{header_application_key}}",
-								"description": ""
+								"value": "{{header_application_key}}"
 							},
 							{
 								"key": "Content-Type",
-								"value": "application/json",
-								"description": ""
+								"value": "application/json"
 							}
 						],
 						"body": {
 							"mode": "raw",
 							"raw": "{\r\n  \"due_date\": \"2015-08-10T17:23:09+0100\",\r\n  \"status\": \"complete\",\r\n  \"texts\": [\r\n    {\r\n      \"text\": \"Second translated text\",\r\n      \"block\": \"63bbe2b1-6355-4110-8a68-e3dd8fb69978\",\r\n      \"comment\": \"I also translated the links.\"\r\n    },\r\n    {\r\n      \"text\": \"\",\r\n      \"block\": \"b7f84cb4-3e96-4b89-b679-317b8010de5e\",\r\n      \"comment\": \"I didn't change this text.\"\r\n    }\r\n  ],\r\n  \"translators\": [\r\n    \"8e29fbbd-de31-4eaa-942a-34a70f851182\",\r\n    \"731edab6-e27c-4cfa-8c19-c34ec73c5922\"\r\n  ]\r\n}"
+						},
+						"url": {
+							"raw": "{{url_base}}/api/translation-jobs/44444444-aaaa-4444-aaaa-444444444444",
+							"host": [
+								"{{url_base}}"
+							],
+							"path": [
+								"api",
+								"translation-jobs",
+								"44444444-aaaa-4444-aaaa-444444444444"
+							]
 						},
 						"description": "Update a product text"
 					},
@@ -1639,26 +2156,35 @@
 				{
 					"name": "/api/text-groups",
 					"request": {
-						"url": "{{url_base}}/api/text-groups",
 						"method": "GET",
 						"header": [
 							{
 								"key": "Accept",
-								"value": "{{header_accept}}",
-								"description": ""
+								"value": "{{header_accept}}"
 							},
 							{
 								"key": "App-ID",
-								"value": "{{header_application_id}}",
-								"description": ""
+								"value": "{{header_application_id}}"
 							},
 							{
 								"key": "App-Key",
-								"value": "{{header_application_key}}",
-								"description": ""
+								"value": "{{header_application_key}}"
 							}
 						],
-						"body": {},
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{url_base}}/api/text-groups",
+							"host": [
+								"{{url_base}}"
+							],
+							"path": [
+								"api",
+								"text-groups"
+							]
+						},
 						"description": "List text groups"
 					},
 					"response": []
@@ -1666,26 +2192,36 @@
 				{
 					"name": "/api/translation-jobs/{translation_job_id}",
 					"request": {
-						"url": "{{url_base}}/api/translation-jobs/44444444-aaaa-4444-aaaa-444444444444",
 						"method": "GET",
 						"header": [
 							{
 								"key": "Accept",
-								"value": "{{header_accept}}",
-								"description": ""
+								"value": "{{header_accept}}"
 							},
 							{
 								"key": "App-ID",
-								"value": "{{header_application_id}}",
-								"description": ""
+								"value": "{{header_application_id}}"
 							},
 							{
 								"key": "App-Key",
-								"value": "{{header_application_key}}",
-								"description": ""
+								"value": "{{header_application_key}}"
 							}
 						],
-						"body": {},
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{url_base}}/api/translation-jobs/44444444-aaaa-4444-aaaa-444444444444",
+							"host": [
+								"{{url_base}}"
+							],
+							"path": [
+								"api",
+								"translation-jobs",
+								"44444444-aaaa-4444-aaaa-444444444444"
+							]
+						},
 						"description": "List a single translation job"
 					},
 					"response": []
@@ -1693,33 +2229,39 @@
 				{
 					"name": "/api/translation-jobs/{translation_job_id}",
 					"request": {
-						"url": "{{url_base}}/api/translation-jobs/44444444-aaaa-4444-aaaa-444444444444",
 						"method": "PATCH",
 						"header": [
 							{
 								"key": "Accept",
-								"value": "{{header_accept}}",
-								"description": ""
+								"value": "{{header_accept}}"
 							},
 							{
 								"key": "App-ID",
-								"value": "{{header_application_id}}",
-								"description": ""
+								"value": "{{header_application_id}}"
 							},
 							{
 								"key": "App-Key",
-								"value": "{{header_application_key}}",
-								"description": ""
+								"value": "{{header_application_key}}"
 							},
 							{
 								"key": "Content-Type",
-								"value": "application/json",
-								"description": ""
+								"value": "application/json"
 							}
 						],
 						"body": {
 							"mode": "raw",
 							"raw": "{\r\n  \"due_date\": \"2015-08-10T17:23:09+0100\",\r\n  \"status\": \"complete\",\r\n  \"texts\": [\r\n    {\r\n      \"text\": \"Second translated text\",\r\n      \"block\": \"63bbe2b1-6355-4110-8a68-e3dd8fb69978\",\r\n      \"comment\": \"I also translated the links.\"\r\n    },\r\n    {\r\n      \"text\": \"\",\r\n      \"block\": \"b7f84cb4-3e96-4b89-b679-317b8010de5e\",\r\n      \"comment\": \"I didn't change this text.\"\r\n    }\r\n  ],\r\n  \"translators\": [\r\n    \"8e29fbbd-de31-4eaa-942a-34a70f851182\",\r\n    \"731edab6-e27c-4cfa-8c19-c34ec73c5922\"\r\n  ]\r\n}"
+						},
+						"url": {
+							"raw": "{{url_base}}/api/translation-jobs/44444444-aaaa-4444-aaaa-444444444444",
+							"host": [
+								"{{url_base}}"
+							],
+							"path": [
+								"api",
+								"translation-jobs",
+								"44444444-aaaa-4444-aaaa-444444444444"
+							]
 						},
 						"description": "Update a translation job"
 					},
@@ -1729,33 +2271,38 @@
 		},
 		{
 			"name": "User",
-			"description": "User",
 			"item": [
 				{
 					"name": "/users",
 					"request": {
-						"url": "{{url_base}}/api/users",
 						"method": "GET",
 						"header": [
 							{
 								"key": "Accept",
-								"value": "{{header_accept}}",
-								"description": ""
+								"value": "{{header_accept}}"
 							},
 							{
 								"key": "App-Key",
-								"value": "{{portal_header_app_key}}",
-								"description": ""
+								"value": "{{portal_header_app_key}}"
 							},
 							{
 								"key": "App-Id",
-								"value": "{{portal_header_app_id}}",
-								"description": ""
+								"value": "{{portal_header_app_id}}"
 							}
 						],
 						"body": {
 							"mode": "raw",
 							"raw": ""
+						},
+						"url": {
+							"raw": "{{url_base}}/api/users",
+							"host": [
+								"{{url_base}}"
+							],
+							"path": [
+								"api",
+								"users"
+							]
 						},
 						"description": "Users"
 					},
@@ -1764,23 +2311,31 @@
 				{
 					"name": "/users/{user_id}",
 					"request": {
-						"url": "{{url_base}}/api/users/44444444-aaaa-4444-aaaa-444444444444",
 						"method": "GET",
 						"header": [
 							{
 								"key": "Accept",
-								"value": "{{header_accept}}",
-								"description": ""
+								"value": "{{header_accept}}"
 							},
 							{
 								"key": "App-Key",
-								"value": "{{portal_header_app_key}}",
-								"description": ""
+								"value": "{{portal_header_app_key}}"
 							}
 						],
 						"body": {
 							"mode": "raw",
 							"raw": ""
+						},
+						"url": {
+							"raw": "{{url_base}}/api/users/44444444-aaaa-4444-aaaa-444444444444",
+							"host": [
+								"{{url_base}}"
+							],
+							"path": [
+								"api",
+								"users",
+								"44444444-aaaa-4444-aaaa-444444444444"
+							]
 						},
 						"description": "List single user"
 					},
@@ -1789,58 +2344,108 @@
 				{
 					"name": "/users/{user_id}",
 					"request": {
-						"url": "{{url_base}}/api/users/44444444-aaaa-4444-aaaa-444444444444",
 						"method": "PATCH",
 						"header": [
 							{
 								"key": "Accept",
-								"value": "{{header_accept}}",
-								"description": ""
+								"value": "{{header_accept}}"
 							},
 							{
 								"key": "App-Key",
-								"value": "{{portal_header_app_key}}",
-								"description": ""
+								"value": "{{portal_header_app_key}}"
 							},
 							{
 								"key": "Content-Type",
-								"value": "application/json",
-								"description": ""
+								"value": "application/json"
 							}
 						],
 						"body": {
 							"mode": "raw",
 							"raw": "{\n    \"email\" : \"test@detailag.ch\",\n    \"username\" : \"hans\",\n    \"state\" : 1,\n    \"firstname\" : \"Hans\",\n    \"lastname\" : \"Test\",\n    \"display_name\" : \"Hans Test\",\n    \"roles\" : [ \n        \"ee5cbf52-91cf-4ef4-a5ef-ee7780ae81d5\"\n    ]\n}"
 						},
+						"url": {
+							"raw": "{{url_base}}/api/users/44444444-aaaa-4444-aaaa-444444444444",
+							"host": [
+								"{{url_base}}"
+							],
+							"path": [
+								"api",
+								"users",
+								"44444444-aaaa-4444-aaaa-444444444444"
+							]
+						},
 						"description": "Update a user"
+					},
+					"response": []
+				},
+				{
+					"name": "/users/{user_id}",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "{{header_accept}}"
+							},
+							{
+								"key": "App-Key",
+								"value": "{{portal_header_app_key}}"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email\" : \"test@detailag.ch\",\n    \"username\" : \"hans\",\n    \"state\" : 1,\n    \"firstname\" : \"Hans\",\n    \"lastname\" : \"Test\",\n    \"display_name\" : \"Hans Test\",\n    \"roles\" : [ \n        \"ee5cbf52-91cf-4ef4-a5ef-ee7780ae81d5\"\n    ]\n}"
+						},
+						"url": {
+							"raw": "{{url_base}}/api/users/44444444-aaaa-4444-aaaa-444444444444",
+							"host": [
+								"{{url_base}}"
+							],
+							"path": [
+								"api",
+								"users",
+								"44444444-aaaa-4444-aaaa-444444444444"
+							]
+						},
+						"description": "Delte an user"
 					},
 					"response": []
 				},
 				{
 					"name": "/users",
 					"request": {
-						"url": "{{url_base}}/api/users",
 						"method": "POST",
 						"header": [
 							{
 								"key": "Accept",
-								"value": "{{header_accept}}",
-								"description": ""
+								"value": "{{header_accept}}"
 							},
 							{
 								"key": "App-Key",
-								"value": "{{portal_header_app_key}}",
-								"description": ""
+								"value": "{{portal_header_app_key}}"
 							},
 							{
 								"key": "Content-Type",
-								"value": "application/json",
-								"description": ""
+								"value": "application/json"
 							}
 						],
 						"body": {
 							"mode": "raw",
 							"raw": "{\n    \"email\" : \"test@detailag.ch\",\n    \"username\" : \"hans\",\n    \"female\": 0,\n    \"state\" : 1,\n    \"firstname\" : \"Hans\",\n    \"lastname\" : \"Test\",\n    \"display_name\" : \"Hans Test\",\n    \"roles\" : [ \n        \"2acb20c6-9571-4444-88dd-c36b487e06d3\", \n        \"2acb20c6-9571-4444-88dd-c36b487e06d9\"\n    ]\n}"
+						},
+						"url": {
+							"raw": "{{url_base}}/api/users",
+							"host": [
+								"{{url_base}}"
+							],
+							"path": [
+								"api",
+								"users"
+							]
 						},
 						"description": "Create a new user"
 					},
@@ -1849,29 +2454,37 @@
 				{
 					"name": "/roles",
 					"request": {
-						"url": "{{url_base}}/api/roles",
 						"method": "GET",
 						"header": [
 							{
 								"key": "Accept",
-								"value": "{{header_accept}}",
-								"description": ""
+								"value": "{{header_accept}}"
 							},
 							{
 								"key": "App-Key",
-								"value": "{{portal_header_app_key}}",
-								"description": ""
+								"value": "{{portal_header_app_key}}"
 							}
 						],
 						"body": {
 							"mode": "raw",
 							"raw": ""
 						},
+						"url": {
+							"raw": "{{url_base}}/api/roles",
+							"host": [
+								"{{url_base}}"
+							],
+							"path": [
+								"api",
+								"roles"
+							]
+						},
 						"description": "Roles"
 					},
 					"response": []
 				}
-			]
+			],
+			"description": "User"
 		}
 	]
 }
