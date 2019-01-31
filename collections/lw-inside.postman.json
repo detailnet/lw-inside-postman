@@ -7,6 +7,376 @@
 	},
 	"item": [
 		{
+			"name": "Core",
+			"item": [
+				{
+					"name": "/api/countries",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "{{header_accept}}"
+							},
+							{
+								"key": "App-ID",
+								"value": "{{header_application_id}}"
+							},
+							{
+								"key": "App-Key",
+								"value": "{{header_application_key}}"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{url_base}}/api/countries",
+							"host": [
+								"{{url_base}}"
+							],
+							"path": [
+								"api",
+								"countries"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/api/languages",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "{{header_accept}}"
+							},
+							{
+								"key": "App-ID",
+								"value": "{{header_application_id}}"
+							},
+							{
+								"key": "App-Key",
+								"value": "{{header_application_key}}"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{url_base}}/api/languages?page_size=-1",
+							"host": [
+								"{{url_base}}"
+							],
+							"path": [
+								"api",
+								"languages"
+							],
+							"query": [
+								{
+									"key": "page_size",
+									"value": "-1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/api/translations",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "{{header_accept}}",
+								"type": "text"
+							},
+							{
+								"key": "App-ID",
+								"value": "{{header_application_id}}",
+								"type": "text"
+							},
+							{
+								"key": "App-Key",
+								"value": "{{header_application_key}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{url_base}}/api/translations",
+							"host": [
+								"{{url_base}}"
+							],
+							"path": [
+								"api",
+								"translations"
+							]
+						},
+						"description": "Get treanslations"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "User",
+			"item": [
+				{
+					"name": "/users",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "{{header_accept}}"
+							},
+							{
+								"key": "App-Key",
+								"value": "{{portal_header_app_key}}"
+							},
+							{
+								"key": "App-Id",
+								"value": "{{portal_header_app_id}}"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{url_base}}/api/users",
+							"host": [
+								"{{url_base}}"
+							],
+							"path": [
+								"api",
+								"users"
+							]
+						},
+						"description": "Users"
+					},
+					"response": []
+				},
+				{
+					"name": "/users/{user_id}",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "{{header_accept}}"
+							},
+							{
+								"key": "App-Key",
+								"value": "{{portal_header_app_key}}"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{url_base}}/api/users/44444444-aaaa-4444-aaaa-444444444444",
+							"host": [
+								"{{url_base}}"
+							],
+							"path": [
+								"api",
+								"users",
+								"44444444-aaaa-4444-aaaa-444444444444"
+							]
+						},
+						"description": "List single user"
+					},
+					"response": []
+				},
+				{
+					"name": "/users/{user_id} Copy",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "{{header_accept}}"
+							},
+							{
+								"key": "App-Key",
+								"value": "{{portal_header_app_key}}"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{url_base}}/api/users/44444444-aaaa-4444-aaaa-444444444444",
+							"host": [
+								"{{url_base}}"
+							],
+							"path": [
+								"api",
+								"users",
+								"44444444-aaaa-4444-aaaa-444444444444"
+							]
+						},
+						"description": "List single user"
+					},
+					"response": []
+				},
+				{
+					"name": "/users/{user_id}",
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "{{header_accept}}"
+							},
+							{
+								"key": "App-Key",
+								"value": "{{portal_header_app_key}}"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email\" : \"test@detailag.ch\",\n    \"username\" : \"hans\",\n    \"state\" : 1,\n    \"firstname\" : \"Hans\",\n    \"lastname\" : \"Test\",\n    \"display_name\" : \"Hans Test\",\n    \"roles\" : [ \n        \"ee5cbf52-91cf-4ef4-a5ef-ee7780ae81d5\"\n    ]\n}"
+						},
+						"url": {
+							"raw": "{{url_base}}/api/users/44444444-aaaa-4444-aaaa-444444444444",
+							"host": [
+								"{{url_base}}"
+							],
+							"path": [
+								"api",
+								"users",
+								"44444444-aaaa-4444-aaaa-444444444444"
+							]
+						},
+						"description": "Update a user"
+					},
+					"response": []
+				},
+				{
+					"name": "/users/{user_id}",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "{{header_accept}}"
+							},
+							{
+								"key": "App-Key",
+								"value": "{{portal_header_app_key}}"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email\" : \"test@detailag.ch\",\n    \"username\" : \"hans\",\n    \"state\" : 1,\n    \"firstname\" : \"Hans\",\n    \"lastname\" : \"Test\",\n    \"display_name\" : \"Hans Test\",\n    \"roles\" : [ \n        \"ee5cbf52-91cf-4ef4-a5ef-ee7780ae81d5\"\n    ]\n}"
+						},
+						"url": {
+							"raw": "{{url_base}}/api/users/44444444-aaaa-4444-aaaa-444444444444",
+							"host": [
+								"{{url_base}}"
+							],
+							"path": [
+								"api",
+								"users",
+								"44444444-aaaa-4444-aaaa-444444444444"
+							]
+						},
+						"description": "Delte an user"
+					},
+					"response": []
+				},
+				{
+					"name": "/users",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "{{header_accept}}"
+							},
+							{
+								"key": "App-Key",
+								"value": "{{portal_header_app_key}}"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email\" : \"test@detailag.ch\",\n    \"username\" : \"hans\",\n    \"female\": 0,\n    \"state\" : 1,\n    \"firstname\" : \"Hans\",\n    \"lastname\" : \"Test\",\n    \"display_name\" : \"Hans Test\",\n    \"roles\" : [ \n        \"2acb20c6-9571-4444-88dd-c36b487e06d3\", \n        \"2acb20c6-9571-4444-88dd-c36b487e06d9\"\n    ]\n}"
+						},
+						"url": {
+							"raw": "{{url_base}}/api/users",
+							"host": [
+								"{{url_base}}"
+							],
+							"path": [
+								"api",
+								"users"
+							]
+						},
+						"description": "Create a new user"
+					},
+					"response": []
+				},
+				{
+					"name": "/roles",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "{{header_accept}}"
+							},
+							{
+								"key": "App-Key",
+								"value": "{{portal_header_app_key}}"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{url_base}}/api/roles",
+							"host": [
+								"{{url_base}}"
+							],
+							"path": [
+								"api",
+								"roles"
+							]
+						},
+						"description": "Roles"
+					},
+					"response": []
+				}
+			],
+			"description": "User"
+		},
+		{
 			"name": "Asset",
 			"item": [
 				{
@@ -1130,126 +1500,6 @@
 			]
 		},
 		{
-			"name": "Core",
-			"item": [
-				{
-					"name": "/api/countries",
-					"request": {
-						"method": "GET",
-						"header": [
-							{
-								"key": "Accept",
-								"value": "{{header_accept}}"
-							},
-							{
-								"key": "App-ID",
-								"value": "{{header_application_id}}"
-							},
-							{
-								"key": "App-Key",
-								"value": "{{header_application_key}}"
-							}
-						],
-						"body": {
-							"mode": "raw",
-							"raw": ""
-						},
-						"url": {
-							"raw": "{{url_base}}/api/countries",
-							"host": [
-								"{{url_base}}"
-							],
-							"path": [
-								"api",
-								"countries"
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "/api/languages",
-					"request": {
-						"method": "GET",
-						"header": [
-							{
-								"key": "Accept",
-								"value": "{{header_accept}}"
-							},
-							{
-								"key": "App-ID",
-								"value": "{{header_application_id}}"
-							},
-							{
-								"key": "App-Key",
-								"value": "{{header_application_key}}"
-							}
-						],
-						"body": {
-							"mode": "raw",
-							"raw": ""
-						},
-						"url": {
-							"raw": "{{url_base}}/api/languages?page_size=-1",
-							"host": [
-								"{{url_base}}"
-							],
-							"path": [
-								"api",
-								"languages"
-							],
-							"query": [
-								{
-									"key": "page_size",
-									"value": "-1"
-								}
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "/api/translations",
-					"request": {
-						"method": "GET",
-						"header": [
-							{
-								"key": "Accept",
-								"value": "{{header_accept}}",
-								"type": "text"
-							},
-							{
-								"key": "App-ID",
-								"value": "{{header_application_id}}",
-								"type": "text"
-							},
-							{
-								"key": "App-Key",
-								"value": "{{header_application_key}}",
-								"type": "text"
-							}
-						],
-						"body": {
-							"mode": "raw",
-							"raw": ""
-						},
-						"url": {
-							"raw": "{{url_base}}/api/translations",
-							"host": [
-								"{{url_base}}"
-							],
-							"path": [
-								"api",
-								"translations"
-							]
-						},
-						"description": "Get treanslations"
-					},
-					"response": []
-				}
-			]
-		},
-		{
 			"name": "Product",
 			"item": [
 				{
@@ -1407,14 +1657,14 @@
 							"raw": "{\n\t\"name\": \"TEST Product\",\n\t\"titles\": [\n  \t\t{\"locale\": \"de\", \"value\": \"TEST Product title DE\"},\n  \t\t{\"locale\": \"en\", \"value\": \"TEST Product title EN\"},\n  \t\t{\"locale\": \"fr\", \"value\": \"TEST Product title FR\"},\n  \t\t{\"locale\": \"it\", \"value\": \"TEST Product title IT\"}\n\t],\n\t\"content\": {\n\t\t\"value\":400,\n\t\t\"unit\":\"ml\"\n\t},\n\t\"skin_types\": [\n\t\t\"fc097053-992c-4876-ad9e-ab262b4e5daa\",\n\t\t\"e1dc345d-b9d9-4fb7-b4d9-d0fe41525215\",\n\t\t\"90a0a054-31f9-42ab-9e68-396ae3966295\"\n\t],\n\t\"groups\": [\n\t\t\"d88c1a9c-c541-4ad4-a053-9959f0c8ca90\"\n\t],\n\t\"ingredients\": [\n\t\t{\n\t\t\t\"id\": \"c4f13dd8-5417-4a28-88c3-240e094f4e3c\",\n\t\t\t\"content\": 0.5,\n\t\t\t\"unit\" : \"%\"\n\t\t}\n\t],\n\t\"flavors\":[\n\t\t{\n\t\t\t\"fragrance\": \"6b2b5516-106f-445a-9e44-d57556a8ab86\",\n\t\t\t\"substances\": [\n\t\t\t],\n\t\t\t\"code\": \"\",\n\t\t\t\"barcode\": null,\n\t\t\t\"substance_addition\": \"\"\n\t\t}\n\t]\n}"
 						},
 						"url": {
-							"raw": "{{url_base}}/api/products/c9925402-cff8-49c7-9b4e-b6a991b36a67",
+							"raw": "{{url_base}}/api/products/44444444-aaaa-4444-aaaa-444444444444",
 							"host": [
 								"{{url_base}}"
 							],
 							"path": [
 								"api",
 								"products",
-								"c9925402-cff8-49c7-9b4e-b6a991b36a67"
+								"44444444-aaaa-4444-aaaa-444444444444"
 							]
 						}
 					},
@@ -1787,52 +2037,1030 @@
 			]
 		},
 		{
-			"name": "ProductText",
+			"name": "Text",
 			"item": [
 				{
-					"name": "/api/products/{product_id}/texts",
-					"request": {
-						"method": "POST",
-						"header": [
-							{
-								"key": "Accept",
-								"value": "{{header_accept}}"
+					"name": "ProductText",
+					"item": [
+						{
+							"name": "/api/text-groups",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "{{header_accept}}"
+									},
+									{
+										"key": "App-ID",
+										"value": "{{header_application_id}}"
+									},
+									{
+										"key": "App-Key",
+										"value": "{{header_application_key}}"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "{{url_base}}/api/text-groups",
+									"host": [
+										"{{url_base}}"
+									],
+									"path": [
+										"api",
+										"text-groups"
+									]
+								},
+								"description": "List text groups (list of available product text blocks)"
 							},
-							{
-								"key": "App-ID",
-								"value": "{{header_application_id}}"
-							},
-							{
-								"key": "App-Key",
-								"value": "{{header_application_key}}"
-							},
-							{
-								"key": "Content-Type",
-								"value": "application/json"
-							}
-						],
-						"body": {
-							"mode": "raw",
-							"raw": "{\r\n  \"id\": \"44444444-aaaa-4444-aaaa-444444444444\",\r\n  \"block\": \"bd69d5c2-3d32-4ada-97ed-a6cc8902fe60\",\r\n  \"locales\": [\r\n    {\r\n      \"id\": \"de\",\r\n      \"text\": \"Text in DE\"\r\n    },\r\n    {\r\n      \"id\": \"de_CH\",\r\n      \"text\": \"\"\r\n    }\r\n  ]\r\n}"
+							"response": []
 						},
-						"url": {
-							"raw": "{{url_base}}/api/products/44444444-aaaa-4444-aaaa-444444444444/texts",
-							"host": [
-								"{{url_base}}"
-							],
-							"path": [
-								"api",
-								"products",
-								"44444444-aaaa-4444-aaaa-444444444444",
-								"texts"
-							]
+						{
+							"name": "/api/products/{product_id}/texts",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "{{header_accept}}"
+									},
+									{
+										"key": "App-ID",
+										"value": "{{header_application_id}}"
+									},
+									{
+										"key": "App-Key",
+										"value": "{{header_application_key}}"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"id\": \"44444444-aaaa-4444-aaaa-444444444444\",\r\n  \"block\": \"bd69d5c2-3d32-4ada-97ed-a6cc8902fe60\",\r\n  \"locales\": [\r\n    {\r\n      \"id\": \"de\",\r\n      \"text\": \"Text in DE\"\r\n    },\r\n    {\r\n      \"id\": \"de_CH\",\r\n      \"text\": \"\"\r\n    }\r\n  ]\r\n}"
+								},
+								"url": {
+									"raw": "{{url_base}}/api/products/44444444-aaaa-4444-aaaa-444444444444/texts",
+									"host": [
+										"{{url_base}}"
+									],
+									"path": [
+										"api",
+										"products",
+										"44444444-aaaa-4444-aaaa-444444444444",
+										"texts"
+									]
+								},
+								"description": "Create a new product text"
+							},
+							"response": []
 						},
-						"description": "Create a new product text"
-					},
-					"response": []
+						{
+							"name": "/api/products/{product_id}/texts",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "{{header_accept}}"
+									},
+									{
+										"key": "App-ID",
+										"value": "{{header_application_id}}"
+									},
+									{
+										"key": "App-Key",
+										"value": "{{header_application_key}}"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "{{url_base}}/api/products/44444444-aaaa-4444-aaaa-444444444444/texts",
+									"host": [
+										"{{url_base}}"
+									],
+									"path": [
+										"api",
+										"products",
+										"44444444-aaaa-4444-aaaa-444444444444",
+										"texts"
+									]
+								},
+								"description": "List a product's texts"
+							},
+							"response": []
+						},
+						{
+							"name": "/api/products/{product_id}/texts/{text_id}",
+							"request": {
+								"method": "PATCH",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "{{header_accept}}"
+									},
+									{
+										"key": "App-ID",
+										"value": "{{header_application_id}}"
+									},
+									{
+										"key": "App-Key",
+										"value": "{{header_application_key}}"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"locales\": [\r\n    {\r\n      \"id\": \"de\",\r\n      \"text\": \"Text in DE\"\r\n    },\r\n    {\r\n      \"id\": \"de_CH\",\r\n      \"text\": \"\"\r\n    }\r\n  ]\r\n}"
+								},
+								"url": {
+									"raw": "{{url_base}}/api/products/44444444-aaaa-4444-aaaa-444444444444/texts/44444444-aaaa-4444-aaaa-444444444444",
+									"host": [
+										"{{url_base}}"
+									],
+									"path": [
+										"api",
+										"products",
+										"44444444-aaaa-4444-aaaa-444444444444",
+										"texts",
+										"44444444-aaaa-4444-aaaa-444444444444"
+									]
+								},
+								"description": "Update a product text"
+							},
+							"response": []
+						},
+						{
+							"name": "/api/products/{product_id}/texts/{text_id}",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "{{header_accept}}"
+									},
+									{
+										"key": "App-ID",
+										"value": "{{header_application_id}}"
+									},
+									{
+										"key": "App-Key",
+										"value": "{{header_application_key}}"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "{{url_base}}/api/products/44444444-aaaa-4444-aaaa-444444444444/texts/44444444-aaaa-4444-aaaa-444444444444",
+									"host": [
+										"{{url_base}}"
+									],
+									"path": [
+										"api",
+										"products",
+										"44444444-aaaa-4444-aaaa-444444444444",
+										"texts",
+										"44444444-aaaa-4444-aaaa-444444444444"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "/api/texts/{text_id}",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "{{header_accept}}"
+									},
+									{
+										"key": "App-ID",
+										"value": "{{header_application_id}}"
+									},
+									{
+										"key": "App-Key",
+										"value": "{{header_application_key}}"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "{{url_base}}/api/texts/44444444-aaaa-4444-aaaa-444444444444",
+									"host": [
+										"{{url_base}}"
+									],
+									"path": [
+										"api",
+										"texts",
+										"44444444-aaaa-4444-aaaa-444444444444"
+									]
+								},
+								"description": "List a single product text (Should not be used anympore, but route not disabled)"
+							},
+							"response": []
+						},
+						{
+							"name": "/api/products/{product_id}/translation-jobs",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "{{header_accept}}"
+									},
+									{
+										"key": "App-ID",
+										"value": "{{header_application_id}}"
+									},
+									{
+										"key": "App-Key",
+										"value": "{{header_application_key}}"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"locale\": \"fr_BE\",\r\n  \"due_date\": \"2015-08-09T14:18:53+0100\",\r\n  \"texts\": [\r\n    {\r\n      \"text\": \"First translated text\",\r\n      \"block\": \"bd69d5c2-3d32-4ada-97ed-a6cc8902fe60\",\r\n      \"comment\": \"Please be aware, to also convert the embedded links to the desired language.\"\r\n    }\r\n\r\n  ],\r\n  \"translators\": [\r\n    \"8e29fbbd-de31-4eaa-942a-34a70f851182\",\r\n    \"731edab6-e27c-4cfa-8c19-c34ec73c5922\"\r\n  ]\r\n}"
+								},
+								"url": {
+									"raw": "{{url_base}}/api/products/44444444-aaaa-4444-aaaa-444444444444/translation-jobs",
+									"host": [
+										"{{url_base}}"
+									],
+									"path": [
+										"api",
+										"products",
+										"44444444-aaaa-4444-aaaa-444444444444",
+										"translation-jobs"
+									]
+								},
+								"description": "Create a translation job for a product"
+							},
+							"response": []
+						},
+						{
+							"name": "/api/products/{product_id}/translation-jobs/{translation_job_id}",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "{{header_accept}}"
+									},
+									{
+										"key": "App-ID",
+										"value": "{{header_application_id}}"
+									},
+									{
+										"key": "App-Key",
+										"value": "{{header_application_key}}"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"due_date\": \"2015-08-10T17:23:09+0100\",\r\n  \"status\": \"complete\",\r\n  \"texts\": [\r\n    {\r\n      \"text\": \"Second translated text\",\r\n      \"block\": \"63bbe2b1-6355-4110-8a68-e3dd8fb69978\",\r\n      \"comment\": \"I also translated the links.\"\r\n    },\r\n    {\r\n      \"text\": \"\",\r\n      \"block\": \"b7f84cb4-3e96-4b89-b679-317b8010de5e\",\r\n      \"comment\": \"I didn't change this text.\"\r\n    }\r\n  ],\r\n  \"translators\": [\r\n    \"8e29fbbd-de31-4eaa-942a-34a70f851182\",\r\n    \"731edab6-e27c-4cfa-8c19-c34ec73c5922\",\r\n    \"91a82a62-61eb-4bed-8d7e-fae8b264db39\"\r\n  ]\r\n}"
+								},
+								"url": {
+									"raw": "{{url_base}}/api/products/44444444-aaaa-4444-aaaa-444444444444/translation-jobs/873d8dcd-30e6-4f5d-a299-3103aae155ff",
+									"host": [
+										"{{url_base}}"
+									],
+									"path": [
+										"api",
+										"products",
+										"44444444-aaaa-4444-aaaa-444444444444",
+										"translation-jobs",
+										"873d8dcd-30e6-4f5d-a299-3103aae155ff"
+									]
+								},
+								"description": "Get a product's translation job"
+							},
+							"response": []
+						},
+						{
+							"name": "/api/products/{product_id}/translation-jobs/{translation_job_id}",
+							"request": {
+								"method": "PATCH",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "{{header_accept}}"
+									},
+									{
+										"key": "App-ID",
+										"value": "{{header_application_id}}"
+									},
+									{
+										"key": "App-Key",
+										"value": "{{header_application_key}}"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"due_date\": \"2015-08-10T17:23:09+0100\",\r\n  \"status\": \"complete\",\r\n  \"texts\": [\r\n    {\r\n      \"text\": \"Second translated text\",\r\n      \"block\": \"63bbe2b1-6355-4110-8a68-e3dd8fb69978\",\r\n      \"comment\": \"I also translated the links.\"\r\n    },\r\n    {\r\n      \"text\": \"\",\r\n      \"block\": \"b7f84cb4-3e96-4b89-b679-317b8010de5e\",\r\n      \"comment\": \"I didn't change this text.\"\r\n    }\r\n  ],\r\n  \"translators\": [\r\n    \"8e29fbbd-de31-4eaa-942a-34a70f851182\",\r\n    \"731edab6-e27c-4cfa-8c19-c34ec73c5922\",\r\n    \"91a82a62-61eb-4bed-8d7e-fae8b264db39\"\r\n  ]\r\n}"
+								},
+								"url": {
+									"raw": "{{url_base}}/api/products/44444444-aaaa-4444-aaaa-444444444444/translation-jobs/44444444-aaaa-4444-aaaa-444444444444",
+									"host": [
+										"{{url_base}}"
+									],
+									"path": [
+										"api",
+										"products",
+										"44444444-aaaa-4444-aaaa-444444444444",
+										"translation-jobs",
+										"44444444-aaaa-4444-aaaa-444444444444"
+									]
+								},
+								"description": "Update a product's translation job"
+							},
+							"response": []
+						},
+						{
+							"name": "/api/products/{product_id}/translation-jobs/{translation_job_id}",
+							"request": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "{{header_accept}}"
+									},
+									{
+										"key": "App-ID",
+										"value": "{{header_application_id}}"
+									},
+									{
+										"key": "App-Key",
+										"value": "{{header_application_key}}"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"due_date\": \"2015-08-10T17:23:09+0100\",\r\n  \"status\": \"complete\",\r\n  \"texts\": [\r\n    {\r\n      \"text\": \"Second translated text\",\r\n      \"block\": \"63bbe2b1-6355-4110-8a68-e3dd8fb69978\",\r\n      \"comment\": \"I also translated the links.\"\r\n    },\r\n    {\r\n      \"text\": \"\",\r\n      \"block\": \"b7f84cb4-3e96-4b89-b679-317b8010de5e\",\r\n      \"comment\": \"I didn't change this text.\"\r\n    }\r\n  ],\r\n  \"translators\": [\r\n    \"8e29fbbd-de31-4eaa-942a-34a70f851182\",\r\n    \"731edab6-e27c-4cfa-8c19-c34ec73c5922\",\r\n    \"91a82a62-61eb-4bed-8d7e-fae8b264db39\"\r\n  ]\r\n}"
+								},
+								"url": {
+									"raw": "{{url_base}}/api/products/44444444-aaaa-4444-aaaa-444444444444/translation-jobs/873d8dcd-30e6-4f5d-a299-3103aae155ff",
+									"host": [
+										"{{url_base}}"
+									],
+									"path": [
+										"api",
+										"products",
+										"44444444-aaaa-4444-aaaa-444444444444",
+										"translation-jobs",
+										"873d8dcd-30e6-4f5d-a299-3103aae155ff"
+									]
+								},
+								"description": "Delete a product's translation job"
+							},
+							"response": []
+						}
+					],
+					"_postman_isSubFolder": true
 				},
 				{
-					"name": "/api/products/{product_id}/texts",
+					"name": "Topic",
+					"item": [
+						{
+							"name": "/api/folders",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "{{header_accept}}"
+									},
+									{
+										"key": "App-ID",
+										"value": "{{header_application_id}}"
+									},
+									{
+										"key": "App-Key",
+										"value": "{{header_application_key}}"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "{{url_base}}/api/folders",
+									"host": [
+										"{{url_base}}"
+									],
+									"path": [
+										"api",
+										"folders"
+									]
+								},
+								"description": "List folders"
+							},
+							"response": []
+						},
+						{
+							"name": "/api/folders",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "{{header_accept}}"
+									},
+									{
+										"key": "App-ID",
+										"value": "{{header_application_id}}"
+									},
+									{
+										"key": "App-Key",
+										"value": "{{header_application_key}}"
+									},
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\t\"id\": \"44444444-aaaa-4444-aaaa-444444444444\",\n\t\"name\": \"TEST\",\n\t\"sort_index\": 900,\n\t\"folders\": [\n\t\t{\n\t\t\t\"name\": \"subfolder\",\n\t\t\t\"sort_index\": 100\n\t\t\t\n\t\t}\n\t],\n\t\"topics\": [\n\t\t{\n\t\t\t\"name\": \"Text 1\",\n\t\t\t\"sort_index\": 100\n\t\t\t\n\t\t},\n\t\t{\n\t\t\t\"name\": \"Text 2\",\n\t\t\t\"sort_index\": 200\n\t\t\t\n\t\t}\n\t]\n}"
+								},
+								"url": {
+									"raw": "{{url_base}}/api/folders",
+									"host": [
+										"{{url_base}}"
+									],
+									"path": [
+										"api",
+										"folders"
+									]
+								},
+								"description": "Create a main folder"
+							},
+							"response": []
+						},
+						{
+							"name": "/api/folders/{folder_id}",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "{{header_accept}}"
+									},
+									{
+										"key": "App-ID",
+										"value": "{{header_application_id}}"
+									},
+									{
+										"key": "App-Key",
+										"value": "{{header_application_key}}"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "{{url_base}}/api/folders/44444444-aaaa-4444-aaaa-444444444444",
+									"host": [
+										"{{url_base}}"
+									],
+									"path": [
+										"api",
+										"folders",
+										"44444444-aaaa-4444-aaaa-444444444444"
+									]
+								},
+								"description": "List single folder"
+							},
+							"response": []
+						},
+						{
+							"name": "/api/folders/{folder_id}",
+							"request": {
+								"method": "PATCH",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "{{header_accept}}"
+									},
+									{
+										"key": "App-ID",
+										"value": "{{header_application_id}}"
+									},
+									{
+										"key": "App-Key",
+										"value": "{{header_application_key}}"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\t\"name\": \"NEW name\",\n\t\"sort_index\": 50,\n\t\"topics\": [\n\t\t{\n\t\t\t\"name\": \"New topic after\",\n\t\t\t\"sort_index\": 300\n\t\t},\n\t\t{\n\t\t\t\"id\": \"f2c0ae8f-5fe7-4766-b40f-4fa59183057d\",\n\t\t\t\"name\": \"Existing topic update\",\n\t\t\t\"sort_index\":200\n\t\t\t\n\t\t},\n\t\t{\n\t\t\t\"name\": \"New topic before\",\n\t\t\t\"sort_index\": 100\n\t\t}\n\t],\n\t\"folders\": [\n\t\t{\n\t\t\t\"id\":\"df5ce38c-925d-4e02-8cd1-ff754385745a\",\n\t\t\t\"name\": \"Folder update\",\n\t\t\t\"sort_index\":200\n\t\t},\n\t\t{\n\t\t\t\"name\": \"New folder after\",\n\t\t\t\"sort_index\": 300\n\t\t},\n\t\t\t\t{\n\t\t\t\"name\": \"New folder before\",\n\t\t\t\"sort_index\": 100\n\t\t}\n\t]\n}"
+								},
+								"url": {
+									"raw": "{{url_base}}/api/folders/44444444-aaaa-4444-aaaa-444444444444",
+									"host": [
+										"{{url_base}}"
+									],
+									"path": [
+										"api",
+										"folders",
+										"44444444-aaaa-4444-aaaa-444444444444"
+									]
+								},
+								"description": "Update folder"
+							},
+							"response": []
+						},
+						{
+							"name": "/api/folders/{folder_id}",
+							"request": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "{{header_accept}}"
+									},
+									{
+										"key": "App-ID",
+										"value": "{{header_application_id}}"
+									},
+									{
+										"key": "App-Key",
+										"value": "{{header_application_key}}"
+									},
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "{{url_base}}/api/folders/44444444-aaaa-4444-aaaa-444444444445",
+									"host": [
+										"{{url_base}}"
+									],
+									"path": [
+										"api",
+										"folders",
+										"44444444-aaaa-4444-aaaa-444444444445"
+									]
+								},
+								"description": "Deleta a main folder"
+							},
+							"response": []
+						},
+						{
+							"name": "/api/topics/{topic_id}",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "{{header_accept}}"
+									},
+									{
+										"key": "App-ID",
+										"value": "{{header_application_id}}"
+									},
+									{
+										"key": "App-Key",
+										"value": "{{header_application_key}}"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "{{url_base}}/api/topics/d02625b5-2df2-41cd-a6dd-9e1537b7303f",
+									"host": [
+										"{{url_base}}"
+									],
+									"path": [
+										"api",
+										"topics",
+										"d02625b5-2df2-41cd-a6dd-9e1537b7303f"
+									]
+								},
+								"description": "List single topic"
+							},
+							"response": []
+						},
+						{
+							"name": "/api/topics/{topic_id}",
+							"request": {
+								"method": "PATCH",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "{{header_accept}}"
+									},
+									{
+										"key": "App-ID",
+										"value": "{{header_application_id}}"
+									},
+									{
+										"key": "App-Key",
+										"value": "{{header_application_key}}"
+									},
+									{
+										"key": "Content-Type",
+										"type": "text",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\t\"name\": \"NEW topic name\",\n\t\"texts\": [\n\t\t{\n\t\t\t\"block\": {\n\t\t\t\t\"name\": \"A multi line text block\", \n\t\t\t\t\"type\": \"multiline-text\",\n\t\t\t\t\"old_name\":\"A multiline text block\"\n\t\t\t},\n\t\t\t\"sort_index\": 200\n\t\t},\n\t\t{\n\t\t\t\"block\": {\n\t\t\t\t\"name\": \"A single line text block\",\n\t\t\t\t\"type\": \"singleline-text\"\n\t\t\t\t\n\t\t\t},\n\t\t\t\"sort_index\": 100\n\t\t},\n\t\t{\n\t\t\t\"block\": {\n\t\t\t\t\"name\": \"A multi line markup text block\",\n\t\t\t\t\"type\": \"multiline-markup\"\n\t\t\t},\n\t\t\t\"sort_index\": 300\n\t\t}\n\t]\n}\n"
+								},
+								"url": {
+									"raw": "{{url_base}}/api/topics/3b756a15-cced-4dc5-ad7d-2ad150aa38f7",
+									"host": [
+										"{{url_base}}"
+									],
+									"path": [
+										"api",
+										"topics",
+										"3b756a15-cced-4dc5-ad7d-2ad150aa38f7"
+									]
+								},
+								"description": "Update topic"
+							},
+							"response": []
+						},
+						{
+							"name": "/api/topics/{topic_id}/texts",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "{{header_accept}}"
+									},
+									{
+										"key": "App-ID",
+										"value": "{{header_application_id}}"
+									},
+									{
+										"key": "App-Key",
+										"value": "{{header_application_key}}"
+									},
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"type": "text",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "{{url_base}}/api/topics/3b756a15-cced-4dc5-ad7d-2ad150aa38f7/texts?page=1&page_size=25&filter=[{\"property\":\"block\",\"value\":{\"name\":\"A single line text block\",\"type\":\"singleline-text\"},\"operator\":\"=\"}]",
+									"host": [
+										"{{url_base}}"
+									],
+									"path": [
+										"api",
+										"topics",
+										"3b756a15-cced-4dc5-ad7d-2ad150aa38f7",
+										"texts"
+									],
+									"query": [
+										{
+											"key": "page",
+											"value": "1"
+										},
+										{
+											"key": "page_size",
+											"value": "25"
+										},
+										{
+											"key": "filter",
+											"value": "[{\"property\":\"block\",\"value\":{\"name\":\"A single line text block\",\"type\":\"singleline-text\"},\"operator\":\"=\"}]"
+										}
+									]
+								},
+								"description": "Create topic text"
+							},
+							"response": []
+						},
+						{
+							"name": "/api/topics/{topic_id}/texts/{text_id}",
+							"request": {
+								"method": "PATCH",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "{{header_accept}}"
+									},
+									{
+										"key": "App-ID",
+										"value": "{{header_application_id}}"
+									},
+									{
+										"key": "App-Key",
+										"value": "{{header_application_key}}"
+									},
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"type": "text",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"block\": \"A single line text block\",\r\n    \"topic\": {\r\n        \"id\": \"3b756a15-cced-4dc5-ad7d-2ad150aa38f7\",\r\n        \"name\": \"NEW topic name\",\r\n        \"created_on\": \"2019-01-29T14:42:54+0100\",\r\n        \"modified_on\": \"2019-01-29T16:01:01+0100\",\r\n        \"sort_index\": 200,\r\n        \"texts\": [\r\n            {\r\n                \"id\": \"ecd2811f-d0c8-42a0-b317-bd7775892b0d\",\r\n                \"block\": {\r\n                    \"name\": \"A multi line text block\",\r\n                    \"type\": \"multiline-text\"\r\n                },\r\n                \"locales\": [],\r\n                \"sort_index\": 200\r\n            },\r\n            {\r\n                \"id\": \"464999ed-f152-4d65-ae23-1780459bfce2\",\r\n                \"block\": {\r\n                    \"name\": \"A multi line markup text block\",\r\n                    \"type\": \"multiline-markup\"\r\n                },\r\n                \"locales\": [],\r\n                \"sort_index\": 300\r\n            }\r\n        ]\r\n    },\r\n    \"sort_index\": 100,\r\n    \"block_sort_index\": \"\",\r\n    \"locales\": [\r\n        {\r\n            \"id\": \"de\",\r\n            \"text\": \"DE single line text\",\r\n            \"versions\": [],\r\n            \"created_on\": null,\r\n            \"label\": \"-\"\r\n        },\r\n        {\r\n            \"id\": \"fr\",\r\n            \"text\": \"FR single line text\",\r\n            \"versions\": [],\r\n            \"created_on\": null,\r\n            \"label\": \"-\"\r\n        },\r\n        {\r\n            \"id\": \"it\",\r\n            \"text\": \"\",\r\n            \"versions\": [],\r\n            \"created_on\": null,\r\n            \"label\": \"-\"\r\n        },\r\n        {\r\n            \"id\": \"en\",\r\n            \"text\": \"\",\r\n            \"versions\": [],\r\n            \"created_on\": null,\r\n            \"label\": \"-\"\r\n        },\r\n        {\r\n            \"id\": \"fi\",\r\n            \"text\": \"\",\r\n            \"versions\": [],\r\n            \"created_on\": null,\r\n            \"label\": \"-\"\r\n        },\r\n        {\r\n            \"id\": \"sv\",\r\n            \"text\": \"\",\r\n            \"versions\": [],\r\n            \"created_on\": null,\r\n            \"label\": \"-\"\r\n        },\r\n        {\r\n            \"id\": \"nl\",\r\n            \"text\": \"NL single line text\",\r\n            \"versions\": [],\r\n            \"created_on\": null,\r\n            \"label\": \"-\"\r\n        }\r\n    ]\r\n}"
+								},
+								"url": {
+									"raw": "{{url_base}}/api/topics/3b756a15-cced-4dc5-ad7d-2ad150aa38f7/texts/c97c75cf-9532-4ead-acb4-ff4945232196",
+									"host": [
+										"{{url_base}}"
+									],
+									"path": [
+										"api",
+										"topics",
+										"3b756a15-cced-4dc5-ad7d-2ad150aa38f7",
+										"texts",
+										"c97c75cf-9532-4ead-acb4-ff4945232196"
+									]
+								},
+								"description": "Update topic text"
+							},
+							"response": []
+						},
+						{
+							"name": "/api/topics/{topic_id}/translation-jobs",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "{{header_accept}}"
+									},
+									{
+										"key": "App-ID",
+										"value": "{{header_application_id}}"
+									},
+									{
+										"key": "App-Key",
+										"value": "{{header_application_key}}"
+									},
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"type": "text",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "{{url_base}}/api/topics/3b756a15-cced-4dc5-ad7d-2ad150aa38f7/translation-jobs",
+									"host": [
+										"{{url_base}}"
+									],
+									"path": [
+										"api",
+										"topics",
+										"3b756a15-cced-4dc5-ad7d-2ad150aa38f7",
+										"translation-jobs"
+									]
+								},
+								"description": "Create topic text"
+							},
+							"response": []
+						},
+						{
+							"name": "/api/topics/{topic_id}/translation-jobs",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "{{header_accept}}"
+									},
+									{
+										"key": "App-ID",
+										"value": "{{header_application_id}}"
+									},
+									{
+										"key": "App-Key",
+										"value": "{{header_application_key}}"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"id\": \"44444444-aaaa-4444-aaaa-444444444444\",\r\n  \"locale\": \"fr_BE\",\r\n  \"due_date\": \"2015-08-09T14:18:53+0100\",\r\n  \"texts\": [\r\n    {\r\n      \"text\": \"First translated text\",\r\n      \"block\": \"63bbe2b1-6355-4110-8a68-e3dd8fb69978\",\r\n      \"comment\": \"Please be aware, to also convert the embedded links to the desired language.\"\r\n    },\r\n    {\r\n      \"text\": \"\",\r\n      \"block\": \"b7f84cb4-3e96-4b89-b679-317b8010de5e\",\r\n      \"comment\": \"\"\r\n    }\r\n  ],\r\n  \"translators\": [\r\n    \"8e29fbbd-de31-4eaa-942a-34a70f851182\",\r\n    \"731edab6-e27c-4cfa-8c19-c34ec73c5922\"\r\n  ]\r\n}"
+								},
+								"url": {
+									"raw": "{{url_base}}/api/topics/3b756a15-cced-4dc5-ad7d-2ad150aa38f7/translation-jobs",
+									"host": [
+										"{{url_base}}"
+									],
+									"path": [
+										"api",
+										"topics",
+										"3b756a15-cced-4dc5-ad7d-2ad150aa38f7",
+										"translation-jobs"
+									]
+								},
+								"description": "Create a translation job for a product"
+							},
+							"response": []
+						},
+						{
+							"name": "/api/topics/{topic_id}/translation-jobs/{translation_job_id}",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "{{header_accept}}"
+									},
+									{
+										"key": "App-ID",
+										"value": "{{header_application_id}}"
+									},
+									{
+										"key": "App-Key",
+										"value": "{{header_application_key}}"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"due_date\": \"2015-08-10T17:23:09+0100\",\r\n  \"status\": \"complete\",\r\n  \"texts\": [\r\n    {\r\n      \"text\": \"Second translated text\",\r\n      \"block\": \"63bbe2b1-6355-4110-8a68-e3dd8fb69978\",\r\n      \"comment\": \"I also translated the links.\"\r\n    },\r\n    {\r\n      \"text\": \"\",\r\n      \"block\": \"b7f84cb4-3e96-4b89-b679-317b8010de5e\",\r\n      \"comment\": \"I didn't change this text.\"\r\n    }\r\n  ],\r\n  \"translators\": [\r\n    \"8e29fbbd-de31-4eaa-942a-34a70f851182\",\r\n    \"731edab6-e27c-4cfa-8c19-c34ec73c5922\",\r\n    \"91a82a62-61eb-4bed-8d7e-fae8b264db39\"\r\n  ]\r\n}"
+								},
+								"url": {
+									"raw": "{{url_base}}/api/topics/3b756a15-cced-4dc5-ad7d-2ad150aa38f7/translation-jobs/6b121568-3cdb-4380-a9a2-80710cdd0d13",
+									"host": [
+										"{{url_base}}"
+									],
+									"path": [
+										"api",
+										"topics",
+										"3b756a15-cced-4dc5-ad7d-2ad150aa38f7",
+										"translation-jobs",
+										"6b121568-3cdb-4380-a9a2-80710cdd0d13"
+									]
+								},
+								"description": "Get a topic's translation job"
+							},
+							"response": []
+						},
+						{
+							"name": "/api/topics/{topic_id}/translation-jobs/{translation_job_id}",
+							"request": {
+								"method": "PATCH",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "{{header_accept}}"
+									},
+									{
+										"key": "App-ID",
+										"value": "{{header_application_id}}"
+									},
+									{
+										"key": "App-Key",
+										"value": "{{header_application_key}}"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"due_date\": \"2015-08-10T17:23:09+0100\",\r\n  \"status\": \"complete\",\r\n  \"texts\": [\r\n    {\r\n      \"text\": \"Second translated text\",\r\n      \"block\": \"63bbe2b1-6355-4110-8a68-e3dd8fb69978\",\r\n      \"comment\": \"I also translated the links.\"\r\n    },\r\n    {\r\n      \"text\": \"\",\r\n      \"block\": \"b7f84cb4-3e96-4b89-b679-317b8010de5e\",\r\n      \"comment\": \"I didn't change this text.\"\r\n    }\r\n  ],\r\n  \"translators\": [\r\n    \"8e29fbbd-de31-4eaa-942a-34a70f851182\",\r\n    \"731edab6-e27c-4cfa-8c19-c34ec73c5922\",\r\n    \"91a82a62-61eb-4bed-8d7e-fae8b264db39\"\r\n  ]\r\n}"
+								},
+								"url": {
+									"raw": "{{url_base}}/api/topics/3b756a15-cced-4dc5-ad7d-2ad150aa38f7/translation-jobs/5dc978a6-62ec-40f6-8782-af50c5191306",
+									"host": [
+										"{{url_base}}"
+									],
+									"path": [
+										"api",
+										"topics",
+										"3b756a15-cced-4dc5-ad7d-2ad150aa38f7",
+										"translation-jobs",
+										"5dc978a6-62ec-40f6-8782-af50c5191306"
+									]
+								},
+								"description": "Update a topic's translation job"
+							},
+							"response": []
+						},
+						{
+							"name": "/api/topics/{topic_id}/translation-jobs/{translation_job_id}",
+							"request": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "{{header_accept}}"
+									},
+									{
+										"key": "App-ID",
+										"value": "{{header_application_id}}"
+									},
+									{
+										"key": "App-Key",
+										"value": "{{header_application_key}}"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"due_date\": \"2015-08-10T17:23:09+0100\",\r\n  \"status\": \"complete\",\r\n  \"texts\": [\r\n    {\r\n      \"text\": \"Second translated text\",\r\n      \"block\": \"63bbe2b1-6355-4110-8a68-e3dd8fb69978\",\r\n      \"comment\": \"I also translated the links.\"\r\n    },\r\n    {\r\n      \"text\": \"\",\r\n      \"block\": \"b7f84cb4-3e96-4b89-b679-317b8010de5e\",\r\n      \"comment\": \"I didn't change this text.\"\r\n    }\r\n  ],\r\n  \"translators\": [\r\n    \"8e29fbbd-de31-4eaa-942a-34a70f851182\",\r\n    \"731edab6-e27c-4cfa-8c19-c34ec73c5922\",\r\n    \"91a82a62-61eb-4bed-8d7e-fae8b264db39\"\r\n  ]\r\n}"
+								},
+								"url": {
+									"raw": "{{url_base}}/api/topics/3b756a15-cced-4dc5-ad7d-2ad150aa38f7/translation-jobs/6b121568-3cdb-4380-a9a2-80710cdd0d13",
+									"host": [
+										"{{url_base}}"
+									],
+									"path": [
+										"api",
+										"topics",
+										"3b756a15-cced-4dc5-ad7d-2ad150aa38f7",
+										"translation-jobs",
+										"6b121568-3cdb-4380-a9a2-80710cdd0d13"
+									]
+								},
+								"description": "Delete a topic's translation job"
+							},
+							"response": []
+						}
+					],
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "/api/translation-jobs",
 					"request": {
 						"method": "GET",
 						"header": [
@@ -1854,637 +3082,65 @@
 							"raw": ""
 						},
 						"url": {
-							"raw": "{{url_base}}/api/products/44444444-aaaa-4444-aaaa-444444444444/texts",
+							"raw": "{{url_base}}/api/translation-jobs?filter=[{\"property\":\"status\",\"operator\":\"in\",\"type\":\"array\",\"value\":[\"open\",\"reopened\",\"ready\"]}]",
 							"host": [
 								"{{url_base}}"
 							],
 							"path": [
 								"api",
-								"products",
-								"44444444-aaaa-4444-aaaa-444444444444",
-								"texts"
+								"translation-jobs"
+							],
+							"query": [
+								{
+									"key": "filter",
+									"value": "[{\"property\":\"status\",\"operator\":\"in\",\"type\":\"array\",\"value\":[\"open\",\"reopened\",\"ready\"]}]"
+								}
 							]
-						},
-						"description": "List a product's texts"
+						}
 					},
 					"response": []
 				},
 				{
-					"name": "/api/products/{product_id}/texts/{text_id}",
+					"name": "/api/users/{user_id}/translation-jobs",
 					"request": {
-						"method": "PATCH",
+						"method": "GET",
 						"header": [
 							{
 								"key": "Accept",
-								"value": "{{header_accept}}"
+								"value": "{{header_accept}}",
+								"type": "text"
 							},
 							{
 								"key": "App-ID",
-								"value": "{{header_application_id}}"
+								"value": "{{header_application_id}}",
+								"type": "text"
 							},
 							{
 								"key": "App-Key",
-								"value": "{{header_application_key}}"
-							},
-							{
-								"key": "Content-Type",
-								"value": "application/json"
+								"value": "{{header_application_key}}",
+								"type": "text"
 							}
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n  \"locales\": [\r\n    {\r\n      \"id\": \"de\",\r\n      \"text\": \"Text in DE\"\r\n    },\r\n    {\r\n      \"id\": \"de_CH\",\r\n      \"text\": \"\"\r\n    }\r\n  ]\r\n}"
+							"raw": ""
 						},
 						"url": {
-							"raw": "{{url_base}}/api/products/44444444-aaaa-4444-aaaa-444444444444/texts/44444444-aaaa-4444-aaaa-444444444444",
+							"raw": "{{url_base}}/api/users/4e63c001-7832-47cb-a676-5ab569c7c10f/translation-jobs",
 							"host": [
 								"{{url_base}}"
 							],
 							"path": [
 								"api",
-								"products",
-								"44444444-aaaa-4444-aaaa-444444444444",
-								"texts",
-								"44444444-aaaa-4444-aaaa-444444444444"
-							]
-						},
-						"description": "Update a product text"
-					},
-					"response": []
-				},
-				{
-					"name": "/api/products/{product_id}/translation-jobs",
-					"request": {
-						"method": "POST",
-						"header": [
-							{
-								"key": "Accept",
-								"value": "{{header_accept}}"
-							},
-							{
-								"key": "App-ID",
-								"value": "{{header_application_id}}"
-							},
-							{
-								"key": "App-Key",
-								"value": "{{header_application_key}}"
-							},
-							{
-								"key": "Content-Type",
-								"value": "application/json"
-							}
-						],
-						"body": {
-							"mode": "raw",
-							"raw": "{\r\n  \"id\": \"44444444-aaaa-4444-aaaa-444444444444\",\r\n  \"locale\": \"fr_BE\",\r\n  \"due_date\": \"2015-08-09T14:18:53+0100\",\r\n  \"texts\": [\r\n    {\r\n      \"text\": \"First translated text\",\r\n      \"block\": \"63bbe2b1-6355-4110-8a68-e3dd8fb69978\",\r\n      \"comment\": \"Please be aware, to also convert the embedded links to the desired language.\"\r\n    },\r\n    {\r\n      \"text\": \"\",\r\n      \"block\": \"b7f84cb4-3e96-4b89-b679-317b8010de5e\",\r\n      \"comment\": \"\"\r\n    }\r\n  ],\r\n  \"translators\": [\r\n    \"8e29fbbd-de31-4eaa-942a-34a70f851182\",\r\n    \"731edab6-e27c-4cfa-8c19-c34ec73c5922\"\r\n  ]\r\n}"
-						},
-						"url": {
-							"raw": "{{url_base}}/api/products/44444444-aaaa-4444-aaaa-444444444444/translation-jobs",
-							"host": [
-								"{{url_base}}"
-							],
-							"path": [
-								"api",
-								"products",
-								"44444444-aaaa-4444-aaaa-444444444444",
+								"users",
+								"4e63c001-7832-47cb-a676-5ab569c7c10f",
 								"translation-jobs"
 							]
-						},
-						"description": "Create a translation job for a product"
-					},
-					"response": []
-				},
-				{
-					"name": "/api/products/{product_id}/translation-jobs",
-					"request": {
-						"method": "GET",
-						"header": [
-							{
-								"key": "Accept",
-								"value": "{{header_accept}}"
-							},
-							{
-								"key": "App-ID",
-								"value": "{{header_application_id}}"
-							},
-							{
-								"key": "App-Key",
-								"value": "{{header_application_key}}"
-							}
-						],
-						"body": {
-							"mode": "raw",
-							"raw": ""
-						},
-						"url": {
-							"raw": "{{url_base}}/api/products/44444444-aaaa-4444-aaaa-444444444444/translation-jobs",
-							"host": [
-								"{{url_base}}"
-							],
-							"path": [
-								"api",
-								"products",
-								"44444444-aaaa-4444-aaaa-444444444444",
-								"translation-jobs"
-							]
-						},
-						"description": "List a product's translation jobs"
-					},
-					"response": []
-				},
-				{
-					"name": "/api/products/{product_id}/translation-jobs/{translation_job_id}",
-					"request": {
-						"method": "PATCH",
-						"header": [
-							{
-								"key": "Accept",
-								"value": "{{header_accept}}"
-							},
-							{
-								"key": "App-ID",
-								"value": "{{header_application_id}}"
-							},
-							{
-								"key": "App-Key",
-								"value": "{{header_application_key}}"
-							},
-							{
-								"key": "Content-Type",
-								"value": "application/json"
-							}
-						],
-						"body": {
-							"mode": "raw",
-							"raw": "{\r\n  \"due_date\": \"2015-08-10T17:23:09+0100\",\r\n  \"status\": \"complete\",\r\n  \"texts\": [\r\n    {\r\n      \"text\": \"Second translated text\",\r\n      \"block\": \"63bbe2b1-6355-4110-8a68-e3dd8fb69978\",\r\n      \"comment\": \"I also translated the links.\"\r\n    },\r\n    {\r\n      \"text\": \"\",\r\n      \"block\": \"b7f84cb4-3e96-4b89-b679-317b8010de5e\",\r\n      \"comment\": \"I didn't change this text.\"\r\n    }\r\n  ],\r\n  \"translators\": [\r\n    \"8e29fbbd-de31-4eaa-942a-34a70f851182\",\r\n    \"731edab6-e27c-4cfa-8c19-c34ec73c5922\"\r\n  ]\r\n}"
-						},
-						"url": {
-							"raw": "{{url_base}}/api/products/44444444-aaaa-4444-aaaa-444444444444/translation-jobs/44444444-aaaa-4444-aaaa-444444444444",
-							"host": [
-								"{{url_base}}"
-							],
-							"path": [
-								"api",
-								"products",
-								"44444444-aaaa-4444-aaaa-444444444444",
-								"translation-jobs",
-								"44444444-aaaa-4444-aaaa-444444444444"
-							]
-						},
-						"description": "Update a product's translation job"
-					},
-					"response": []
-				},
-				{
-					"name": "/api/texts (not working)",
-					"request": {
-						"method": "POST",
-						"header": [
-							{
-								"key": "Accept",
-								"value": "{{header_accept}}"
-							},
-							{
-								"key": "App-ID",
-								"value": "{{header_application_id}}"
-							},
-							{
-								"key": "App-Key",
-								"value": "{{header_application_key}}"
-							},
-							{
-								"key": "Content-Type",
-								"value": "application/json"
-							}
-						],
-						"body": {
-							"mode": "raw",
-							"raw": "{\r\n  \"product\": \"c9925402-cff8-49c7-9b4e-b6a991b36a67\",\r\n  \"block\": \"bd69d5c2-3d32-4ada-97ed-a6cc8902fe60\",\r\n  \"locales\": [\r\n    {\r\n      \"id\": \"de\",\r\n      \"text\": \"Text in DE\"\r\n    },\r\n    {\r\n      \"id\": \"de_CH\",\r\n      \"text\": \"\"\r\n    }\r\n  ]\r\n}"
-						},
-						"url": {
-							"raw": "{{url_base}}/api/texts",
-							"host": [
-								"{{url_base}}"
-							],
-							"path": [
-								"api",
-								"texts"
-							]
-						},
-						"description": "Create a new product text"
-					},
-					"response": []
-				},
-				{
-					"name": "/api/texts/{text_id}",
-					"request": {
-						"method": "GET",
-						"header": [
-							{
-								"key": "Accept",
-								"value": "{{header_accept}}"
-							},
-							{
-								"key": "App-ID",
-								"value": "{{header_application_id}}"
-							},
-							{
-								"key": "App-Key",
-								"value": "{{header_application_key}}"
-							}
-						],
-						"body": {
-							"mode": "raw",
-							"raw": ""
-						},
-						"url": {
-							"raw": "{{url_base}}/api/translation-jobs/44444444-aaaa-4444-aaaa-444444444444",
-							"host": [
-								"{{url_base}}"
-							],
-							"path": [
-								"api",
-								"translation-jobs",
-								"44444444-aaaa-4444-aaaa-444444444444"
-							]
-						},
-						"description": "List a single product text"
-					},
-					"response": []
-				},
-				{
-					"name": "/api/texts/{text_id}",
-					"request": {
-						"method": "PATCH",
-						"header": [
-							{
-								"key": "Accept",
-								"value": "{{header_accept}}"
-							},
-							{
-								"key": "App-ID",
-								"value": "{{header_application_id}}"
-							},
-							{
-								"key": "App-Key",
-								"value": "{{header_application_key}}"
-							},
-							{
-								"key": "Content-Type",
-								"value": "application/json"
-							}
-						],
-						"body": {
-							"mode": "raw",
-							"raw": "{\r\n  \"due_date\": \"2015-08-10T17:23:09+0100\",\r\n  \"status\": \"complete\",\r\n  \"texts\": [\r\n    {\r\n      \"text\": \"Second translated text\",\r\n      \"block\": \"63bbe2b1-6355-4110-8a68-e3dd8fb69978\",\r\n      \"comment\": \"I also translated the links.\"\r\n    },\r\n    {\r\n      \"text\": \"\",\r\n      \"block\": \"b7f84cb4-3e96-4b89-b679-317b8010de5e\",\r\n      \"comment\": \"I didn't change this text.\"\r\n    }\r\n  ],\r\n  \"translators\": [\r\n    \"8e29fbbd-de31-4eaa-942a-34a70f851182\",\r\n    \"731edab6-e27c-4cfa-8c19-c34ec73c5922\"\r\n  ]\r\n}"
-						},
-						"url": {
-							"raw": "{{url_base}}/api/translation-jobs/44444444-aaaa-4444-aaaa-444444444444",
-							"host": [
-								"{{url_base}}"
-							],
-							"path": [
-								"api",
-								"translation-jobs",
-								"44444444-aaaa-4444-aaaa-444444444444"
-							]
-						},
-						"description": "Update a product text"
-					},
-					"response": []
-				},
-				{
-					"name": "/api/text-groups",
-					"request": {
-						"method": "GET",
-						"header": [
-							{
-								"key": "Accept",
-								"value": "{{header_accept}}"
-							},
-							{
-								"key": "App-ID",
-								"value": "{{header_application_id}}"
-							},
-							{
-								"key": "App-Key",
-								"value": "{{header_application_key}}"
-							}
-						],
-						"body": {
-							"mode": "raw",
-							"raw": ""
-						},
-						"url": {
-							"raw": "{{url_base}}/api/text-groups",
-							"host": [
-								"{{url_base}}"
-							],
-							"path": [
-								"api",
-								"text-groups"
-							]
-						},
-						"description": "List text groups"
-					},
-					"response": []
-				},
-				{
-					"name": "/api/translation-jobs/{translation_job_id}",
-					"request": {
-						"method": "GET",
-						"header": [
-							{
-								"key": "Accept",
-								"value": "{{header_accept}}"
-							},
-							{
-								"key": "App-ID",
-								"value": "{{header_application_id}}"
-							},
-							{
-								"key": "App-Key",
-								"value": "{{header_application_key}}"
-							}
-						],
-						"body": {
-							"mode": "raw",
-							"raw": ""
-						},
-						"url": {
-							"raw": "{{url_base}}/api/translation-jobs/44444444-aaaa-4444-aaaa-444444444444",
-							"host": [
-								"{{url_base}}"
-							],
-							"path": [
-								"api",
-								"translation-jobs",
-								"44444444-aaaa-4444-aaaa-444444444444"
-							]
-						},
-						"description": "List a single translation job"
-					},
-					"response": []
-				},
-				{
-					"name": "/api/translation-jobs/{translation_job_id}",
-					"request": {
-						"method": "PATCH",
-						"header": [
-							{
-								"key": "Accept",
-								"value": "{{header_accept}}"
-							},
-							{
-								"key": "App-ID",
-								"value": "{{header_application_id}}"
-							},
-							{
-								"key": "App-Key",
-								"value": "{{header_application_key}}"
-							},
-							{
-								"key": "Content-Type",
-								"value": "application/json"
-							}
-						],
-						"body": {
-							"mode": "raw",
-							"raw": "{\r\n  \"due_date\": \"2015-08-10T17:23:09+0100\",\r\n  \"status\": \"complete\",\r\n  \"texts\": [\r\n    {\r\n      \"text\": \"Second translated text\",\r\n      \"block\": \"63bbe2b1-6355-4110-8a68-e3dd8fb69978\",\r\n      \"comment\": \"I also translated the links.\"\r\n    },\r\n    {\r\n      \"text\": \"\",\r\n      \"block\": \"b7f84cb4-3e96-4b89-b679-317b8010de5e\",\r\n      \"comment\": \"I didn't change this text.\"\r\n    }\r\n  ],\r\n  \"translators\": [\r\n    \"8e29fbbd-de31-4eaa-942a-34a70f851182\",\r\n    \"731edab6-e27c-4cfa-8c19-c34ec73c5922\"\r\n  ]\r\n}"
-						},
-						"url": {
-							"raw": "{{url_base}}/api/translation-jobs/44444444-aaaa-4444-aaaa-444444444444",
-							"host": [
-								"{{url_base}}"
-							],
-							"path": [
-								"api",
-								"translation-jobs",
-								"44444444-aaaa-4444-aaaa-444444444444"
-							]
-						},
-						"description": "Update a translation job"
+						}
 					},
 					"response": []
 				}
 			]
-		},
-		{
-			"name": "User",
-			"item": [
-				{
-					"name": "/users",
-					"request": {
-						"method": "GET",
-						"header": [
-							{
-								"key": "Accept",
-								"value": "{{header_accept}}"
-							},
-							{
-								"key": "App-Key",
-								"value": "{{portal_header_app_key}}"
-							},
-							{
-								"key": "App-Id",
-								"value": "{{portal_header_app_id}}"
-							}
-						],
-						"body": {
-							"mode": "raw",
-							"raw": ""
-						},
-						"url": {
-							"raw": "{{url_base}}/api/users",
-							"host": [
-								"{{url_base}}"
-							],
-							"path": [
-								"api",
-								"users"
-							]
-						},
-						"description": "Users"
-					},
-					"response": []
-				},
-				{
-					"name": "/users/{user_id}",
-					"request": {
-						"method": "GET",
-						"header": [
-							{
-								"key": "Accept",
-								"value": "{{header_accept}}"
-							},
-							{
-								"key": "App-Key",
-								"value": "{{portal_header_app_key}}"
-							}
-						],
-						"body": {
-							"mode": "raw",
-							"raw": ""
-						},
-						"url": {
-							"raw": "{{url_base}}/api/users/44444444-aaaa-4444-aaaa-444444444444",
-							"host": [
-								"{{url_base}}"
-							],
-							"path": [
-								"api",
-								"users",
-								"44444444-aaaa-4444-aaaa-444444444444"
-							]
-						},
-						"description": "List single user"
-					},
-					"response": []
-				},
-				{
-					"name": "/users/{user_id}",
-					"request": {
-						"method": "PATCH",
-						"header": [
-							{
-								"key": "Accept",
-								"value": "{{header_accept}}"
-							},
-							{
-								"key": "App-Key",
-								"value": "{{portal_header_app_key}}"
-							},
-							{
-								"key": "Content-Type",
-								"value": "application/json"
-							}
-						],
-						"body": {
-							"mode": "raw",
-							"raw": "{\n    \"email\" : \"test@detailag.ch\",\n    \"username\" : \"hans\",\n    \"state\" : 1,\n    \"firstname\" : \"Hans\",\n    \"lastname\" : \"Test\",\n    \"display_name\" : \"Hans Test\",\n    \"roles\" : [ \n        \"ee5cbf52-91cf-4ef4-a5ef-ee7780ae81d5\"\n    ]\n}"
-						},
-						"url": {
-							"raw": "{{url_base}}/api/users/44444444-aaaa-4444-aaaa-444444444444",
-							"host": [
-								"{{url_base}}"
-							],
-							"path": [
-								"api",
-								"users",
-								"44444444-aaaa-4444-aaaa-444444444444"
-							]
-						},
-						"description": "Update a user"
-					},
-					"response": []
-				},
-				{
-					"name": "/users/{user_id}",
-					"request": {
-						"method": "DELETE",
-						"header": [
-							{
-								"key": "Accept",
-								"value": "{{header_accept}}"
-							},
-							{
-								"key": "App-Key",
-								"value": "{{portal_header_app_key}}"
-							},
-							{
-								"key": "Content-Type",
-								"value": "application/json"
-							}
-						],
-						"body": {
-							"mode": "raw",
-							"raw": "{\n    \"email\" : \"test@detailag.ch\",\n    \"username\" : \"hans\",\n    \"state\" : 1,\n    \"firstname\" : \"Hans\",\n    \"lastname\" : \"Test\",\n    \"display_name\" : \"Hans Test\",\n    \"roles\" : [ \n        \"ee5cbf52-91cf-4ef4-a5ef-ee7780ae81d5\"\n    ]\n}"
-						},
-						"url": {
-							"raw": "{{url_base}}/api/users/44444444-aaaa-4444-aaaa-444444444444",
-							"host": [
-								"{{url_base}}"
-							],
-							"path": [
-								"api",
-								"users",
-								"44444444-aaaa-4444-aaaa-444444444444"
-							]
-						},
-						"description": "Delte an user"
-					},
-					"response": []
-				},
-				{
-					"name": "/users",
-					"request": {
-						"method": "POST",
-						"header": [
-							{
-								"key": "Accept",
-								"value": "{{header_accept}}"
-							},
-							{
-								"key": "App-Key",
-								"value": "{{portal_header_app_key}}"
-							},
-							{
-								"key": "Content-Type",
-								"value": "application/json"
-							}
-						],
-						"body": {
-							"mode": "raw",
-							"raw": "{\n    \"email\" : \"test@detailag.ch\",\n    \"username\" : \"hans\",\n    \"female\": 0,\n    \"state\" : 1,\n    \"firstname\" : \"Hans\",\n    \"lastname\" : \"Test\",\n    \"display_name\" : \"Hans Test\",\n    \"roles\" : [ \n        \"2acb20c6-9571-4444-88dd-c36b487e06d3\", \n        \"2acb20c6-9571-4444-88dd-c36b487e06d9\"\n    ]\n}"
-						},
-						"url": {
-							"raw": "{{url_base}}/api/users",
-							"host": [
-								"{{url_base}}"
-							],
-							"path": [
-								"api",
-								"users"
-							]
-						},
-						"description": "Create a new user"
-					},
-					"response": []
-				},
-				{
-					"name": "/roles",
-					"request": {
-						"method": "GET",
-						"header": [
-							{
-								"key": "Accept",
-								"value": "{{header_accept}}"
-							},
-							{
-								"key": "App-Key",
-								"value": "{{portal_header_app_key}}"
-							}
-						],
-						"body": {
-							"mode": "raw",
-							"raw": ""
-						},
-						"url": {
-							"raw": "{{url_base}}/api/roles",
-							"host": [
-								"{{url_base}}"
-							],
-							"path": [
-								"api",
-								"roles"
-							]
-						},
-						"description": "Roles"
-					},
-					"response": []
-				}
-			],
-			"description": "User"
 		}
 	]
 }
