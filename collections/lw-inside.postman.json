@@ -1335,22 +1335,17 @@
 						{
 							"listen": "test",
 							"script": {
-								"type": "text/javascript",
+								"id": "4091e9e6-4b8d-486b-9bff-06b67586ac87",
 								"exec": [
 									"var rendererResponses = JSON.parse(postman.getGlobalVariable(\"rendererResponses\") || '{}');",
 									"console.log( rendererResponses);",
 									"",
-									"var doc = new DOMParser().parseFromString(responseBody,'text/html');",
-									"var iterator = doc.evaluate('//div/@data-id', doc, null, XPathResult.ANY_TYPE, null);",
+									"const $ = cheerio.load(responseBody); ",
 									"",
-									"try {",
-									"  var thisNode = iterator.iterateNext();",
-									"  ",
-									"  while (thisNode && thisNode.textContent) {",
-									"    var id = thisNode.textContent,",
-									"        contentResultNode=doc.evaluate('//div[@data-id=\"'+id+'\"]/pre/text()',  doc, null, XPathResult.ANY_TYPE, null),",
-									"        content=JSON.parse(contentResultNode.iterateNext().nodeValue);",
-									"    ",
+									"$('.request-body').each(function(i, elem) {",
+									"    var id = $(this).attr('data-id'),",
+									"        content = JSON.parse($(this).find('pre').text());",
+									"",
 									"    if (!rendererResponses[id]) {",
 									"        rendererResponses[id] = {",
 									"            status: 'new',",
@@ -1365,19 +1360,14 @@
 									"            tests[\"Response id \"+ id + \" already fetched and sent\"] = true;",
 									"        }",
 									"    }",
-									"    ",
-									"    thisNode = iterator.iterateNext();",
-									"  }  ",
-									"}",
-									"catch (e) {",
-									" ",
-									"}",
+									"});",
 									"",
 									"//console.log(rendererResponses);",
 									"",
 									"postman.setGlobalVariable(\"rendererResponses\", JSON.stringify(rendererResponses));",
 									""
-								]
+								],
+								"type": "text/javascript"
 							}
 						}
 					],
@@ -1402,14 +1392,15 @@
 							"raw": ""
 						},
 						"url": {
-							"raw": "https://requestb.in/{your-reqwstb.in-id}?inspect",
+							"raw": "https://requestbin.fullcontact.com/{your-session-id}?inspect",
 							"protocol": "https",
 							"host": [
-								"requestb",
-								"in"
+								"requestbin",
+								"fullcontact",
+								"com"
 							],
 							"path": [
-								"{your-reqwstb.in-id}"
+								"{your-session-id}"
 							],
 							"query": [
 								{
