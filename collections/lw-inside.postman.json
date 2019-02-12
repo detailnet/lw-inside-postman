@@ -199,39 +199,6 @@
 					"response": []
 				},
 				{
-					"name": "/users/{user_id} Copy",
-					"request": {
-						"method": "GET",
-						"header": [
-							{
-								"key": "Accept",
-								"value": "{{header_accept}}"
-							},
-							{
-								"key": "App-Key",
-								"value": "{{portal_header_app_key}}"
-							}
-						],
-						"body": {
-							"mode": "raw",
-							"raw": ""
-						},
-						"url": {
-							"raw": "{{url_base}}/api/users/44444444-aaaa-4444-aaaa-444444444444",
-							"host": [
-								"{{url_base}}"
-							],
-							"path": [
-								"api",
-								"users",
-								"44444444-aaaa-4444-aaaa-444444444444"
-							]
-						},
-						"description": "List single user"
-					},
-					"response": []
-				},
-				{
 					"name": "/users/{user_id}",
 					"request": {
 						"method": "PATCH",
@@ -370,6 +337,103 @@
 							]
 						},
 						"description": "Roles"
+					},
+					"response": []
+				},
+				{
+					"name": "/user/login",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "{{header_accept}}"
+							},
+							{
+								"key": "App-Key",
+								"value": "{{portal_header_app_key}}"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "identity",
+									"value": "{username}",
+									"type": "text"
+								},
+								{
+									"key": "credential",
+									"value": "{pass}",
+									"type": "text"
+								},
+								{
+									"key": "submit",
+									"value": "",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url_base}}/user/login",
+							"host": [
+								"{{url_base}}"
+							],
+							"path": [
+								"user",
+								"login"
+							]
+						},
+						"description": "Login request"
+					},
+					"response": []
+				},
+				{
+					"name": "/{language}/user/login",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "{{header_accept}}"
+							},
+							{
+								"key": "App-Key",
+								"value": "{{portal_header_app_key}}"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "identity",
+									"value": "{username}",
+									"type": "text"
+								},
+								{
+									"key": "credential",
+									"value": "{pass}",
+									"type": "text"
+								},
+								{
+									"key": "submit",
+									"value": "",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url_base}}/de/user/login",
+							"host": [
+								"{{url_base}}"
+							],
+							"path": [
+								"de",
+								"user",
+								"login"
+							]
+						},
+						"description": "Login request from specific locale"
 					},
 					"response": []
 				}
