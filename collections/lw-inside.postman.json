@@ -1,7 +1,7 @@
 {
 	"info": {
+		"_postman_id": "a665b267-d47c-463c-9c36-c78b81ecdbbc",
 		"name": "lw-inside",
-		"_postman_id": "1039b4e6-a34a-9790-accc-315a0036e8c8",
 		"description": "Louis Widmer Inside API",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
 	},
@@ -27,10 +27,6 @@
 								"value": "{{header_application_key}}"
 							}
 						],
-						"body": {
-							"mode": "raw",
-							"raw": ""
-						},
 						"url": {
 							"raw": "{{url_base}}/api/countries",
 							"host": [
@@ -62,10 +58,6 @@
 								"value": "{{header_application_key}}"
 							}
 						],
-						"body": {
-							"mode": "raw",
-							"raw": ""
-						},
 						"url": {
 							"raw": "{{url_base}}/api/languages?page_size=-1",
 							"host": [
@@ -106,10 +98,6 @@
 								"type": "text"
 							}
 						],
-						"body": {
-							"mode": "raw",
-							"raw": ""
-						},
 						"url": {
 							"raw": "{{url_base}}/api/translations",
 							"host": [
@@ -130,9 +118,9 @@
 			"name": "User",
 			"item": [
 				{
-					"name": "/users",
+					"name": "/password-strength",
 					"request": {
-						"method": "GET",
+						"method": "POST",
 						"header": [
 							{
 								"key": "Accept",
@@ -145,20 +133,70 @@
 							{
 								"key": "App-Id",
 								"value": "{{portal_header_app_id}}"
+							},
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
 							}
 						],
 						"body": {
-							"mode": "raw",
-							"raw": ""
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "password",
+									"value": "This is my test password",
+									"type": "text"
+								}
+							]
 						},
 						"url": {
-							"raw": "{{url_base}}/api/users",
+							"raw": "{{url_base}}/user/password-strength",
+							"host": [
+								"{{url_base}}"
+							],
+							"path": [
+								"user",
+								"password-strength"
+							]
+						},
+						"description": "Get strenhth of password"
+					},
+					"response": []
+				},
+				{
+					"name": "/users",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "{{header_accept}}"
+							},
+							{
+								"key": "App-Key",
+								"value": "{{header_application_key}}"
+							},
+							{
+								"key": "App-Id",
+								"value": "{{header_application_id}}"
+							}
+						],
+						"url": {
+							"raw": "{{url_base}}/api/users?page_size=10",
 							"host": [
 								"{{url_base}}"
 							],
 							"path": [
 								"api",
 								"users"
+							],
+							"query": [
+								{
+									"key": "page_size",
+									"value": "10"
+								}
 							]
 						},
 						"description": "Users"
@@ -179,10 +217,6 @@
 								"value": "{{portal_header_app_key}}"
 							}
 						],
-						"body": {
-							"mode": "raw",
-							"raw": ""
-						},
 						"url": {
 							"raw": "{{url_base}}/api/users/44444444-aaaa-4444-aaaa-444444444444",
 							"host": [
@@ -322,10 +356,6 @@
 								"value": "{{portal_header_app_key}}"
 							}
 						],
-						"body": {
-							"mode": "raw",
-							"raw": ""
-						},
 						"url": {
 							"raw": "{{url_base}}/api/roles",
 							"host": [
@@ -542,10 +572,6 @@
 								"value": "{{header_application_key}}"
 							}
 						],
-						"body": {
-							"mode": "raw",
-							"raw": ""
-						},
 						"url": {
 							"raw": "{{url_base}}/api/assets?page=1&page_size=5&filter=[{\"property\":\"products\",\"operator\":\"in\",\"value\":[\"2b46f560-f7c4-4fa1-9ed6-a25c39d6b671\"],\"type\":\"array\"}]&sort=[{\"property\":\"created_on\",\"direction\":\"asc\"}]",
 							"host": [
@@ -596,10 +622,6 @@
 								"value": "{{header_application_key}}"
 							}
 						],
-						"body": {
-							"mode": "raw",
-							"raw": ""
-						},
 						"url": {
 							"raw": "{{url_base}}/api/assets/44444444-aaaa-4444-aaaa-444444444444",
 							"host": [
@@ -792,10 +814,6 @@
 								"value": "{{header_application_key}}"
 							}
 						],
-						"body": {
-							"mode": "raw",
-							"raw": ""
-						},
 						"url": {
 							"raw": "{{url_base}}/api/assets/44444444-aaaa-4444-aaaa-444444444444/file-replacements?page_size=3&page=1&sort=[{\"property\":\"created_on\",\"direction\":\"desc\"}]",
 							"host": [
@@ -926,10 +944,6 @@
 								"value": "{{header_application_key}}"
 							}
 						],
-						"body": {
-							"mode": "raw",
-							"raw": ""
-						},
 						"url": {
 							"raw": "{{url_base}}/api/asset-tags?page_size=-1",
 							"host": [
@@ -967,10 +981,6 @@
 								"value": "{{header_application_key}}"
 							}
 						],
-						"body": {
-							"mode": "raw",
-							"raw": ""
-						},
 						"url": {
 							"raw": "{{url_base}}/api/asset-types?page_size=-1",
 							"host": [
@@ -1008,10 +1018,6 @@
 								"value": "{{header_application_key}}"
 							}
 						],
-						"body": {
-							"mode": "raw",
-							"raw": ""
-						},
 						"url": {
 							"raw": "{{url_base}}/api/asset-collections?page=1&page_size=5&sort=[{\"property\":\"created_on\",\"direction\":\"asc\"}]",
 							"host": [
@@ -1098,10 +1104,6 @@
 								"value": "{{header_application_key}}"
 							}
 						],
-						"body": {
-							"mode": "raw",
-							"raw": ""
-						},
 						"url": {
 							"raw": "{{url_base}}/api/asset-collections/44444444-aaaa-4444-aaaa-444444444444",
 							"host": [
@@ -1335,10 +1337,6 @@
 								"value": "{{header_application_key}}"
 							}
 						],
-						"body": {
-							"mode": "raw",
-							"raw": ""
-						},
 						"url": {
 							"raw": "{{url_base}}/api/purposes",
 							"host": [
@@ -1399,7 +1397,6 @@
 						{
 							"listen": "test",
 							"script": {
-								"id": "4091e9e6-4b8d-486b-9bff-06b67586ac87",
 								"exec": [
 									"var rendererResponses = JSON.parse(postman.getGlobalVariable(\"rendererResponses\") || '{}');",
 									"console.log( rendererResponses);",
@@ -1407,6 +1404,8 @@
 									"const $ = cheerio.load(responseBody); ",
 									"",
 									"$('.request-body').each(function(i, elem) {",
+									"    if ($(this).find('pre').text()[0] !== '{') return;",
+									"    ",
 									"    var id = $(this).attr('data-id'),",
 									"        content = JSON.parse($(this).find('pre').text());",
 									"",
@@ -1451,10 +1450,6 @@
 								"value": "{{assets_header_app_key}}"
 							}
 						],
-						"body": {
-							"mode": "raw",
-							"raw": ""
-						},
 						"url": {
 							"raw": "https://requestbin.fullcontact.com/{your-session-id}?inspect",
 							"protocol": "https",
@@ -1575,10 +1570,6 @@
 								"value": "{{header_application_key}}"
 							}
 						],
-						"body": {
-							"mode": "raw",
-							"raw": ""
-						},
 						"url": {
 							"raw": "{{url_base}}/api/products?page=1&page_size=5&filter=[{\"property\":\"name\",\"operator\":\"like\",\"value\":\"%Auge%\",\"type\":\"string\"}]&sort=[{\"property\":\"name\",\"direction\":\"asc\"}]",
 							"host": [
@@ -1667,10 +1658,6 @@
 								"value": "{{header_application_key}}"
 							}
 						],
-						"body": {
-							"mode": "raw",
-							"raw": ""
-						},
 						"url": {
 							"raw": "{{url_base}}/api/products/44444444-aaaa-4444-aaaa-444444444444",
 							"host": [
@@ -1779,10 +1766,6 @@
 								"value": "{{header_application_key}}"
 							}
 						],
-						"body": {
-							"mode": "raw",
-							"raw": ""
-						},
 						"url": {
 							"raw": "{{url_base}}/api/product-units",
 							"host": [
@@ -1814,10 +1797,6 @@
 								"value": "{{header_application_key}}"
 							}
 						],
-						"body": {
-							"mode": "raw",
-							"raw": ""
-						},
 						"url": {
 							"raw": "{{url_base}}/api/product-groups?page_size=5&page=1&sort=[{\"property\":\"sort_index\",\"direction\":\"asc\"}]&filter=[{\"property\":\"name\",\"operator\":\"like\",\"type\":\"string\",\"value\":\"%a%\"}]",
 							"host": [
@@ -1867,10 +1846,6 @@
 								"value": "{{header_application_key}}"
 							}
 						],
-						"body": {
-							"mode": "raw",
-							"raw": ""
-						},
 						"url": {
 							"raw": "{{url_base}}/api/skin-types?page_size=-1",
 							"host": [
@@ -1908,10 +1883,6 @@
 								"value": "{{header_application_key}}"
 							}
 						],
-						"body": {
-							"mode": "raw",
-							"raw": ""
-						},
 						"url": {
 							"raw": "{{url_base}}/api/fragrances?page_size=-1",
 							"host": [
@@ -1949,10 +1920,6 @@
 								"value": "{{header_application_key}}"
 							}
 						],
-						"body": {
-							"mode": "raw",
-							"raw": ""
-						},
 						"url": {
 							"raw": "{{url_base}}/api/aging-types?page_size=-1",
 							"host": [
@@ -1990,10 +1957,6 @@
 								"value": "{{header_application_key}}"
 							}
 						],
-						"body": {
-							"mode": "raw",
-							"raw": ""
-						},
 						"url": {
 							"raw": "{{url_base}}/api/ingredients?page_size=-1",
 							"host": [
@@ -2031,10 +1994,6 @@
 								"value": "{{header_application_key}}"
 							}
 						],
-						"body": {
-							"mode": "raw",
-							"raw": ""
-						},
 						"url": {
 							"raw": "{{url_base}}/api/ingredient-units?page_size=-1",
 							"host": [
@@ -2072,10 +2031,6 @@
 								"value": "{{header_application_key}}"
 							}
 						],
-						"body": {
-							"mode": "raw",
-							"raw": ""
-						},
 						"url": {
 							"raw": "{{url_base}}/api/substances",
 							"host": [
@@ -2115,10 +2070,6 @@
 										"value": "{{header_application_key}}"
 									}
 								],
-								"body": {
-									"mode": "raw",
-									"raw": ""
-								},
 								"url": {
 									"raw": "{{url_base}}/api/text-groups",
 									"host": [
@@ -2193,10 +2144,6 @@
 										"value": "{{header_application_key}}"
 									}
 								],
-								"body": {
-									"mode": "raw",
-									"raw": ""
-								},
 								"url": {
 									"raw": "{{url_base}}/api/products/44444444-aaaa-4444-aaaa-444444444444/texts",
 									"host": [
@@ -2274,10 +2221,6 @@
 										"value": "{{header_application_key}}"
 									}
 								],
-								"body": {
-									"mode": "raw",
-									"raw": ""
-								},
 								"url": {
 									"raw": "{{url_base}}/api/products/44444444-aaaa-4444-aaaa-444444444444/texts/44444444-aaaa-4444-aaaa-444444444444",
 									"host": [
@@ -2312,10 +2255,6 @@
 										"value": "{{header_application_key}}"
 									}
 								],
-								"body": {
-									"mode": "raw",
-									"raw": ""
-								},
 								"url": {
 									"raw": "{{url_base}}/api/texts/44444444-aaaa-4444-aaaa-444444444444",
 									"host": [
@@ -2505,8 +2444,7 @@
 							},
 							"response": []
 						}
-					],
-					"_postman_isSubFolder": true
+					]
 				},
 				{
 					"name": "Topic",
@@ -2529,10 +2467,6 @@
 										"value": "{{header_application_key}}"
 									}
 								],
-								"body": {
-									"mode": "raw",
-									"raw": ""
-								},
 								"url": {
 									"raw": "{{url_base}}/api/folders",
 									"host": [
@@ -2607,10 +2541,6 @@
 										"value": "{{header_application_key}}"
 									}
 								],
-								"body": {
-									"mode": "raw",
-									"raw": ""
-								},
 								"url": {
 									"raw": "{{url_base}}/api/folders/44444444-aaaa-4444-aaaa-444444444444",
 									"host": [
@@ -2729,10 +2659,6 @@
 										"value": "{{header_application_key}}"
 									}
 								],
-								"body": {
-									"mode": "raw",
-									"raw": ""
-								},
 								"url": {
 									"raw": "{{url_base}}/api/topics/d02625b5-2df2-41cd-a6dd-9e1537b7303f",
 									"host": [
@@ -2814,10 +2740,6 @@
 										"value": "application/json"
 									}
 								],
-								"body": {
-									"mode": "raw",
-									"raw": ""
-								},
 								"url": {
 									"raw": "{{url_base}}/api/topics/3b756a15-cced-4dc5-ad7d-2ad150aa38f7/texts?page=1&page_size=25&filter=[{\"property\":\"block\",\"value\":{\"name\":\"A single line text block\",\"type\":\"singleline-text\"},\"operator\":\"=\"}]",
 									"host": [
@@ -2917,10 +2839,6 @@
 										"value": "application/json"
 									}
 								],
-								"body": {
-									"mode": "raw",
-									"raw": ""
-								},
 								"url": {
 									"raw": "{{url_base}}/api/topics/3b756a15-cced-4dc5-ad7d-2ad150aa38f7/translation-jobs",
 									"host": [
@@ -3111,49 +3029,7 @@
 							},
 							"response": []
 						}
-					],
-					"_postman_isSubFolder": true
-				},
-				{
-					"name": "/api/translation-jobs",
-					"request": {
-						"method": "GET",
-						"header": [
-							{
-								"key": "Accept",
-								"value": "{{header_accept}}"
-							},
-							{
-								"key": "App-ID",
-								"value": "{{header_application_id}}"
-							},
-							{
-								"key": "App-Key",
-								"value": "{{header_application_key}}"
-							}
-						],
-						"body": {
-							"mode": "raw",
-							"raw": ""
-						},
-						"url": {
-							"raw": "{{url_base}}/api/translation-jobs?filter=[{\"property\":\"status\",\"operator\":\"in\",\"type\":\"array\",\"value\":[\"open\",\"reopened\",\"ready\"]}]",
-							"host": [
-								"{{url_base}}"
-							],
-							"path": [
-								"api",
-								"translation-jobs"
-							],
-							"query": [
-								{
-									"key": "filter",
-									"value": "[{\"property\":\"status\",\"operator\":\"in\",\"type\":\"array\",\"value\":[\"open\",\"reopened\",\"ready\"]}]"
-								}
-							]
-						}
-					},
-					"response": []
+					]
 				},
 				{
 					"name": "/api/users/{user_id}/translation-jobs",
@@ -3176,10 +3052,6 @@
 								"type": "text"
 							}
 						],
-						"body": {
-							"mode": "raw",
-							"raw": ""
-						},
 						"url": {
 							"raw": "{{url_base}}/api/users/4e63c001-7832-47cb-a676-5ab569c7c10f/translation-jobs",
 							"host": [
@@ -3192,6 +3064,154 @@
 								"translation-jobs"
 							]
 						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Generation",
+			"item": [
+				{
+					"name": "/api/templates",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "{{header_accept}}"
+							},
+							{
+								"key": "App-ID",
+								"value": "{{header_application_id}}"
+							},
+							{
+								"key": "App-Key",
+								"value": "{{header_application_key}}"
+							}
+						],
+						"url": {
+							"raw": "{{url_base}}/api/templates",
+							"host": [
+								"{{url_base}}"
+							],
+							"path": [
+								"api",
+								"templates"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/api/templates/{template_id}",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "{{header_accept}}"
+							},
+							{
+								"key": "App-ID",
+								"value": "{{header_application_id}}"
+							},
+							{
+								"key": "App-Key",
+								"value": "{{header_application_key}}"
+							}
+						],
+						"url": {
+							"raw": "{{url_base}}/api/templates/test",
+							"host": [
+								"{{url_base}}"
+							],
+							"path": [
+								"api",
+								"templates",
+								"test"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/{template}/{target} (XML body)",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/xml",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<document>\r\n    <id><![CDATA[LRA_Bildschirm_Gesundhaus_1920x1080px]]></id>\r\n    <paper>\r\n        <unit>px</unit>\r\n        <width>1920</width>\r\n        <height>1080</height>\r\n    </paper>\r\n    <language>de</language>\r\n    <content>\r\n    </content>\r\n</document>\r\n"
+						},
+						"url": {
+							"raw": "https://dwousjbb7a.execute-api.eu-west-1.amazonaws.com/test/screen-coupon-and-consultation-skin-care/test.pdf",
+							"protocol": "https",
+							"host": [
+								"dwousjbb7a",
+								"execute-api",
+								"eu-west-1",
+								"amazonaws",
+								"com"
+							],
+							"path": [
+								"test",
+								"screen-coupon-and-consultation-skin-care",
+								"test.pdf"
+							]
+						},
+						"description": "Render tamplate"
+					},
+					"response": []
+				},
+				{
+					"name": "/{template}/{target} (JSON body)",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"type": "text",
+								"value": "application/json"
+							},
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"id\": \"LRA_Bildschirm_Gesundhaus_1920x1080px\",\n\t\"paper\": {\n        \"unit\": \"px\",\n        \"width\": 1920,\n        \"height\": 1080\n\t},\n    \"language\": \"de\",\n    \"content\": {}\n}"
+						},
+						"url": {
+							"raw": "https://dwousjbb7a.execute-api.eu-west-1.amazonaws.com/test/screen-coupon-and-consultation-skin-care/test.pdf",
+							"protocol": "https",
+							"host": [
+								"dwousjbb7a",
+								"execute-api",
+								"eu-west-1",
+								"amazonaws",
+								"com"
+							],
+							"path": [
+								"test",
+								"screen-coupon-and-consultation-skin-care",
+								"test.pdf"
+							]
+						},
+						"description": "Render tamplate"
 					},
 					"response": []
 				}
