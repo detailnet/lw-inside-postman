@@ -1,6 +1,6 @@
 {
 	"info": {
-		"_postman_id": "a665b267-d47c-463c-9c36-c78b81ecdbbc",
+		"_postman_id": "b0aec8e9-bb1a-4114-9301-9cc9847f32ef",
 		"name": "lw-inside",
 		"description": "Louis Widmer Inside API",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
@@ -1464,7 +1464,7 @@
 							"query": [
 								{
 									"key": "inspect",
-									"value": null
+									"value": ""
 								}
 							]
 						},
@@ -1553,6 +1553,374 @@
 			"name": "Product",
 			"item": [
 				{
+					"name": "Ingredients",
+					"item": [
+						{
+							"name": "/api/ingredients",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "{{header_accept}}"
+									},
+									{
+										"key": "App-ID",
+										"value": "{{header_application_id}}"
+									},
+									{
+										"key": "App-Key",
+										"value": "{{header_application_key}}"
+									}
+								],
+								"url": {
+									"raw": "{{url_base}}/api/ingredients?page_size=-1",
+									"host": [
+										"{{url_base}}"
+									],
+									"path": [
+										"api",
+										"ingredients"
+									],
+									"query": [
+										{
+											"key": "page_size",
+											"value": "-1"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "/api/ingredients",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "{{header_accept}}"
+									},
+									{
+										"key": "App-ID",
+										"value": "{{header_application_id}}"
+									},
+									{
+										"key": "App-Key",
+										"value": "{{header_application_key}}"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\": \"Newly Created Ingredient\",\r\n    \"in_search\": false,\r\n    \"titles\": [\r\n        {\r\n            \"locale\": \"de\",\r\n            \"value\": \"Newly Created Ingredient de\"\r\n        },\r\n        {\r\n            \"locale\": \"de_AT\",\r\n            \"value\": \"Newly Created Ingredient de_AT\"\r\n        },\r\n        {\r\n            \"locale\": \"de_CH\",\r\n            \"value\": \"Newly Created Ingredient de_CH\"\r\n        },\r\n        {\r\n            \"locale\": \"de_DE\",\r\n            \"value\": \"Newly Created Ingredient de_DE\"\r\n        },\r\n        {\r\n            \"locale\": \"en\",\r\n            \"value\": \"Newly Created Ingredient en\"\r\n        },\r\n        {\r\n            \"locale\": \"fi\",\r\n            \"value\": \"Newly Created Ingredient fi\"\r\n        },\r\n        {\r\n            \"locale\": \"fr\",\r\n            \"value\": \"Newly Created Ingredient fr\"\r\n        },\r\n        {\r\n            \"locale\": \"fr_BE\",\r\n            \"value\": \"Newly Created Ingredient fr_BE\"\r\n        },\r\n        {\r\n            \"locale\": \"fr_CH\",\r\n            \"value\": \"Newly Created Ingredient fr_CH\"\r\n        },\r\n        {\r\n            \"locale\": \"it\",\r\n            \"value\": \"Newly Created Ingredient it\"\r\n        },\r\n        {\r\n            \"locale\": \"it_CH\",\r\n            \"value\": \"Newly Created Ingredient it_CH\"\r\n        },\r\n        {\r\n            \"locale\": \"nl\",\r\n            \"value\": \"Newly Created Ingredient nl\"\r\n        },\r\n        {\r\n            \"locale\": \"nl_BE\",\r\n            \"value\": \"Newly Created Ingredient nl_BE\"\r\n        },\r\n        {\r\n            \"locale\": \"nl_NL\",\r\n            \"value\": \"Newly Created Ingredient nl_NL\"\r\n        }\r\n    ]\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url_base}}/api/ingredients",
+									"host": [
+										"{{url_base}}"
+									],
+									"path": [
+										"api",
+										"ingredients"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "/api/ingredients/{ingredient_id}",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "{{header_accept}}"
+									},
+									{
+										"key": "App-ID",
+										"value": "{{header_application_id}}"
+									},
+									{
+										"key": "App-Key",
+										"value": "{{header_application_key}}"
+									}
+								],
+								"url": {
+									"raw": "{{url_base}}/api/ingredients/2263c922-da50-418c-b231-da5974a2fe64",
+									"host": [
+										"{{url_base}}"
+									],
+									"path": [
+										"api",
+										"ingredients",
+										"2263c922-da50-418c-b231-da5974a2fe64"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "/api/ingredients/{ingredient_id}",
+							"request": {
+								"method": "PATCH",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "{{header_accept}}"
+									},
+									{
+										"key": "App-ID",
+										"value": "{{header_application_id}}"
+									},
+									{
+										"key": "App-Key",
+										"value": "{{header_application_key}}"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"id\": \"81fc41a3-3e42-4f80-af9a-1aea64ffd037\",\r\n    \"name\": \"Allantoin\",\r\n    \"in_search\": true,\r\n    \"titles\": [\r\n        {\r\n            \"locale\": \"de\",\r\n            \"value\": \"Allantoin new 2\"\r\n        },\r\n        {\r\n            \"locale\": \"de_AT\",\r\n            \"value\": \"Allantoin\"\r\n        },\r\n        {\r\n            \"locale\": \"de_CH\",\r\n            \"value\": \"Allantoin\"\r\n        },\r\n        {\r\n            \"locale\": \"de_DE\",\r\n            \"value\": \"Allantoin\"\r\n        },\r\n        {\r\n            \"locale\": \"en\",\r\n            \"value\": \"Allantoin\"\r\n        },\r\n        {\r\n            \"locale\": \"fi\",\r\n            \"value\": \"Allantoiini\"\r\n        },\r\n        {\r\n            \"locale\": \"fr\",\r\n            \"value\": \"Allantoïne\"\r\n        },\r\n        {\r\n            \"locale\": \"fr_BE\",\r\n            \"value\": \"Allantoïne\"\r\n        },\r\n        {\r\n            \"locale\": \"fr_CH\",\r\n            \"value\": \"Allantoïne\"\r\n        },\r\n        {\r\n            \"locale\": \"it\",\r\n            \"value\": \"Allantoina\"\r\n        },\r\n        {\r\n            \"locale\": \"it_CH\",\r\n            \"value\": \"Allantoina\"\r\n        },\r\n        {\r\n            \"locale\": \"nl\",\r\n            \"value\": \"Allantoïne\"\r\n        },\r\n        {\r\n            \"locale\": \"nl_BE\",\r\n            \"value\": \"Allantoïne\"\r\n        },\r\n        {\r\n            \"locale\": \"nl_NL\",\r\n            \"value\": \"Allantoïne\"\r\n        }\r\n    ]\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url_base}}/api/ingredients/81fc41a3-3e42-4f80-af9a-1aea64ffd037",
+									"host": [
+										"{{url_base}}"
+									],
+									"path": [
+										"api",
+										"ingredients",
+										"81fc41a3-3e42-4f80-af9a-1aea64ffd037"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "/api/ingredients/{ingredient_id}",
+							"request": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "{{header_accept}}"
+									},
+									{
+										"key": "App-ID",
+										"value": "{{header_application_id}}"
+									},
+									{
+										"key": "App-Key",
+										"value": "{{header_application_key}}"
+									}
+								],
+								"url": {
+									"raw": "{{url_base}}/api/ingredients/44444444-aaaa-4444-aaaa-444444444444",
+									"host": [
+										"{{url_base}}"
+									],
+									"path": [
+										"api",
+										"ingredients",
+										"44444444-aaaa-4444-aaaa-444444444444"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Substances",
+					"item": [
+						{
+							"name": "/api/substances",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "{{header_accept}}"
+									},
+									{
+										"key": "App-ID",
+										"value": "{{header_application_id}}"
+									},
+									{
+										"key": "App-Key",
+										"value": "{{header_application_key}}"
+									}
+								],
+								"url": {
+									"raw": "{{url_base}}/api/substances",
+									"host": [
+										"{{url_base}}"
+									],
+									"path": [
+										"api",
+										"substances"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "/api/substances",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "{{header_accept}}"
+									},
+									{
+										"key": "App-ID",
+										"value": "{{header_application_id}}"
+									},
+									{
+										"key": "App-Key",
+										"value": "{{header_application_key}}"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\": \"New Substance\",\r\n    \"sort_index\": 32767,\r\n    \"titles\": [\r\n        {\r\n            \"locale\": \"de\",\r\n            \"value\": \"New Substance de\"\r\n        },\r\n        {\r\n            \"locale\": \"en\",\r\n            \"value\": \"New Substance en\"\r\n        },\r\n        {\r\n            \"locale\": \"fi\",\r\n            \"value\": \"New Substance fi\"\r\n        },\r\n        {\r\n            \"locale\": \"fr\",\r\n            \"value\": \"New Substance fr\"\r\n        },\r\n        {\r\n            \"locale\": \"it\",\r\n            \"value\": \"New Substance it\"\r\n        },\r\n        {\r\n            \"locale\": \"nl\",\r\n            \"value\": \"New Substance nl\"\r\n        }\r\n    ]\r\n    ,\r\n    \"descriptions\": [\r\n        {\r\n            \"locale\": \"de\",\r\n            \"value\": \"New Substance Description de\"\r\n        },\r\n        {\r\n            \"locale\": \"en\",\r\n            \"value\": \"New Substance Description en\"\r\n        },\r\n        {\r\n            \"locale\": \"fi\",\r\n            \"value\": \"New Substance Description fi\"\r\n        },\r\n        {\r\n            \"locale\": \"fr\",\r\n            \"value\": \"New Substance Description fr\"\r\n        },\r\n        {\r\n            \"locale\": \"it\",\r\n            \"value\": \"New Substance Description it\"\r\n        },\r\n        {\r\n            \"locale\": \"nl\",\r\n            \"value\": \"New Substance Description nl\"\r\n        }\r\n    ]\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url_base}}/api/substances",
+									"host": [
+										"{{url_base}}"
+									],
+									"path": [
+										"api",
+										"substances"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "/api/substances/{substance_id}",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "{{header_accept}}"
+									},
+									{
+										"key": "App-ID",
+										"value": "{{header_application_id}}"
+									},
+									{
+										"key": "App-Key",
+										"value": "{{header_application_key}}"
+									}
+								],
+								"url": {
+									"raw": "{{url_base}}/api/substances/b9a488fb-9d84-4053-bece-83dd33e4f8dd",
+									"host": [
+										"{{url_base}}"
+									],
+									"path": [
+										"api",
+										"substances",
+										"b9a488fb-9d84-4053-bece-83dd33e4f8dd"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "/api/substances/{substance_id}",
+							"request": {
+								"method": "PATCH",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "{{header_accept}}"
+									},
+									{
+										"key": "App-ID",
+										"value": "{{header_application_id}}"
+									},
+									{
+										"key": "App-Key",
+										"value": "{{header_application_key}}"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"id\": \"b9a488fb-9d84-4053-bece-83dd33e4f8dd\",\r\n    \"name\": \"Algin bw44\",\r\n    \"titles\": [\r\n        {\r\n            \"locale\": \"de\",\r\n            \"value\": \"Algin neu 4\"\r\n        },\r\n        {\r\n            \"locale\": \"en\",\r\n            \"value\": \"Algin\"\r\n        },\r\n        {\r\n            \"locale\": \"fi\",\r\n            \"value\": \"Algin\"\r\n        },\r\n        {\r\n            \"locale\": \"fr\",\r\n            \"value\": \"Algin\"\r\n        },\r\n        {\r\n            \"locale\": \"it\",\r\n            \"value\": \"Algin\"\r\n        },\r\n        {\r\n            \"locale\": \"nl\",\r\n            \"value\": \"Algin\"\r\n        }\r\n    ],\r\n    \"descriptions\": [\r\n        {\r\n            \"locale\": \"de\",\r\n            \"value\": \"Konsistenzgeber, Absorber\"\r\n        },\r\n        {\r\n            \"locale\": \"en\",\r\n            \"value\": \"Viscosity increasing agent, absorbent\"\r\n        },\r\n        {\r\n            \"locale\": \"fi\",\r\n            \"value\": \"Absorboiva, himmentävä aine, viskositeettiä lisäävä aine\"\r\n        },\r\n        {\r\n            \"locale\": \"fr\",\r\n            \"value\": \"Agent de consistance\"\r\n        },\r\n        {\r\n            \"locale\": \"it\",\r\n            \"value\": \"Legante/additivo reologico\"\r\n        },\r\n        {\r\n            \"locale\": \"nl\",\r\n            \"value\": \"Consistentiegevend bestanddeel\"\r\n        }\r\n    ]\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url_base}}/api/substances/b9a488fb-9d84-4053-bece-83dd33e4f8dd",
+									"host": [
+										"{{url_base}}"
+									],
+									"path": [
+										"api",
+										"substances",
+										"b9a488fb-9d84-4053-bece-83dd33e4f8dd"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "/api/substances/{substance_id}",
+							"request": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "{{header_accept}}"
+									},
+									{
+										"key": "App-ID",
+										"value": "{{header_application_id}}"
+									},
+									{
+										"key": "App-Key",
+										"value": "{{header_application_key}}"
+									}
+								],
+								"url": {
+									"raw": "{{url_base}}/api/substances/44444444-aaaa-4444-aaaa-444444444444",
+									"host": [
+										"{{url_base}}"
+									],
+									"path": [
+										"api",
+										"substances",
+										"44444444-aaaa-4444-aaaa-444444444444"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
 					"name": "/api/products",
 					"request": {
 						"method": "GET",
@@ -1625,7 +1993,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n\t\"id\": \"44444444-aaaa-4444-aaaa-444444444444\",\n\t\"name\": \"TEST Product\",\n\t\"titles\": [\n  \t\t{\"locale\": \"de\", \"value\": \"TEST Product title DE\"},\n  \t\t{\"locale\": \"en\", \"value\": \"TEST Product title EN\"},\n  \t\t{\"locale\": \"fr\", \"value\": \"TEST Product title FR\"},\n  \t\t{\"locale\": \"it\", \"value\": \"TEST Product title IT\"}\n\t],\n\t\"content\": {\n\t\t\"value\":400,\n\t\t\"unit\":\"ml\"\n\t},\n\t\"skin_types\": [\n\t\t\"fc097053-992c-4876-ad9e-ab262b4e5daa\",\n\t\t\"e1dc345d-b9d9-4fb7-b4d9-d0fe41525215\",\n\t\t\"90a0a054-31f9-42ab-9e68-396ae3966295\"\n\t],\n\t\"aging_type\": \"ebfd5ead-09c5-4451-b7f2-e693390edcb6\",\n\t\"groups\": [\n\t\t\"d88c1a9c-c541-4ad4-a053-9959f0c8ca90\"\n\t],\n\t\"ingredients\": [\n\t\t{\"id\": \"39b3a187-7ed4-4902-8b9f-5f11b2e0ca7a\", \"unit\":null, \"content\":null, \"sort_index\": 1},\n\t\t{\"id\": \"96575d66-1f34-40b4-aa10-d5768aeca06a\", \"unit\":\"mg\", \"content\":\"5\",  \"sort_index\": 2},\n\t\t{\"id\": \"5acec4d6-8a14-4298-a948-8451ab17b9f1\", \"unit\":null, \"content\":null, \"sort_index\": 3}\n\t],\n\t\"flavors\": [\n\t\t{\n\t\t\t\"fragrance\": \"6b2b5516-106f-445a-9e44-d57556a8ab86\",\n\t\t\t\"substances\": [\n\t\t\t\t{\"id\": \"52f0b4ec-e459-4cca-84d2-3ae48c4afb4f\", \"sort_index\": 1},\n\t\t\t\t{\"id\": \"10cd49f9-4c9a-4182-9fba-87575ce706fd\", \"sort_index\": 2}\n\t\t\t],\n\t\t\t\"code\": \"aaaaaaaaaaaaaaa\",\n\t\t\t\"barcode\": \"5701234567899\",\n\t\t\t\"substance_addition\":\"1324564\"\n\t\t},\n\t\t{\n\t\t\t\"fragrance\": \"9942eb9f-1738-47c2-a598-706ad6724eff\",\n\t\t\t\"code\": \"\",\n\t\t\t\"substance_addition\": \"\",\n\t\t\t\"substances\": [\n\t\t\t\t{\"id\": \"ae50eb96-d57f-46bd-bd40-360f69dd4217\", \"sort_index\": 1},\n\t\t\t\t{\"id\": \"13efcb52-0127-4b62-a88e-e60dbdc1037a\", \"sort_index\": 2},\n\t\t\t\t{\"id\": \"b603975e-ed81-43f2-86ac-e282ac5db7cf\", \"sort_index\": 3},\n\t\t\t\t{\"id\": \"f7d24a9a-4d09-4f8e-b5fa-f6514c0d7f8f\", \"sort_index\": 4}\n\t\t\t],\n\t\t\t\"barcode\":null\n\t\t}\n\t],\n\t\"lifetime_after_opening\": 2,\n\t\"lifetime_after_production\": 5\n}"
+							"raw": "{\n\t\"id\": \"44444444-aaaa-4444-aaaa-444444444444\",\n\t\"name\": \"TEST Product\",\n\t\"titles\": [\n  \t\t{\"locale\": \"de\", \"value\": \"TEST Product title DE\"},\n  \t\t{\"locale\": \"en\", \"value\": \"TEST Product title EN\"},\n  \t\t{\"locale\": \"fr\", \"value\": \"TEST Product title FR\"},\n  \t\t{\"locale\": \"it\", \"value\": \"TEST Product title IT\"}\n\t],\n\t\"content\": {\n\t\t\"value\":400,\n\t\t\"unit\":\"ml\"\n\t},\n\t\"skin_types\": [\n\t\t\"fc097053-992c-4876-ad9e-ab262b4e5daa\",\n\t\t\"e1dc345d-b9d9-4fb7-b4d9-d0fe41525215\",\n\t\t\"90a0a054-31f9-42ab-9e68-396ae3966295\"\n\t],\n    \"tags\" : [\n        \"352260b4-9301-40cc-a886-2a6f63e72bc4\"\n    ],\n\t\"aging_type\": \"ebfd5ead-09c5-4451-b7f2-e693390edcb6\",\n\t\"groups\": [\n\t\t\"d88c1a9c-c541-4ad4-a053-9959f0c8ca90\"\n\t],\n\t\"ingredients\": [\n\t\t{\"id\": \"39b3a187-7ed4-4902-8b9f-5f11b2e0ca7a\", \"unit\":null, \"content\":null, \"sort_index\": 1},\n\t\t{\"id\": \"96575d66-1f34-40b4-aa10-d5768aeca06a\", \"unit\":\"mg\", \"content\":\"5\",  \"sort_index\": 2},\n\t\t{\"id\": \"5acec4d6-8a14-4298-a948-8451ab17b9f1\", \"unit\":null, \"content\":null, \"sort_index\": 3}\n\t],\n\t\"flavors\": [\n\t\t{\n\t\t\t\"fragrance\": \"6b2b5516-106f-445a-9e44-d57556a8ab86\",\n\t\t\t\"substances\": [\n\t\t\t\t{\"id\": \"52f0b4ec-e459-4cca-84d2-3ae48c4afb4f\", \"sort_index\": 1},\n\t\t\t\t{\"id\": \"10cd49f9-4c9a-4182-9fba-87575ce706fd\", \"sort_index\": 2}\n\t\t\t],\n\t\t\t\"code\": \"aaaaaaaaaaaaaaa\",\n\t\t\t\"barcode\": \"5701234567899\",\n\t\t\t\"substance_addition\":\"1324564\"\n\t\t},\n\t\t{\n\t\t\t\"fragrance\": \"9942eb9f-1738-47c2-a598-706ad6724eff\",\n\t\t\t\"code\": \"\",\n\t\t\t\"substance_addition\": \"\",\n\t\t\t\"substances\": [\n\t\t\t\t{\"id\": \"ae50eb96-d57f-46bd-bd40-360f69dd4217\", \"sort_index\": 1},\n\t\t\t\t{\"id\": \"13efcb52-0127-4b62-a88e-e60dbdc1037a\", \"sort_index\": 2},\n\t\t\t\t{\"id\": \"b603975e-ed81-43f2-86ac-e282ac5db7cf\", \"sort_index\": 3},\n\t\t\t\t{\"id\": \"f7d24a9a-4d09-4f8e-b5fa-f6514c0d7f8f\", \"sort_index\": 4}\n\t\t\t],\n\t\t\t\"barcode\":null\n\t\t}\n\t],\n\t\"lifetime_after_opening\": 2,\n\t\"lifetime_after_production\": 5\n}"
 						},
 						"url": {
 							"raw": "{{url_base}}/api/products",
@@ -1696,17 +2064,17 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n\t\"name\": \"TEST Product\",\n\t\"titles\": [\n  \t\t{\"locale\": \"de\", \"value\": \"TEST Product title DE\"},\n  \t\t{\"locale\": \"en\", \"value\": \"TEST Product title EN\"},\n  \t\t{\"locale\": \"fr\", \"value\": \"TEST Product title FR\"},\n  \t\t{\"locale\": \"it\", \"value\": \"TEST Product title IT\"}\n\t],\n\t\"content\": {\n\t\t\"value\":400,\n\t\t\"unit\":\"ml\"\n\t},\n\t\"skin_types\": [\n\t\t\"fc097053-992c-4876-ad9e-ab262b4e5daa\",\n\t\t\"e1dc345d-b9d9-4fb7-b4d9-d0fe41525215\",\n\t\t\"90a0a054-31f9-42ab-9e68-396ae3966295\"\n\t],\n\t\"groups\": [\n\t\t\"d88c1a9c-c541-4ad4-a053-9959f0c8ca90\"\n\t],\n\t\"ingredients\": [\n\t\t{\n\t\t\t\"id\": \"c4f13dd8-5417-4a28-88c3-240e094f4e3c\",\n\t\t\t\"content\": 0.5,\n\t\t\t\"unit\" : \"%\"\n\t\t}\n\t],\n\t\"flavors\":[\n\t\t{\n\t\t\t\"fragrance\": \"6b2b5516-106f-445a-9e44-d57556a8ab86\",\n\t\t\t\"substances\": [\n\t\t\t],\n\t\t\t\"code\": \"\",\n\t\t\t\"barcode\": null,\n\t\t\t\"substance_addition\": \"\"\n\t\t}\n\t]\n}"
+							"raw": "{\n\t\"name\": \"TEST Product\",\n\t\"titles\": [\n  \t\t{\"locale\": \"de\", \"value\": \"TEST Product title DE\"},\n  \t\t{\"locale\": \"en\", \"value\": \"TEST Product title EN\"},\n  \t\t{\"locale\": \"fr\", \"value\": \"TEST Product title FR\"},\n  \t\t{\"locale\": \"it\", \"value\": \"TEST Product title IT\"}\n\t],\n\t\"content\": {\n\t\t\"value\":400,\n\t\t\"unit\":\"ml\"\n\t},\n\t\"skin_types\": [\n\t\t\"fc097053-992c-4876-ad9e-ab262b4e5daa\",\n\t\t\"e1dc345d-b9d9-4fb7-b4d9-d0fe41525215\",\n\t\t\"90a0a054-31f9-42ab-9e68-396ae3966295\"\n\t],\n\t\"groups\": [\n\t\t\"d88c1a9c-c541-4ad4-a053-9959f0c8ca90\"\n\t],\n\t\"ingredients\": [\n\t\n\t],\n\t\"flavors\":[\n\t\t{\n\t\t\t\"fragrance\": \"6b2b5516-106f-445a-9e44-d57556a8ab86\",\n\t\t\t\"substances\": [\n\t\t\t],\n\t\t\t\"code\": \"\",\n\t\t\t\"barcode\": null,\n\t\t\t\"substance_addition\": \"\"\n\t\t}\n\t]\n}"
 						},
 						"url": {
-							"raw": "{{url_base}}/api/products/44444444-aaaa-4444-aaaa-444444444444",
+							"raw": "{{url_base}}/api/products/44444444-aaaa-4444-aaaa-444444444446",
 							"host": [
 								"{{url_base}}"
 							],
 							"path": [
 								"api",
 								"products",
-								"44444444-aaaa-4444-aaaa-444444444444"
+								"44444444-aaaa-4444-aaaa-444444444446"
 							]
 						}
 					},
@@ -1940,43 +2308,6 @@
 					"response": []
 				},
 				{
-					"name": "/api/ingredients",
-					"request": {
-						"method": "GET",
-						"header": [
-							{
-								"key": "Accept",
-								"value": "{{header_accept}}"
-							},
-							{
-								"key": "App-ID",
-								"value": "{{header_application_id}}"
-							},
-							{
-								"key": "App-Key",
-								"value": "{{header_application_key}}"
-							}
-						],
-						"url": {
-							"raw": "{{url_base}}/api/ingredients?page_size=-1",
-							"host": [
-								"{{url_base}}"
-							],
-							"path": [
-								"api",
-								"ingredients"
-							],
-							"query": [
-								{
-									"key": "page_size",
-									"value": "-1"
-								}
-							]
-						}
-					},
-					"response": []
-				},
-				{
 					"name": "/api/ingredient-units",
 					"request": {
 						"method": "GET",
@@ -2014,7 +2345,7 @@
 					"response": []
 				},
 				{
-					"name": "/api/substances",
+					"name": "/api/ingredients Copy",
 					"request": {
 						"method": "GET",
 						"header": [
@@ -2032,13 +2363,107 @@
 							}
 						],
 						"url": {
-							"raw": "{{url_base}}/api/substances",
+							"raw": "{{url_base}}/api/ingredients?page_size=-1",
 							"host": [
 								"{{url_base}}"
 							],
 							"path": [
 								"api",
-								"substances"
+								"ingredients"
+							],
+							"query": [
+								{
+									"key": "page_size",
+									"value": "-1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/api/product-group-types",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "{{header_accept}}"
+							},
+							{
+								"key": "App-ID",
+								"value": "{{header_application_id}}"
+							},
+							{
+								"key": "App-Key",
+								"value": "{{header_application_key}}"
+							}
+						],
+						"url": {
+							"raw": "{{url_base}}/api/product-group-types?page_size=5&page=1",
+							"host": [
+								"{{url_base}}"
+							],
+							"path": [
+								"api",
+								"product-group-types"
+							],
+							"query": [
+								{
+									"key": "page_size",
+									"value": "5"
+								},
+								{
+									"key": "page",
+									"value": "1"
+								},
+								{
+									"key": "sort",
+									"value": "[{\"property\":\"sort_index\",\"direction\":\"asc\"}]",
+									"disabled": true
+								},
+								{
+									"key": "filter",
+									"value": "[{\"property\":\"name\",\"operator\":\"like\",\"type\":\"string\",\"value\":\"%a%\"}]",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/api/product-tags",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "{{header_accept}}"
+							},
+							{
+								"key": "App-ID",
+								"value": "{{header_application_id}}"
+							},
+							{
+								"key": "App-Key",
+								"value": "{{header_application_key}}"
+							}
+						],
+						"url": {
+							"raw": "{{url_base}}/api/product-tags?page_size=-1",
+							"host": [
+								"{{url_base}}"
+							],
+							"path": [
+								"api",
+								"product-tags"
+							],
+							"query": [
+								{
+									"key": "page_size",
+									"value": "-1"
+								}
 							]
 						}
 					},
